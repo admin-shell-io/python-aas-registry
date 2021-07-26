@@ -1,0 +1,64 @@
+{
+      "semanticId": {
+        "keys": []
+      },
+      "identification": {
+        "idType": "IRI",
+        "id": "www.company.com/ids/sm/6535_4121_8002_9238"
+      },
+      "idShort": "StatusResponse",
+      "modelType": {
+        "name": "Submodel"
+      },
+      "kind": "Instance",
+      "submodelElements": [
+        {
+          "value": "E",
+          "semanticId": {
+            "keys": []
+          },
+          "idShort": "Status",
+          "modelType": {
+            "name": "Property"
+          },
+          "valueType": {
+            "dataObjectType": {
+              "name": ""
+            }
+          },
+          "kind": "Instance"
+        },
+        {
+          "value": "",
+          "semanticId": {
+            "keys": []
+          },
+          "idShort": "Code",
+          "modelType": {
+            "name": "Property"
+          },
+          "valueType": {
+            "dataObjectType": {
+              "name": ""
+            }
+          },
+          "kind": "Instance"
+        },
+        {
+          "value": "Error Message",
+          "semanticId": {
+            "keys": []
+          },
+          "idShort": "Messaage",
+          "modelType": {
+            "name": "Property"
+          },
+          "valueType": {
+            "dataObjectType": {
+              "name": ""
+            }
+          },
+          "kind": "Instance"
+        }
+      ]
+    }

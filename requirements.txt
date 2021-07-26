@@ -1,0 +1,10 @@
+APScheduler>=3.6.3
+python-snap7>=0.11
+werkzeug>=1.0.1
+Flask>=1.1.2
+Flask-RESTful>=0.3.8
+python-dotenv>=0.14.0
+requests>=2.24.0
+jsonschema>=3.2.0
+hbmqtt>=0.9.6
+aiocoap>=0.4.1

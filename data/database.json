@@ -1,0 +1,3675 @@
+{
+    "aas_VWS_RIC": [
+        {
+            "aasId": "www.company.com/ids/aas/7325_4121_8002_3619",
+            "aasetId": "www.company.com/ids/asset/1130_0101_8002_0001",
+            "idShort": "VWS_RIC",
+            "data": {
+                "assetAdministrationShells": [
+                    {
+                        "asset": {
+                            "keys": []
+                        },
+                        "submodels": [
+                            {
+                                "keys": [
+                                    {
+                                        "type": "Submodel",
+                                        "local": true,
+                                        "value": "www.company.com/ids/sm/2215_8071_1012_8314",
+                                        "index": 0,
+                                        "idType": "IRI"
+                                    }
+                                ]
+                            },
+                            {
+                                "keys": [
+                                    {
+                                        "type": "Submodel",
+                                        "local": true,
+                                        "value": "www.company.com/ids/sm/1271_8071_1012_0936",
+                                        "index": 0,
+                                        "idType": "IRI"
+                                    }
+                                ]
+                            },
+                            {
+                                "keys": [
+                                    {
+                                        "type": "Submodel",
+                                        "local": true,
+                                        "value": "www.company.com/ids/sm/1040_9071_1012_4944",
+                                        "index": 0,
+                                        "idType": "IRI"
+                                    }
+                                ]
+                            },
+                            {
+                                "keys": [
+                                    {
+                                        "type": "Submodel",
+                                        "local": true,
+                                        "value": "www.company.com/ids/sm/3041_9071_1012_5417",
+                                        "index": 0,
+                                        "idType": "IRI"
+                                    }
+                                ]
+                            }
+                        ],
+                        "identification": {
+                            "idType": "IRI",
+                            "id": "www.company.com/ids/aas/7325_4121_8002_3619"
+                        },
+                        "idShort": "VWS_RIC",
+                        "modelType": {
+                            "name": "AssetAdministrationShell"
+                        }
+                    }
+                ],
+                "assets": [
+                    {
+                        "identification": {
+                            "idType": "IRI",
+                            "id": "www.company.com/ids/asset/1130_0101_8002_0001"
+                        },
+                        "idShort": "RegistrInterface",
+                        "modelType": {
+                            "name": "Asset"
+                        },
+                        "kind": "Instance"
+                    }
+                ],
+                "submodels": [
+                    {
+                        "semanticId": {
+                            "keys": [
+                                {
+                                    "type": "Submodel",
+                                    "local": true,
+                                    "value": "TCD",
+                                    "index": 0,
+                                    "idType": "Custom"
+                                }
+                            ]
+                        },
+                        "identification": {
+                            "idType": "IRI",
+                            "id": "www.company.com/ids/sm/1271_8071_1012_0936"
+                        },
+                        "idShort": "TechnicalData",
+                        "modelType": {
+                            "name": "Submodel"
+                        },
+                        "kind": "Instance",
+                        "submodelElements": [
+                            {
+                                "ordered": false,
+                                "allowDuplicates": false,
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "TechnicalProperties",
+                                "modelType": {
+                                    "name": "SubmodelElementCollection"
+                                },
+                                "value": [
+                                    {
+                                        "value": "AdminShell",
+                                        "semanticId": {
+                                            "keys": []
+                                        },
+                                        "idShort": "host",
+                                        "modelType": {
+                                            "name": "Property"
+                                        },
+                                        "valueType": {
+                                            "dataObjectType": {
+                                                "name": ""
+                                            }
+                                        },
+                                        "kind": "Instance"
+                                    },
+                                    {
+                                        "value": "Andreas",
+                                        "semanticId": {
+                                            "keys": []
+                                        },
+                                        "idShort": "maintainer",
+                                        "modelType": {
+                                            "name": "Property"
+                                        },
+                                        "valueType": {
+                                            "dataObjectType": {
+                                                "name": ""
+                                            }
+                                        },
+                                        "kind": "Instance"
+                                    }
+                                ],
+                                "kind": "Instance"
+                            }
+                        ]
+                    },
+                    {
+                        "semanticId": {
+                            "keys": []
+                        },
+                        "identification": {
+                            "idType": "IRI",
+                            "id": "www.company.com/ids/sm/2215_8071_1012_8314"
+                        },
+                        "idShort": "Nameplate",
+                        "modelType": {
+                            "name": "Submodel"
+                        },
+                        "kind": "Instance",
+                        "submodelElements": [
+                            {
+                                "value": "LIA OVGU",
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "ManufacturerName",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            },
+                            {
+                                "value": "Verwaltungschalle Vernetzt Registry Infrastructure Component",
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "ManufacturerProduct",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            },
+                            {
+                                "value": "LIA OVGU, Magdeburg, 39106, Germany",
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "ManufacturerAddress",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            }
+                        ]
+                    },
+                    {
+                        "semanticId": {
+                            "keys": []
+                        },
+                        "identification": {
+                            "idType": "IRI",
+                            "id": "www.company.com/ids/sm/1040_9071_1012_4944"
+                        },
+                        "idShort": "Skills",
+                        "modelType": {
+                            "name": "Submodel"
+                        },
+                        "kind": "Instance",
+                        "submodelElements": [
+                            {
+                                "ordered": false,
+                                "allowDuplicates": false,
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "RegistryHandler",
+                                "modelType": {
+                                    "name": "SubmodelElementCollection"
+                                },
+                                "value": [
+                                    {
+                                        "value": "RegistryHandler",
+                                        "semanticId": {
+                                            "keys": []
+                                        },
+                                        "idShort": "SkillName",
+                                        "modelType": {
+                                            "name": "Property"
+                                        },
+                                        "valueType": {
+                                            "dataObjectType": {
+                                                "name": ""
+                                            }
+                                        },
+                                        "kind": "Instance"
+                                    },
+                                    {
+                                        "value": "Registry Handling Service",
+                                        "semanticId": {
+                                            "keys": []
+                                        },
+                                        "idShort": "SkillService",
+                                        "modelType": {
+                                            "name": "Property"
+                                        },
+                                        "valueType": {
+                                            "dataObjectType": {
+                                                "name": ""
+                                            }
+                                        },
+                                        "kind": "Instance"
+                                    },
+                                    {
+                                        "value": "Start",
+                                        "semanticId": {
+                                            "keys": []
+                                        },
+                                        "idShort": "InitialState",
+                                        "modelType": {
+                                            "name": "Property"
+                                        },
+                                        "valueType": {
+                                            "dataObjectType": {
+                                                "name": ""
+                                            }
+                                        },
+                                        "kind": "Instance"
+                                    },
+                                    {
+                                        "value": "Y",
+                                        "semanticId": {
+                                            "keys": []
+                                        },
+                                        "idShort": "enabled",
+                                        "modelType": {
+                                            "name": "Property"
+                                        },
+                                        "valueType": {
+                                            "dataObjectType": {
+                                                "name": ""
+                                            }
+                                        },
+                                        "kind": "Instance"
+                                    },
+                                    {
+                                        "value": "www.admin-shell.io/interaction/registration",
+                                        "semanticId": {
+                                            "keys": []
+                                        },
+                                        "idShort": "semanticProtocol",
+                                        "modelType": {
+                                            "name": "Property"
+                                        },
+                                        "valueType": {
+                                            "dataObjectType": {
+                                                "name": ""
+                                            }
+                                        },
+                                        "kind": "Instance"
+                                    },
+                                    {
+                                        "ordered": false,
+                                        "allowDuplicates": false,
+                                        "semanticId": {
+                                            "keys": []
+                                        },
+                                        "idShort": "Transition1",
+                                        "modelType": {
+                                            "name": "SubmodelElementCollection"
+                                        },
+                                        "value": [
+                                            {
+                                                "value": "Start",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Source",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            },
+                                            {
+                                                "value": "WaitforRegisterMessage",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Target",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            },
+                                            {
+                                                "value": "NA",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Input",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            },
+                                            {
+                                                "value": "-",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Condition",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            },
+                                            {
+                                                "value": "NA",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Output",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            }
+                                        ],
+                                        "kind": "Instance"
+                                    },
+                                    {
+                                        "ordered": false,
+                                        "allowDuplicates": false,
+                                        "semanticId": {
+                                            "keys": []
+                                        },
+                                        "idShort": "Transition2",
+                                        "modelType": {
+                                            "name": "SubmodelElementCollection"
+                                        },
+                                        "value": [
+                                            {
+                                                "value": "WaitforRegisterMessage",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Source",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            },
+                                            {
+                                                "value": "ValidateRegisterMessage",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Target",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            },
+                                            {
+                                                "value": "register",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Input",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            },
+                                            {
+                                                "value": "-",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Condition",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            },
+                                            {
+                                                "value": "NA",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Output",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            }
+                                        ],
+                                        "kind": "Instance"
+                                    },
+                                    {
+                                        "ordered": false,
+                                        "allowDuplicates": false,
+                                        "semanticId": {
+                                            "keys": []
+                                        },
+                                        "idShort": "Transition3",
+                                        "modelType": {
+                                            "name": "SubmodelElementCollection"
+                                        },
+                                        "value": [
+                                            {
+                                                "value": "ValidateRegisterMessage",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Source",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            },
+                                            {
+                                                "value": "sendMalformedError",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Target",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            },
+                                            {
+                                                "value": "NA",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Input",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            },
+                                            {
+                                                "value": "-",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Condition",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            },
+                                            {
+                                                "value": "NA",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Output",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            }
+                                        ],
+                                        "kind": "Instance"
+                                    },
+                                    {
+                                        "ordered": false,
+                                        "allowDuplicates": false,
+                                        "semanticId": {
+                                            "keys": []
+                                        },
+                                        "idShort": "Transition4",
+                                        "modelType": {
+                                            "name": "SubmodelElementCollection"
+                                        },
+                                        "value": [
+                                            {
+                                                "value": "sendMalformedError",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Source",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            },
+                                            {
+                                                "value": "WaitforRegisterMessage",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Target",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            },
+                                            {
+                                                "value": "NA",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Input",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            },
+                                            {
+                                                "value": "-",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Condition",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            },
+                                            {
+                                                "value": "registerack",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Output",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            }
+                                        ],
+                                        "kind": "Instance"
+                                    },
+                                    {
+                                        "ordered": false,
+                                        "allowDuplicates": false,
+                                        "semanticId": {
+                                            "keys": []
+                                        },
+                                        "idShort": "Transition5",
+                                        "modelType": {
+                                            "name": "SubmodelElementCollection"
+                                        },
+                                        "value": [
+                                            {
+                                                "value": "ValidateRegisterMessage",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Source",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            },
+                                            {
+                                                "value": "saveDescriptorDetails",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Target",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            },
+                                            {
+                                                "value": "NA",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Input",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            },
+                                            {
+                                                "value": "-",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Condition",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            },
+                                            {
+                                                "value": "NA",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Output",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            }
+                                        ],
+                                        "kind": "Instance"
+                                    },
+                                    {
+                                        "ordered": false,
+                                        "allowDuplicates": false,
+                                        "semanticId": {
+                                            "keys": []
+                                        },
+                                        "idShort": "Transition6",
+                                        "modelType": {
+                                            "name": "SubmodelElementCollection"
+                                        },
+                                        "value": [
+                                            {
+                                                "value": "saveDescriptorDetails",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Source",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            },
+                                            {
+                                                "value": "sendRegisterAck",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Target",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            },
+                                            {
+                                                "value": "NA",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Input",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            },
+                                            {
+                                                "value": "-",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Condition",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            },
+                                            {
+                                                "value": "NA",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Output",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            }
+                                        ],
+                                        "kind": "Instance"
+                                    },
+                                    {
+                                        "ordered": false,
+                                        "allowDuplicates": false,
+                                        "semanticId": {
+                                            "keys": []
+                                        },
+                                        "idShort": "Transition7",
+                                        "modelType": {
+                                            "name": "SubmodelElementCollection"
+                                        },
+                                        "value": [
+                                            {
+                                                "value": "sendRegisterAck",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Source",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            },
+                                            {
+                                                "value": "WaitforRegisterMessage",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Target",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            },
+                                            {
+                                                "value": "NA",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Input",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            },
+                                            {
+                                                "value": "-",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Condition",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            },
+                                            {
+                                                "value": "registerack",
+                                                "semanticId": {
+                                                    "keys": []
+                                                },
+                                                "idShort": "Output",
+                                                "modelType": {
+                                                    "name": "Property"
+                                                },
+                                                "valueType": {
+                                                    "dataObjectType": {
+                                                        "name": ""
+                                                    }
+                                                },
+                                                "kind": "Instance"
+                                            }
+                                        ],
+                                        "kind": "Instance"
+                                    }
+                                ],
+                                "kind": "Instance"
+                            }
+                        ]
+                    },
+                    {
+                        "semanticId": {
+                            "keys": []
+                        },
+                        "identification": {
+                            "idType": "IRI",
+                            "id": "www.company.com/ids/sm/3041_9071_1012_5417"
+                        },
+                        "idShort": "AssetSpecificProperties",
+                        "modelType": {
+                            "name": "Submodel"
+                        },
+                        "kind": "Instance",
+                        "submodelElements": []
+                    }
+                ],
+                "conceptDescriptions": []
+            }
+        }
+    ],
+    "messages_VWS_RIC": [
+        {
+            "messageType": "register",
+            "message_Id": "Register_1",
+            "message": {
+                "frame": {
+                    "semanticProtocol": {
+                        "keys": [
+                            {
+                                "type": "GlobalReference",
+                                "local": "local",
+                                "value": "www.admin-shell.io/interaction/registration",
+                                "idType": false
+                            }
+                        ]
+                    },
+                    "type": "register",
+                    "messageId": "Register_1",
+                    "sender": {
+                        "identification": {
+                            "id": "string11",
+                            "idType": "URI"
+                        },
+                        "role": {
+                            "name": "Register"
+                        }
+                    },
+                    "replyBy": "MQTT",
+                    "replyTo": "MQTT",
+                    "conversationId": "Registration_1",
+                    "receiver": {
+                        "identification": {
+                            "id": "VWS_RIC",
+                            "idType": "URI"
+                        },
+                        "role": {
+                            "name": "RegistryHandler"
+                        }
+                    }
+                },
+                "interactionElements": [
+                    {
+                        "idShort": "string233334",
+                        "identification": {
+                            "id": "string233331",
+                            "idType": "Custom"
+                        },
+                        "administration": {
+                            "version": "string",
+                            "revision": "string"
+                        },
+                        "description": [
+                            {
+                                "language": "string",
+                                "text": "string"
+                            }
+                        ],
+                        "assetInformation": {
+                            "assetKind": "Type",
+                            "globalAssetId": {
+                                "keys": [
+                                    {
+                                        "type": "Asset",
+                                        "idType": "Custom",
+                                        "value": "string",
+                                        "local": true
+                                    }
+                                ]
+                            },
+                            "specificAssetIds": [
+                                {
+                                    "semanticId": {
+                                        "keys": [
+                                            {
+                                                "type": "Asset",
+                                                "idType": "Custom",
+                                                "value": "string"
+                                            }
+                                        ]
+                                    },
+                                    "key": "string",
+                                    "value": "string",
+                                    "subjectId": {
+                                        "keys": [
+                                            {
+                                                "type": "Asset",
+                                                "idType": "Custom",
+                                                "value": "string"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "billOfMaterial": [
+                                {
+                                    "keys": [
+                                        {
+                                            "type": "Asset",
+                                            "idType": "Custom",
+                                            "value": "string"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "thumbnail": {
+                                "extensions": [
+                                    {
+                                        "semanticId": {
+                                            "keys": [
+                                                {
+                                                    "type": "Asset",
+                                                    "idType": "Custom",
+                                                    "value": "string"
+                                                }
+                                            ]
+                                        },
+                                        "name": "string",
+                                        "valueType": "anyUri",
+                                        "value": "string",
+                                        "refersTo": {
+                                            "keys": [
+                                                {
+                                                    "type": "Asset",
+                                                    "idType": "Custom",
+                                                    "value": "string"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "idShort": "string",
+                                "category": "string",
+                                "displayName": "string",
+                                "description": [
+                                    {
+                                        "language": "string",
+                                        "text": "string"
+                                    }
+                                ],
+                                "modelType": {
+                                    "name": "Asset"
+                                },
+                                "embeddedDataSpecifications": [
+                                    {
+                                        "dataSpecification": {
+                                            "keys": [
+                                                {
+                                                    "type": "Asset",
+                                                    "idType": "Custom",
+                                                    "value": "string"
+                                                }
+                                            ]
+                                        },
+                                        "dataSpecificationContent": {
+                                            "value": "string",
+                                            "valueId": {
+                                                "keys": [
+                                                    {
+                                                        "type": "Asset",
+                                                        "idType": "Custom",
+                                                        "value": "string"
+                                                    }
+                                                ]
+                                            },
+                                            "valueType": "anyUri",
+                                            "dataType": "DATE",
+                                            "definition": [
+                                                {
+                                                    "language": "string",
+                                                    "text": "string"
+                                                }
+                                            ],
+                                            "preferredName": [
+                                                {
+                                                    "language": "string",
+                                                    "text": "string"
+                                                }
+                                            ],
+                                            "shortName": [
+                                                {
+                                                    "language": "string",
+                                                    "text": "string"
+                                                }
+                                            ],
+                                            "sourceOfDefinition": "string",
+                                            "symbol": "string",
+                                            "unit": "string",
+                                            "unitId": {
+                                                "keys": [
+                                                    {
+                                                        "type": "Asset",
+                                                        "idType": "Custom",
+                                                        "value": "string"
+                                                    }
+                                                ]
+                                            },
+                                            "valueFormat": "string",
+                                            "valueList": {
+                                                "valueReferencePairTypes": [
+                                                    {
+                                                        "value": "string",
+                                                        "valueId": {
+                                                            "keys": [
+                                                                {
+                                                                    "type": "Asset",
+                                                                    "idType": "Custom",
+                                                                    "value": "string"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "valueType": "anyUri"
+                                                    }
+                                                ]
+                                            },
+                                            "levelType": [
+                                                "Min"
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "semanticId": {
+                                    "keys": [
+                                        {
+                                            "type": "Asset",
+                                            "idType": "Custom",
+                                            "value": "string"
+                                        }
+                                    ]
+                                },
+                                "qualifiers": [
+                                    {
+                                        "semanticId": {
+                                            "keys": [
+                                                {
+                                                    "type": "Asset",
+                                                    "idType": "Custom",
+                                                    "value": "string"
+                                                }
+                                            ]
+                                        },
+                                        "value": "string",
+                                        "valueId": {
+                                            "keys": [
+                                                {
+                                                    "type": "Asset",
+                                                    "idType": "Custom",
+                                                    "value": "string"
+                                                }
+                                            ]
+                                        },
+                                        "valueType": "anyUri",
+                                        "type": "string",
+                                        "modelType": {
+                                            "name": "Asset"
+                                        }
+                                    },
+                                    {
+                                        "dependsOn": [
+                                            {
+                                                "keys": [
+                                                    {
+                                                        "type": "Asset",
+                                                        "idType": "Custom",
+                                                        "value": "string"
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "modelType": {
+                                            "name": "Asset"
+                                        }
+                                    }
+                                ],
+                                "kind": "Template",
+                                "value": "string",
+                                "mimeType": "string"
+                            }
+                        },
+                        "endpoints": [
+                            {
+                                "protocol_information": {
+                                    "endpoint_address": "string",
+                                    "endpoint_protocol": "string",
+                                    "endpoint_protocol_version": "string",
+                                    "subprotocol": "string",
+                                    "subprotocol_body": "string",
+                                    "subprotocol_body_encoding": "string"
+                                },
+                                "interface": "string"
+                            }
+                        ],
+                        "submodelDescriptors": [
+                            {
+                                "idShort": "string",
+                                "identification": {
+                                    "id": "string",
+                                    "idType": "Custom"
+                                },
+                                "administration": {
+                                    "version": "string",
+                                    "revision": "string"
+                                },
+                                "description": [
+                                    {
+                                        "language": "string",
+                                        "text": "string"
+                                    }
+                                ],
+                                "semanticId": {
+                                    "keys": [
+                                        {
+                                            "type": "Asset",
+                                            "idType": "Custom",
+                                            "value": "string"
+                                        }
+                                    ]
+                                },
+                                "endpoints": [
+                                    {
+                                        "protocol_information": {
+                                            "endpoint_address": "string",
+                                            "endpoint_protocol": "string",
+                                            "endpoint_protocol_version": "string",
+                                            "subprotocol": "string",
+                                            "subprotocol_body": "string",
+                                            "subprotocol_body_encoding": "string"
+                                        },
+                                        "interface": "restapi"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "messageType": "registerack",
+            "message_Id": "registerack_2",
+            "message": {
+                "frame": {
+                    "semanticProtocol": {
+                        "keys": [
+                            {
+                                "type": "GlobalReference",
+                                "local": "local",
+                                "value": "www.admin-shell.io/interaction/registration",
+                                "idType": "URI"
+                            }
+                        ]
+                    },
+                    "type": "registerack",
+                    "messageId": "registerack_2",
+                    "sender": {
+                        "identification": {
+                            "id": "VWS_RIC",
+                            "idType": "URI"
+                        },
+                        "role": {
+                            "name": "RegistryHandler"
+                        }
+                    },
+                    "replyBy": "RESTAPI",
+                    "replyTo": "MQTT",
+                    "conversationId": "Registration_1",
+                    "receiver": {
+                        "identification": {
+                            "id": "string11",
+                            "idType": "URI"
+                        },
+                        "role": {
+                            "name": "Register"
+                        }
+                    }
+                },
+                "interactionElements": [
+                    {
+                        "semanticId": {
+                            "keys": []
+                        },
+                        "identification": {
+                            "idType": "IRI",
+                            "id": "www.company.com/ids/sm/6535_4121_8002_9238"
+                        },
+                        "idShort": "StatusResponse",
+                        "modelType": {
+                            "name": "Submodel"
+                        },
+                        "kind": "Instance",
+                        "submodelElements": [
+                            {
+                                "value": "S",
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Status",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            },
+                            {
+                                "value": 200,
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Code",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            },
+                            {
+                                "value": "The Asset Administration Shell's descriptor registration is successfull",
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Messaage",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "messageType": "register",
+            "message_Id": "Register_1",
+            "message": {
+                "frame": {
+                    "semanticProtocol": {
+                        "keys": [
+                            {
+                                "type": "GlobalReference",
+                                "local": "local",
+                                "value": "www.admin-shell.io/interaction/registration",
+                                "idType": false
+                            }
+                        ]
+                    },
+                    "type": "register",
+                    "messageId": "Register_1",
+                    "sender": {
+                        "identification": {
+                            "id": "string11",
+                            "idType": "URI"
+                        },
+                        "role": {
+                            "name": "Register"
+                        }
+                    },
+                    "replyBy": "MQTT",
+                    "replyTo": "MQTT",
+                    "conversationId": "Registration_1",
+                    "receiver": {
+                        "identification": {
+                            "id": "VWS_RIC",
+                            "idType": "URI"
+                        },
+                        "role": {
+                            "name": "RegistryHandler"
+                        }
+                    }
+                },
+                "interactionElements": [
+                    {
+                        "idShort": "string233334",
+                        "identification": {
+                            "id": "string233331",
+                            "idType": "Custom"
+                        },
+                        "administration": {
+                            "version": "string",
+                            "revision": "string"
+                        },
+                        "description": [
+                            {
+                                "language": "string",
+                                "text": "string"
+                            }
+                        ],
+                        "assetInformation": {
+                            "assetKind": "Type",
+                            "globalAssetId": {
+                                "keys": [
+                                    {
+                                        "type": "Asset",
+                                        "idType": "Custom",
+                                        "value": "string",
+                                        "local": true
+                                    }
+                                ]
+                            },
+                            "specificAssetIds": [
+                                {
+                                    "semanticId": {
+                                        "keys": [
+                                            {
+                                                "type": "Asset",
+                                                "idType": "Custom",
+                                                "value": "string"
+                                            }
+                                        ]
+                                    },
+                                    "key": "string",
+                                    "value": "string",
+                                    "subjectId": {
+                                        "keys": [
+                                            {
+                                                "type": "Asset",
+                                                "idType": "Custom",
+                                                "value": "string"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "billOfMaterial": [
+                                {
+                                    "keys": [
+                                        {
+                                            "type": "Asset",
+                                            "idType": "Custom",
+                                            "value": "string"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "thumbnail": {
+                                "extensions": [
+                                    {
+                                        "semanticId": {
+                                            "keys": [
+                                                {
+                                                    "type": "Asset",
+                                                    "idType": "Custom",
+                                                    "value": "string"
+                                                }
+                                            ]
+                                        },
+                                        "name": "string",
+                                        "valueType": "anyUri",
+                                        "value": "string",
+                                        "refersTo": {
+                                            "keys": [
+                                                {
+                                                    "type": "Asset",
+                                                    "idType": "Custom",
+                                                    "value": "string"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "idShort": "string",
+                                "category": "string",
+                                "displayName": "string",
+                                "description": [
+                                    {
+                                        "language": "string",
+                                        "text": "string"
+                                    }
+                                ],
+                                "modelType": {
+                                    "name": "Asset"
+                                },
+                                "embeddedDataSpecifications": [
+                                    {
+                                        "dataSpecification": {
+                                            "keys": [
+                                                {
+                                                    "type": "Asset",
+                                                    "idType": "Custom",
+                                                    "value": "string"
+                                                }
+                                            ]
+                                        },
+                                        "dataSpecificationContent": {
+                                            "value": "string",
+                                            "valueId": {
+                                                "keys": [
+                                                    {
+                                                        "type": "Asset",
+                                                        "idType": "Custom",
+                                                        "value": "string"
+                                                    }
+                                                ]
+                                            },
+                                            "valueType": "anyUri",
+                                            "dataType": "DATE",
+                                            "definition": [
+                                                {
+                                                    "language": "string",
+                                                    "text": "string"
+                                                }
+                                            ],
+                                            "preferredName": [
+                                                {
+                                                    "language": "string",
+                                                    "text": "string"
+                                                }
+                                            ],
+                                            "shortName": [
+                                                {
+                                                    "language": "string",
+                                                    "text": "string"
+                                                }
+                                            ],
+                                            "sourceOfDefinition": "string",
+                                            "symbol": "string",
+                                            "unit": "string",
+                                            "unitId": {
+                                                "keys": [
+                                                    {
+                                                        "type": "Asset",
+                                                        "idType": "Custom",
+                                                        "value": "string"
+                                                    }
+                                                ]
+                                            },
+                                            "valueFormat": "string",
+                                            "valueList": {
+                                                "valueReferencePairTypes": [
+                                                    {
+                                                        "value": "string",
+                                                        "valueId": {
+                                                            "keys": [
+                                                                {
+                                                                    "type": "Asset",
+                                                                    "idType": "Custom",
+                                                                    "value": "string"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "valueType": "anyUri"
+                                                    }
+                                                ]
+                                            },
+                                            "levelType": [
+                                                "Min"
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "semanticId": {
+                                    "keys": [
+                                        {
+                                            "type": "Asset",
+                                            "idType": "Custom",
+                                            "value": "string"
+                                        }
+                                    ]
+                                },
+                                "qualifiers": [
+                                    {
+                                        "semanticId": {
+                                            "keys": [
+                                                {
+                                                    "type": "Asset",
+                                                    "idType": "Custom",
+                                                    "value": "string"
+                                                }
+                                            ]
+                                        },
+                                        "value": "string",
+                                        "valueId": {
+                                            "keys": [
+                                                {
+                                                    "type": "Asset",
+                                                    "idType": "Custom",
+                                                    "value": "string"
+                                                }
+                                            ]
+                                        },
+                                        "valueType": "anyUri",
+                                        "type": "string",
+                                        "modelType": {
+                                            "name": "Asset"
+                                        }
+                                    },
+                                    {
+                                        "dependsOn": [
+                                            {
+                                                "keys": [
+                                                    {
+                                                        "type": "Asset",
+                                                        "idType": "Custom",
+                                                        "value": "string"
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "modelType": {
+                                            "name": "Asset"
+                                        }
+                                    }
+                                ],
+                                "kind": "Template",
+                                "value": "string",
+                                "mimeType": "string"
+                            }
+                        },
+                        "endpoints": [
+                            {
+                                "protocol_information": {
+                                    "endpoint_address": "string",
+                                    "endpoint_protocol": "string",
+                                    "endpoint_protocol_version": "string",
+                                    "subprotocol": "string",
+                                    "subprotocol_body": "string",
+                                    "subprotocol_body_encoding": "string"
+                                },
+                                "interface": "string"
+                            }
+                        ],
+                        "submodelDescriptors": [
+                            {
+                                "idShort": "string",
+                                "identification": {
+                                    "id": "string",
+                                    "idType": "Custom"
+                                },
+                                "administration": {
+                                    "version": "string",
+                                    "revision": "string"
+                                },
+                                "description": [
+                                    {
+                                        "language": "string",
+                                        "text": "string"
+                                    }
+                                ],
+                                "semanticId": {
+                                    "keys": [
+                                        {
+                                            "type": "Asset",
+                                            "idType": "Custom",
+                                            "value": "string"
+                                        }
+                                    ]
+                                },
+                                "endpoints": [
+                                    {
+                                        "protocol_information": {
+                                            "endpoint_address": "string",
+                                            "endpoint_protocol": "string",
+                                            "endpoint_protocol_version": "string",
+                                            "subprotocol": "string",
+                                            "subprotocol_body": "string",
+                                            "subprotocol_body_encoding": "string"
+                                        },
+                                        "interface": "restapi"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "messageType": "registerack",
+            "message_Id": "registerack_4",
+            "message": {
+                "frame": {
+                    "semanticProtocol": {
+                        "keys": [
+                            {
+                                "type": "GlobalReference",
+                                "local": "local",
+                                "value": "www.admin-shell.io/interaction/registration",
+                                "idType": "IRI"
+                            }
+                        ]
+                    },
+                    "type": "registerack",
+                    "messageId": "registerack_4",
+                    "sender": {
+                        "identification": {
+                            "id": "VWS_RIC",
+                            "idType": "idShort"
+                        },
+                        "role": {
+                            "name": "RegistryHandler"
+                        }
+                    },
+                    "replyBy": "RESTAPI",
+                    "replyTo": "MQTT",
+                    "conversationId": "Registration_1",
+                    "receiver": {
+                        "identification": {
+                            "id": "string11",
+                            "idType": "string11"
+                        },
+                        "role": {
+                            "name": "Register"
+                        }
+                    }
+                },
+                "interactionElements": [
+                    {
+                        "semanticId": {
+                            "keys": []
+                        },
+                        "identification": {
+                            "idType": "IRI",
+                            "id": "www.company.com/ids/sm/6535_4121_8002_9238"
+                        },
+                        "idShort": "StatusResponse",
+                        "modelType": {
+                            "name": "Submodel"
+                        },
+                        "kind": "Instance",
+                        "submodelElements": [
+                            {
+                                "value": "S",
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Status",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            },
+                            {
+                                "value": 200,
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Code",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            },
+                            {
+                                "value": "The Asset Administration Shell's descriptor registration is successfully renewed",
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Messaage",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "messageType": "register",
+            "message_Id": "Register_1",
+            "message": {
+                "frame": {
+                    "semanticProtocol": {
+                        "keys": [
+                            {
+                                "type": "GlobalReference",
+                                "local": "local",
+                                "value": "www.admin-shell.io/interaction/registration",
+                                "idType": false
+                            }
+                        ]
+                    },
+                    "type": "register",
+                    "messageId": "Register_1",
+                    "sender": {
+                        "identification": {
+                            "id": "string11",
+                            "idType": "URI"
+                        },
+                        "role": {
+                            "name": "Register"
+                        }
+                    },
+                    "replyBy": "MQTT",
+                    "replyTo": "MQTT",
+                    "conversationId": "Registration_1",
+                    "receiver": {
+                        "identification": {
+                            "id": "VWS_RIC",
+                            "idType": "URI"
+                        },
+                        "role": {
+                            "name": "RegistryHandler"
+                        }
+                    }
+                },
+                "interactionElements": [
+                    {
+                        "idShort": "string233334",
+                        "identification": {
+                            "id": "string233331",
+                            "idType": "Custom"
+                        },
+                        "administration": {
+                            "version": "string",
+                            "revision": "string"
+                        },
+                        "description": [
+                            {
+                                "language": "string",
+                                "text": "string"
+                            }
+                        ],
+                        "assetInformation": {
+                            "assetKind": "Type",
+                            "globalAssetId": {
+                                "keys": [
+                                    {
+                                        "type": "Asset",
+                                        "idType": "Custom",
+                                        "value": "string",
+                                        "local": true
+                                    }
+                                ]
+                            },
+                            "specificAssetIds": [
+                                {
+                                    "semanticId": {
+                                        "keys": [
+                                            {
+                                                "type": "Asset",
+                                                "idType": "Custom",
+                                                "value": "string"
+                                            }
+                                        ]
+                                    },
+                                    "key": "string",
+                                    "value": "string",
+                                    "subjectId": {
+                                        "keys": [
+                                            {
+                                                "type": "Asset",
+                                                "idType": "Custom",
+                                                "value": "string"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "billOfMaterial": [
+                                {
+                                    "keys": [
+                                        {
+                                            "type": "Asset",
+                                            "idType": "Custom",
+                                            "value": "string"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "thumbnail": {
+                                "extensions": [
+                                    {
+                                        "semanticId": {
+                                            "keys": [
+                                                {
+                                                    "type": "Asset",
+                                                    "idType": "Custom",
+                                                    "value": "string"
+                                                }
+                                            ]
+                                        },
+                                        "name": "string",
+                                        "valueType": "anyUri",
+                                        "value": "string",
+                                        "refersTo": {
+                                            "keys": [
+                                                {
+                                                    "type": "Asset",
+                                                    "idType": "Custom",
+                                                    "value": "string"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "idShort": "string",
+                                "category": "string",
+                                "displayName": "string",
+                                "description": [
+                                    {
+                                        "language": "string",
+                                        "text": "string"
+                                    }
+                                ],
+                                "modelType": {
+                                    "name": "Asset"
+                                },
+                                "embeddedDataSpecifications": [
+                                    {
+                                        "dataSpecification": {
+                                            "keys": [
+                                                {
+                                                    "type": "Asset",
+                                                    "idType": "Custom",
+                                                    "value": "string"
+                                                }
+                                            ]
+                                        },
+                                        "dataSpecificationContent": {
+                                            "value": "string",
+                                            "valueId": {
+                                                "keys": [
+                                                    {
+                                                        "type": "Asset",
+                                                        "idType": "Custom",
+                                                        "value": "string"
+                                                    }
+                                                ]
+                                            },
+                                            "valueType": "anyUri",
+                                            "dataType": "DATE",
+                                            "definition": [
+                                                {
+                                                    "language": "string",
+                                                    "text": "string"
+                                                }
+                                            ],
+                                            "preferredName": [
+                                                {
+                                                    "language": "string",
+                                                    "text": "string"
+                                                }
+                                            ],
+                                            "shortName": [
+                                                {
+                                                    "language": "string",
+                                                    "text": "string"
+                                                }
+                                            ],
+                                            "sourceOfDefinition": "string",
+                                            "symbol": "string",
+                                            "unit": "string",
+                                            "unitId": {
+                                                "keys": [
+                                                    {
+                                                        "type": "Asset",
+                                                        "idType": "Custom",
+                                                        "value": "string"
+                                                    }
+                                                ]
+                                            },
+                                            "valueFormat": "string",
+                                            "valueList": {
+                                                "valueReferencePairTypes": [
+                                                    {
+                                                        "value": "string",
+                                                        "valueId": {
+                                                            "keys": [
+                                                                {
+                                                                    "type": "Asset",
+                                                                    "idType": "Custom",
+                                                                    "value": "string"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "valueType": "anyUri"
+                                                    }
+                                                ]
+                                            },
+                                            "levelType": [
+                                                "Min"
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "semanticId": {
+                                    "keys": [
+                                        {
+                                            "type": "Asset",
+                                            "idType": "Custom",
+                                            "value": "string"
+                                        }
+                                    ]
+                                },
+                                "qualifiers": [
+                                    {
+                                        "semanticId": {
+                                            "keys": [
+                                                {
+                                                    "type": "Asset",
+                                                    "idType": "Custom",
+                                                    "value": "string"
+                                                }
+                                            ]
+                                        },
+                                        "value": "string",
+                                        "valueId": {
+                                            "keys": [
+                                                {
+                                                    "type": "Asset",
+                                                    "idType": "Custom",
+                                                    "value": "string"
+                                                }
+                                            ]
+                                        },
+                                        "valueType": "anyUri",
+                                        "type": "string",
+                                        "modelType": {
+                                            "name": "Asset"
+                                        }
+                                    },
+                                    {
+                                        "dependsOn": [
+                                            {
+                                                "keys": [
+                                                    {
+                                                        "type": "Asset",
+                                                        "idType": "Custom",
+                                                        "value": "string"
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "modelType": {
+                                            "name": "Asset"
+                                        }
+                                    }
+                                ],
+                                "kind": "Template",
+                                "value": "string",
+                                "mimeType": "string"
+                            }
+                        },
+                        "endpoints": [
+                            {
+                                "protocol_information": {
+                                    "endpoint_address": "string",
+                                    "endpoint_protocol": "string",
+                                    "endpoint_protocol_version": "string",
+                                    "subprotocol": "string",
+                                    "subprotocol_body": "string",
+                                    "subprotocol_body_encoding": "string"
+                                },
+                                "interface": "string"
+                            }
+                        ],
+                        "submodelDescriptors": [
+                            {
+                                "idShort": "string",
+                                "identification": {
+                                    "id": "string",
+                                    "idType": "Custom"
+                                },
+                                "administration": {
+                                    "version": "string",
+                                    "revision": "string"
+                                },
+                                "description": [
+                                    {
+                                        "language": "string",
+                                        "text": "string"
+                                    }
+                                ],
+                                "semanticId": {
+                                    "keys": [
+                                        {
+                                            "type": "Asset",
+                                            "idType": "Custom",
+                                            "value": "string"
+                                        }
+                                    ]
+                                },
+                                "endpoints": [
+                                    {
+                                        "protocol_information": {
+                                            "endpoint_address": "string",
+                                            "endpoint_protocol": "string",
+                                            "endpoint_protocol_version": "string",
+                                            "subprotocol": "string",
+                                            "subprotocol_body": "string",
+                                            "subprotocol_body_encoding": "string"
+                                        },
+                                        "interface": "restapi"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "messageType": "registerack",
+            "message_Id": "registerack_6",
+            "message": {
+                "frame": {
+                    "semanticProtocol": {
+                        "keys": [
+                            {
+                                "type": "GlobalReference",
+                                "local": "local",
+                                "value": "www.admin-shell.io/interaction/registration",
+                                "idType": "IRI"
+                            }
+                        ]
+                    },
+                    "type": "registerack",
+                    "messageId": "registerack_6",
+                    "sender": {
+                        "identification": {
+                            "id": "VWS_RIC",
+                            "idType": "idShort"
+                        },
+                        "role": {
+                            "name": "RegistryHandler"
+                        }
+                    },
+                    "replyBy": "RESTAPI",
+                    "replyTo": "MQTT",
+                    "conversationId": "Registration_1",
+                    "receiver": {
+                        "identification": {
+                            "id": "string11",
+                            "idType": "URI"
+                        },
+                        "role": {
+                            "name": "Register"
+                        }
+                    }
+                },
+                "interactionElements": [
+                    {
+                        "semanticId": {
+                            "keys": []
+                        },
+                        "identification": {
+                            "idType": "IRI",
+                            "id": "www.company.com/ids/sm/6535_4121_8002_9238"
+                        },
+                        "idShort": "StatusResponse",
+                        "modelType": {
+                            "name": "Submodel"
+                        },
+                        "kind": "Instance",
+                        "submodelElements": [
+                            {
+                                "value": "S",
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Status",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            },
+                            {
+                                "value": 200,
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Code",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            },
+                            {
+                                "value": "The Asset Administration Shell's descriptor registration is successfully renewed",
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Messaage",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "messageType": "register",
+            "message_Id": "Register_1",
+            "message": {
+                "frame": {
+                    "semanticProtocol": {
+                        "keys": [
+                            {
+                                "type": "GlobalReference",
+                                "local": "local",
+                                "value": "www.admin-shell.io/interaction/registration",
+                                "idType": "IRI"
+                            }
+                        ]
+                    },
+                    "type": "register",
+                    "messageId": "Register_1",
+                    "sender": {
+                        "identification": {
+                            "id": "string11",
+                            "idType": "URI"
+                        },
+                        "role": {
+                            "name": "Register"
+                        }
+                    },
+                    "replyBy": "MQTT",
+                    "replyTo": "MQTT",
+                    "conversationId": "Registration_1",
+                    "receiver": {
+                        "identification": {
+                            "id": "VWS_RIC",
+                            "idType": "URI"
+                        },
+                        "role": {
+                            "name": "RegistryHandler"
+                        }
+                    }
+                },
+                "interactionElements": [
+                    {
+                        "idShort": "string233334",
+                        "identification": {
+                            "id": "string233331",
+                            "idType": "Custom"
+                        },
+                        "administration": {
+                            "version": "string",
+                            "revision": "string"
+                        },
+                        "description": [
+                            {
+                                "language": "string",
+                                "text": "string"
+                            }
+                        ],
+                        "assetInformation": {
+                            "assetKind": "Type",
+                            "globalAssetId": {
+                                "keys": [
+                                    {
+                                        "type": "Asset",
+                                        "idType": "Custom",
+                                        "value": "string",
+                                        "local": true
+                                    }
+                                ]
+                            },
+                            "specificAssetIds": [
+                                {
+                                    "semanticId": {
+                                        "keys": [
+                                            {
+                                                "type": "Asset",
+                                                "idType": "Custom",
+                                                "value": "string"
+                                            }
+                                        ]
+                                    },
+                                    "key": "string",
+                                    "value": "string",
+                                    "subjectId": {
+                                        "keys": [
+                                            {
+                                                "type": "Asset",
+                                                "idType": "Custom",
+                                                "value": "string"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "billOfMaterial": [
+                                {
+                                    "keys": [
+                                        {
+                                            "type": "Asset",
+                                            "idType": "Custom",
+                                            "value": "string"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "thumbnail": {
+                                "extensions": [
+                                    {
+                                        "semanticId": {
+                                            "keys": [
+                                                {
+                                                    "type": "Asset",
+                                                    "idType": "Custom",
+                                                    "value": "string"
+                                                }
+                                            ]
+                                        },
+                                        "name": "string",
+                                        "valueType": "anyUri",
+                                        "value": "string",
+                                        "refersTo": {
+                                            "keys": [
+                                                {
+                                                    "type": "Asset",
+                                                    "idType": "Custom",
+                                                    "value": "string"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "idShort": "string",
+                                "category": "string",
+                                "displayName": "string",
+                                "description": [
+                                    {
+                                        "language": "string",
+                                        "text": "string"
+                                    }
+                                ],
+                                "modelType": {
+                                    "name": "Asset"
+                                },
+                                "embeddedDataSpecifications": [
+                                    {
+                                        "dataSpecification": {
+                                            "keys": [
+                                                {
+                                                    "type": "Asset",
+                                                    "idType": "Custom",
+                                                    "value": "string"
+                                                }
+                                            ]
+                                        },
+                                        "dataSpecificationContent": {
+                                            "value": "string",
+                                            "valueId": {
+                                                "keys": [
+                                                    {
+                                                        "type": "Asset",
+                                                        "idType": "Custom",
+                                                        "value": "string"
+                                                    }
+                                                ]
+                                            },
+                                            "valueType": "anyUri",
+                                            "dataType": "DATE",
+                                            "definition": [
+                                                {
+                                                    "language": "string",
+                                                    "text": "string"
+                                                }
+                                            ],
+                                            "preferredName": [
+                                                {
+                                                    "language": "string",
+                                                    "text": "string"
+                                                }
+                                            ],
+                                            "shortName": [
+                                                {
+                                                    "language": "string",
+                                                    "text": "string"
+                                                }
+                                            ],
+                                            "sourceOfDefinition": "string",
+                                            "symbol": "string",
+                                            "unit": "string",
+                                            "unitId": {
+                                                "keys": [
+                                                    {
+                                                        "type": "Asset",
+                                                        "idType": "Custom",
+                                                        "value": "string"
+                                                    }
+                                                ]
+                                            },
+                                            "valueFormat": "string",
+                                            "valueList": {
+                                                "valueReferencePairTypes": [
+                                                    {
+                                                        "value": "string",
+                                                        "valueId": {
+                                                            "keys": [
+                                                                {
+                                                                    "type": "Asset",
+                                                                    "idType": "Custom",
+                                                                    "value": "string"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "valueType": "anyUri"
+                                                    }
+                                                ]
+                                            },
+                                            "levelType": [
+                                                "Min"
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "semanticId": {
+                                    "keys": [
+                                        {
+                                            "type": "Asset",
+                                            "idType": "Custom",
+                                            "value": "string"
+                                        }
+                                    ]
+                                },
+                                "qualifiers": [
+                                    {
+                                        "semanticId": {
+                                            "keys": [
+                                                {
+                                                    "type": "Asset",
+                                                    "idType": "Custom",
+                                                    "value": "string"
+                                                }
+                                            ]
+                                        },
+                                        "value": "string",
+                                        "valueId": {
+                                            "keys": [
+                                                {
+                                                    "type": "Asset",
+                                                    "idType": "Custom",
+                                                    "value": "string"
+                                                }
+                                            ]
+                                        },
+                                        "valueType": "anyUri",
+                                        "type": "string",
+                                        "modelType": {
+                                            "name": "Asset"
+                                        }
+                                    },
+                                    {
+                                        "dependsOn": [
+                                            {
+                                                "keys": [
+                                                    {
+                                                        "type": "Asset",
+                                                        "idType": "Custom",
+                                                        "value": "string"
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "modelType": {
+                                            "name": "Asset"
+                                        }
+                                    }
+                                ],
+                                "kind": "Template",
+                                "value": "string",
+                                "mimeType": "string"
+                            }
+                        },
+                        "endpoints": [
+                            {
+                                "protocol_information": {
+                                    "endpoint_address": "string",
+                                    "endpoint_protocol": "string",
+                                    "endpoint_protocol_version": "string",
+                                    "subprotocol": "string",
+                                    "subprotocol_body": "string",
+                                    "subprotocol_body_encoding": "string"
+                                },
+                                "interface": "string"
+                            }
+                        ],
+                        "submodelDescriptors": [
+                            {
+                                "idShort": "string",
+                                "identification": {
+                                    "id": "string",
+                                    "idType": "Custom"
+                                },
+                                "administration": {
+                                    "version": "string",
+                                    "revision": "string"
+                                },
+                                "description": [
+                                    {
+                                        "language": "string",
+                                        "text": "string"
+                                    }
+                                ],
+                                "semanticId": {
+                                    "keys": [
+                                        {
+                                            "type": "Asset",
+                                            "idType": "Custom",
+                                            "value": "string"
+                                        }
+                                    ]
+                                },
+                                "endpoints": [
+                                    {
+                                        "protocol_information": {
+                                            "endpoint_address": "string",
+                                            "endpoint_protocol": "string",
+                                            "endpoint_protocol_version": "string",
+                                            "subprotocol": "string",
+                                            "subprotocol_body": "string",
+                                            "subprotocol_body_encoding": "string"
+                                        },
+                                        "interface": "restapi"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "messageType": "registerack",
+            "message_Id": "registerack_8",
+            "message": {
+                "frame": {
+                    "semanticProtocol": {
+                        "keys": [
+                            {
+                                "type": "GlobalReference",
+                                "local": "local",
+                                "value": "www.admin-shell.io/interaction/registration",
+                                "idType": "IRI"
+                            }
+                        ]
+                    },
+                    "type": "registerack",
+                    "messageId": "registerack_8",
+                    "sender": {
+                        "identification": {
+                            "id": "VWS_RIC",
+                            "idType": "idShort"
+                        },
+                        "role": {
+                            "name": "RegistryHandler"
+                        }
+                    },
+                    "replyBy": "RESTAPI",
+                    "replyTo": "MQTT",
+                    "conversationId": "Registration_1",
+                    "receiver": {
+                        "identification": {
+                            "id": "string11",
+                            "idType": "URI"
+                        },
+                        "role": {
+                            "name": "Register"
+                        }
+                    }
+                },
+                "interactionElements": [
+                    {
+                        "semanticId": {
+                            "keys": []
+                        },
+                        "identification": {
+                            "idType": "IRI",
+                            "id": "www.company.com/ids/sm/6535_4121_8002_9238"
+                        },
+                        "idShort": "StatusResponse",
+                        "modelType": {
+                            "name": "Submodel"
+                        },
+                        "kind": "Instance",
+                        "submodelElements": [
+                            {
+                                "value": "S",
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Status",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            },
+                            {
+                                "value": 200,
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Code",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            },
+                            {
+                                "value": "The Asset Administration Shell's descriptor registration is successfully renewed",
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Messaage",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "messageType": "register",
+            "message_Id": "Register_1",
+            "message": {
+                "frame": {
+                    "semanticProtocol": {
+                        "keys": [
+                            {
+                                "type": "GlobalReference",
+                                "local": "local",
+                                "value": "www.admin-shell.io/interaction/registration",
+                                "idType": false
+                            }
+                        ]
+                    },
+                    "type": "register",
+                    "messageId": "Register_1",
+                    "sender": {
+                        "identification": {
+                            "id": "string11",
+                            "idType": "URI"
+                        },
+                        "role": {
+                            "name": "Register"
+                        }
+                    },
+                    "replyBy": "MQTT",
+                    "replyTo": "MQTT",
+                    "conversationId": "Registration_1",
+                    "receiver": {
+                        "identification": {
+                            "id": "VWS_RIC",
+                            "idType": "URI"
+                        },
+                        "role": {
+                            "name": "RegistryHandler"
+                        }
+                    }
+                },
+                "interactionElements": [
+                    {
+                        "idShort": "string233334",
+                        "identification": {
+                            "id": "string233331",
+                            "idType": "Custom"
+                        },
+                        "administration": {
+                            "version": "string",
+                            "revision": "string"
+                        },
+                        "description": [
+                            {
+                                "language": "string",
+                                "text": "string"
+                            }
+                        ],
+                        "assetInformation": {
+                            "assetKind": "Type",
+                            "globalAssetId": {
+                                "keys": [
+                                    {
+                                        "type": "Asset",
+                                        "idType": "Custom",
+                                        "value": "string",
+                                        "local": true
+                                    }
+                                ]
+                            },
+                            "specificAssetIds": [
+                                {
+                                    "semanticId": {
+                                        "keys": [
+                                            {
+                                                "type": "Asset",
+                                                "idType": "Custom",
+                                                "value": "string"
+                                            }
+                                        ]
+                                    },
+                                    "key": "string",
+                                    "value": "string",
+                                    "subjectId": {
+                                        "keys": [
+                                            {
+                                                "type": "Asset",
+                                                "idType": "Custom",
+                                                "value": "string"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "billOfMaterial": [
+                                {
+                                    "keys": [
+                                        {
+                                            "type": "Asset",
+                                            "idType": "Custom",
+                                            "value": "string"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "thumbnail": {
+                                "extensions": [
+                                    {
+                                        "semanticId": {
+                                            "keys": [
+                                                {
+                                                    "type": "Asset",
+                                                    "idType": "Custom",
+                                                    "value": "string"
+                                                }
+                                            ]
+                                        },
+                                        "name": "string",
+                                        "valueType": "anyUri",
+                                        "value": "string",
+                                        "refersTo": {
+                                            "keys": [
+                                                {
+                                                    "type": "Asset",
+                                                    "idType": "Custom",
+                                                    "value": "string"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "idShort": "string",
+                                "category": "string",
+                                "displayName": "string",
+                                "description": [
+                                    {
+                                        "language": "string",
+                                        "text": "string"
+                                    }
+                                ],
+                                "modelType": {
+                                    "name": "Asset"
+                                },
+                                "embeddedDataSpecifications": [
+                                    {
+                                        "dataSpecification": {
+                                            "keys": [
+                                                {
+                                                    "type": "Asset",
+                                                    "idType": "Custom",
+                                                    "value": "string"
+                                                }
+                                            ]
+                                        },
+                                        "dataSpecificationContent": {
+                                            "value": "string",
+                                            "valueId": {
+                                                "keys": [
+                                                    {
+                                                        "type": "Asset",
+                                                        "idType": "Custom",
+                                                        "value": "string"
+                                                    }
+                                                ]
+                                            },
+                                            "valueType": "anyUri",
+                                            "dataType": "DATE",
+                                            "definition": [
+                                                {
+                                                    "language": "string",
+                                                    "text": "string"
+                                                }
+                                            ],
+                                            "preferredName": [
+                                                {
+                                                    "language": "string",
+                                                    "text": "string"
+                                                }
+                                            ],
+                                            "shortName": [
+                                                {
+                                                    "language": "string",
+                                                    "text": "string"
+                                                }
+                                            ],
+                                            "sourceOfDefinition": "string",
+                                            "symbol": "string",
+                                            "unit": "string",
+                                            "unitId": {
+                                                "keys": [
+                                                    {
+                                                        "type": "Asset",
+                                                        "idType": "Custom",
+                                                        "value": "string"
+                                                    }
+                                                ]
+                                            },
+                                            "valueFormat": "string",
+                                            "valueList": {
+                                                "valueReferencePairTypes": [
+                                                    {
+                                                        "value": "string",
+                                                        "valueId": {
+                                                            "keys": [
+                                                                {
+                                                                    "type": "Asset",
+                                                                    "idType": "Custom",
+                                                                    "value": "string"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "valueType": "anyUri"
+                                                    }
+                                                ]
+                                            },
+                                            "levelType": [
+                                                "Min"
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "semanticId": {
+                                    "keys": [
+                                        {
+                                            "type": "Asset",
+                                            "idType": "Custom",
+                                            "value": "string"
+                                        }
+                                    ]
+                                },
+                                "qualifiers": [
+                                    {
+                                        "semanticId": {
+                                            "keys": [
+                                                {
+                                                    "type": "Asset",
+                                                    "idType": "Custom",
+                                                    "value": "string"
+                                                }
+                                            ]
+                                        },
+                                        "value": "string",
+                                        "valueId": {
+                                            "keys": [
+                                                {
+                                                    "type": "Asset",
+                                                    "idType": "Custom",
+                                                    "value": "string"
+                                                }
+                                            ]
+                                        },
+                                        "valueType": "anyUri",
+                                        "type": "string",
+                                        "modelType": {
+                                            "name": "Asset"
+                                        }
+                                    },
+                                    {
+                                        "dependsOn": [
+                                            {
+                                                "keys": [
+                                                    {
+                                                        "type": "Asset",
+                                                        "idType": "Custom",
+                                                        "value": "string"
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "modelType": {
+                                            "name": "Asset"
+                                        }
+                                    }
+                                ],
+                                "kind": "Template",
+                                "value": "string",
+                                "mimeType": "string"
+                            }
+                        },
+                        "endpoints": [
+                            {
+                                "protocol_information": {
+                                    "endpoint_address": "string",
+                                    "endpoint_protocol": "string",
+                                    "endpoint_protocol_version": "string",
+                                    "subprotocol": "string",
+                                    "subprotocol_body": "string",
+                                    "subprotocol_body_encoding": "string"
+                                },
+                                "interface": "string"
+                            }
+                        ],
+                        "submodelDescriptors": [
+                            {
+                                "idShort": "string",
+                                "identification": {
+                                    "id": "string",
+                                    "idType": "Custom"
+                                },
+                                "administration": {
+                                    "version": "string",
+                                    "revision": "string"
+                                },
+                                "description": [
+                                    {
+                                        "language": "string",
+                                        "text": "string"
+                                    }
+                                ],
+                                "semanticId": {
+                                    "keys": [
+                                        {
+                                            "type": "Asset",
+                                            "idType": "Custom",
+                                            "value": "string"
+                                        }
+                                    ]
+                                },
+                                "endpoints": [
+                                    {
+                                        "protocol_information": {
+                                            "endpoint_address": "string",
+                                            "endpoint_protocol": "string",
+                                            "endpoint_protocol_version": "string",
+                                            "subprotocol": "string",
+                                            "subprotocol_body": "string",
+                                            "subprotocol_body_encoding": "string"
+                                        },
+                                        "interface": "dddeee"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "messageType": "registerack",
+            "message_Id": "registerack_10",
+            "message": {
+                "frame": {
+                    "semanticProtocol": {
+                        "keys": [
+                            {
+                                "type": "GlobalReference",
+                                "local": "local",
+                                "value": "www.admin-shell.io/interaction/registration",
+                                "idType": "IRI"
+                            }
+                        ]
+                    },
+                    "type": "registerack",
+                    "messageId": "registerack_10",
+                    "sender": {
+                        "identification": {
+                            "id": "VWS_RIC",
+                            "idType": "idShort"
+                        },
+                        "role": {
+                            "name": "RegistryHandler"
+                        }
+                    },
+                    "replyBy": "RESTAPI",
+                    "replyTo": "MQTT",
+                    "conversationId": "Registration_1",
+                    "receiver": {
+                        "identification": {
+                            "id": "string11",
+                            "idType": "URI"
+                        },
+                        "role": {
+                            "name": "Register"
+                        }
+                    }
+                },
+                "interactionElements": [
+                    {
+                        "semanticId": {
+                            "keys": []
+                        },
+                        "identification": {
+                            "idType": "IRI",
+                            "id": "www.company.com/ids/sm/6535_4121_8002_9238"
+                        },
+                        "idShort": "StatusResponse",
+                        "modelType": {
+                            "name": "Submodel"
+                        },
+                        "kind": "Instance",
+                        "submodelElements": [
+                            {
+                                "value": "S",
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Status",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            },
+                            {
+                                "value": 200,
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Code",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            },
+                            {
+                                "value": "The Asset Administration Shell's descriptor registration is successfully renewed",
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Messaage",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "aasDescVWS_RIC": [
+        {
+            "aasId": "www.company.com/ids/aas/7325_4121_8002_3619",
+            "aasetId": "",
+            "idShort": "VWS_RIC",
+            "data": {
+                "idShort": "VWS_RIC",
+                "identification": {
+                    "idType": "IRI",
+                    "id": "www.company.com/ids/aas/7325_4121_8002_3619"
+                },
+                "endpoints": [
+                    {
+                        "protocol_information": {
+                            "endpoint_address": "http://admin-shell-io.com:9021/aas/VWS_RIC",
+                            "endpoint_protocol": "http"
+                        },
+                        "interface": "restapi"
+                    },
+                    {
+                        "protocol_information": {
+                            "endpoint_address": "http://admin-shell-io.com:9021/i40commu",
+                            "endpoint_protocol": "http"
+                        },
+                        "interface": "communication"
+                    }
+                ],
+                "submodelDescriptors": [
+                    {
+                        "idShort": "TechnicalData",
+                        "identification": {
+                            "idType": "IRI",
+                            "id": "www.company.com/ids/sm/1271_8071_1012_0936"
+                        },
+                        "semanticId": {
+                            "keys": [
+                                {
+                                    "type": "Submodel",
+                                    "local": true,
+                                    "value": "TCD",
+                                    "index": 0,
+                                    "idType": "Custom"
+                                }
+                            ]
+                        },
+                        "endpoints": [
+                            {
+                                "protocol_information": {
+                                    "endpoint_address": "http://admin-shell-io.com:9021/aas/VWS_RIC/submodels/TechnicalData",
+                                    "endpoint_protocol": "http"
+                                },
+                                "interface": "restapi"
+                            }
+                        ]
+                    },
+                    {
+                        "idShort": "Nameplate",
+                        "identification": {
+                            "idType": "IRI",
+                            "id": "www.company.com/ids/sm/2215_8071_1012_8314"
+                        },
+                        "semanticId": {
+                            "keys": []
+                        },
+                        "endpoints": [
+                            {
+                                "protocol_information": {
+                                    "endpoint_address": "http://admin-shell-io.com:9021/aas/VWS_RIC/submodels/Nameplate",
+                                    "endpoint_protocol": "http"
+                                },
+                                "interface": "restapi"
+                            }
+                        ]
+                    },
+                    {
+                        "idShort": "Skills",
+                        "identification": {
+                            "idType": "IRI",
+                            "id": "www.company.com/ids/sm/1040_9071_1012_4944"
+                        },
+                        "semanticId": {
+                            "keys": []
+                        },
+                        "endpoints": [
+                            {
+                                "protocol_information": {
+                                    "endpoint_address": "http://admin-shell-io.com:9021/aas/VWS_RIC/submodels/Skills",
+                                    "endpoint_protocol": "http"
+                                },
+                                "interface": "restapi"
+                            }
+                        ]
+                    },
+                    {
+                        "idShort": "AssetSpecificProperties",
+                        "identification": {
+                            "idType": "IRI",
+                            "id": "www.company.com/ids/sm/3041_9071_1012_5417"
+                        },
+                        "semanticId": {
+                            "keys": []
+                        },
+                        "endpoints": [
+                            {
+                                "protocol_information": {
+                                    "endpoint_address": "http://admin-shell-io.com:9021/aas/VWS_RIC/submodels/AssetSpecificProperties",
+                                    "endpoint_protocol": "http"
+                                },
+                                "interface": "restapi"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "aasId": "string233331",
+            "aasetId": "",
+            "idShort": "string233334",
+            "data": {
+                "idShort": "string233334",
+                "identification": {
+                    "id": "string233331",
+                    "idType": "Custom"
+                },
+                "administration": {
+                    "version": "string",
+                    "revision": "string"
+                },
+                "description": [
+                    {
+                        "language": "string",
+                        "text": "string"
+                    }
+                ],
+                "assetInformation": {
+                    "assetKind": "Type",
+                    "globalAssetId": {
+                        "keys": [
+                            {
+                                "type": "Asset",
+                                "idType": "Custom",
+                                "value": "string",
+                                "local": true
+                            }
+                        ]
+                    },
+                    "specificAssetIds": [
+                        {
+                            "semanticId": {
+                                "keys": [
+                                    {
+                                        "type": "Asset",
+                                        "idType": "Custom",
+                                        "value": "string"
+                                    }
+                                ]
+                            },
+                            "key": "string",
+                            "value": "string",
+                            "subjectId": {
+                                "keys": [
+                                    {
+                                        "type": "Asset",
+                                        "idType": "Custom",
+                                        "value": "string"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "billOfMaterial": [
+                        {
+                            "keys": [
+                                {
+                                    "type": "Asset",
+                                    "idType": "Custom",
+                                    "value": "string"
+                                }
+                            ]
+                        }
+                    ],
+                    "thumbnail": {
+                        "extensions": [
+                            {
+                                "semanticId": {
+                                    "keys": [
+                                        {
+                                            "type": "Asset",
+                                            "idType": "Custom",
+                                            "value": "string"
+                                        }
+                                    ]
+                                },
+                                "name": "string",
+                                "valueType": "anyUri",
+                                "value": "string",
+                                "refersTo": {
+                                    "keys": [
+                                        {
+                                            "type": "Asset",
+                                            "idType": "Custom",
+                                            "value": "string"
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "idShort": "string",
+                        "category": "string",
+                        "displayName": "string",
+                        "description": [
+                            {
+                                "language": "string",
+                                "text": "string"
+                            }
+                        ],
+                        "modelType": {
+                            "name": "Asset"
+                        },
+                        "embeddedDataSpecifications": [
+                            {
+                                "dataSpecification": {
+                                    "keys": [
+                                        {
+                                            "type": "Asset",
+                                            "idType": "Custom",
+                                            "value": "string"
+                                        }
+                                    ]
+                                },
+                                "dataSpecificationContent": {
+                                    "value": "string",
+                                    "valueId": {
+                                        "keys": [
+                                            {
+                                                "type": "Asset",
+                                                "idType": "Custom",
+                                                "value": "string"
+                                            }
+                                        ]
+                                    },
+                                    "valueType": "anyUri",
+                                    "dataType": "DATE",
+                                    "definition": [
+                                        {
+                                            "language": "string",
+                                            "text": "string"
+                                        }
+                                    ],
+                                    "preferredName": [
+                                        {
+                                            "language": "string",
+                                            "text": "string"
+                                        }
+                                    ],
+                                    "shortName": [
+                                        {
+                                            "language": "string",
+                                            "text": "string"
+                                        }
+                                    ],
+                                    "sourceOfDefinition": "string",
+                                    "symbol": "string",
+                                    "unit": "string",
+                                    "unitId": {
+                                        "keys": [
+                                            {
+                                                "type": "Asset",
+                                                "idType": "Custom",
+                                                "value": "string"
+                                            }
+                                        ]
+                                    },
+                                    "valueFormat": "string",
+                                    "valueList": {
+                                        "valueReferencePairTypes": [
+                                            {
+                                                "value": "string",
+                                                "valueId": {
+                                                    "keys": [
+                                                        {
+                                                            "type": "Asset",
+                                                            "idType": "Custom",
+                                                            "value": "string"
+                                                        }
+                                                    ]
+                                                },
+                                                "valueType": "anyUri"
+                                            }
+                                        ]
+                                    },
+                                    "levelType": [
+                                        "Min"
+                                    ]
+                                }
+                            }
+                        ],
+                        "semanticId": {
+                            "keys": [
+                                {
+                                    "type": "Asset",
+                                    "idType": "Custom",
+                                    "value": "string"
+                                }
+                            ]
+                        },
+                        "qualifiers": [
+                            {
+                                "semanticId": {
+                                    "keys": [
+                                        {
+                                            "type": "Asset",
+                                            "idType": "Custom",
+                                            "value": "string"
+                                        }
+                                    ]
+                                },
+                                "value": "string",
+                                "valueId": {
+                                    "keys": [
+                                        {
+                                            "type": "Asset",
+                                            "idType": "Custom",
+                                            "value": "string"
+                                        }
+                                    ]
+                                },
+                                "valueType": "anyUri",
+                                "type": "string",
+                                "modelType": {
+                                    "name": "Asset"
+                                }
+                            },
+                            {
+                                "dependsOn": [
+                                    {
+                                        "keys": [
+                                            {
+                                                "type": "Asset",
+                                                "idType": "Custom",
+                                                "value": "string"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "modelType": {
+                                    "name": "Asset"
+                                }
+                            }
+                        ],
+                        "kind": "Template",
+                        "value": "string",
+                        "mimeType": "string"
+                    }
+                },
+                "endpoints": [
+                    {
+                        "protocol_information": {
+                            "endpoint_address": "string",
+                            "endpoint_protocol": "string",
+                            "endpoint_protocol_version": "string",
+                            "subprotocol": "string",
+                            "subprotocol_body": "string",
+                            "subprotocol_body_encoding": "string"
+                        },
+                        "interface": "string"
+                    }
+                ],
+                "submodelDescriptors": [
+                    {
+                        "idShort": "string",
+                        "identification": {
+                            "id": "string",
+                            "idType": "Custom"
+                        },
+                        "administration": {
+                            "version": "string",
+                            "revision": "string"
+                        },
+                        "description": [
+                            {
+                                "language": "string",
+                                "text": "string"
+                            }
+                        ],
+                        "semanticId": {
+                            "keys": [
+                                {
+                                    "type": "Asset",
+                                    "idType": "Custom",
+                                    "value": "string"
+                                }
+                            ]
+                        },
+                        "endpoints": [
+                            {
+                                "protocol_information": {
+                                    "endpoint_address": "string",
+                                    "endpoint_protocol": "string",
+                                    "endpoint_protocol_version": "string",
+                                    "subprotocol": "string",
+                                    "subprotocol_body": "string",
+                                    "subprotocol_body_encoding": "string"
+                                },
+                                "interface": "dddeee"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "aasDescEndPointVWS_RIC": [
+        {
+            "aasId": "www.company.com/ids/aas/7325_4121_8002_3619",
+            "aasetId": "",
+            "idShort": "VWS_RIC",
+            "endpoint": "http://admin-shell-io.com:9021/i40commu",
+            "ASYNC": "N"
+        },
+        {
+            "aasId": "string233331",
+            "aasetId": "",
+            "idShort": "string233334",
+            "endpoint": "string233331",
+            "ASYNC": "Y"
+        },
+        {
+            "aasId": "string233331",
+            "aasetId": "",
+            "idShort": "string233334",
+            "endpoint": "string233331",
+            "ASYNC": "Y"
+        },
+        {
+            "aasId": "string233331",
+            "aasetId": "",
+            "idShort": "string233334",
+            "endpoint": "string233331",
+            "ASYNC": "Y"
+        },
+        {
+            "aasId": "string233331",
+            "aasetId": "",
+            "idShort": "string233334",
+            "endpoint": "string233331",
+            "ASYNC": "Y"
+        },
+        {
+            "aasId": "string233331",
+            "aasetId": "",
+            "idShort": "string233334",
+            "endpoint": "string233331",
+            "ASYNC": "Y"
+        }
+    ],
+    "submodelDesccriptorsVWS_RIC": []
+}

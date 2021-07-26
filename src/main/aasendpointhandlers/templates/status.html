@@ -1,0 +1,24 @@
+<html>
+<head>
+<title> VWS Status Report</title>
+<script>
+	function update()
+	{
+		var connectstatusDict = JSON.parse('{{ connectstatusDict | tojson | safe}}');
+		documentLoad(connectstatusDict)
+	}
+	
+</script>
+<script  type="text/javascript" src="http://liabroker.ddns.net:9023/js1/script.js" ></script>
+</head>
+	<body  onload="update()">
+		<h5 id = "headerElem"></h5>
+		<table border=2px cellpadding="4">
+			<thead style = "background-color:lightgrey;">
+				<tr><th>ServerName</th><th>LastConnect</th></tr></thead>
+			<tbody id = "entriesList">
+				
+			</tbody>
+		</table>
+	</body>
+</html>

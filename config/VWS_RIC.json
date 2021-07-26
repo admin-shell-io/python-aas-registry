@@ -1,0 +1,996 @@
+{
+  "assetAdministrationShells": [
+    {
+      "asset": {
+        "keys": []
+      },
+      "submodels": [
+        {
+          "keys": [
+            {
+              "type": "Submodel",
+              "local": true,
+              "value": "www.company.com/ids/sm/2215_8071_1012_8314",
+              "index": 0,
+              "idType": "IRI"
+            }
+          ]
+        },
+        {
+          "keys": [
+            {
+              "type": "Submodel",
+              "local": true,
+              "value": "www.company.com/ids/sm/1271_8071_1012_0936",
+              "index": 0,
+              "idType": "IRI"
+            }
+          ]
+        },
+        {
+          "keys": [
+            {
+              "type": "Submodel",
+              "local": true,
+              "value": "www.company.com/ids/sm/1040_9071_1012_4944",
+              "index": 0,
+              "idType": "IRI"
+            }
+          ]
+        },
+        {
+          "keys": [
+            {
+              "type": "Submodel",
+              "local": true,
+              "value": "www.company.com/ids/sm/3041_9071_1012_5417",
+              "index": 0,
+              "idType": "IRI"
+            }
+          ]
+        }
+      ],
+      "identification": {
+        "idType": "IRI",
+        "id": "www.company.com/ids/aas/7325_4121_8002_3619"
+      },
+      "idShort": "VWS_RIC",
+      "modelType": {
+        "name": "AssetAdministrationShell"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "identification": {
+        "idType": "IRI",
+        "id": "www.company.com/ids/asset/1130_0101_8002_0001"
+      },
+      "idShort": "RegistrInterface",
+      "modelType": {
+        "name": "Asset"
+      },
+      "kind": "Instance"
+    }
+  ],
+  "submodels": [
+    {
+      "semanticId": {
+        "keys": [
+          {
+            "type": "Submodel",
+            "local": true,
+            "value": "TCD",
+            "index": 0,
+            "idType": "Custom"
+          }
+        ]
+      },
+      "identification": {
+        "idType": "IRI",
+        "id": "www.company.com/ids/sm/1271_8071_1012_0936"
+      },
+      "idShort": "TechnicalData",
+      "modelType": {
+        "name": "Submodel"
+      },
+      "kind": "Instance",
+      "submodelElements": [
+        {
+          "ordered": false,
+          "allowDuplicates": false,
+          "semanticId": {
+            "keys": []
+          },
+          "idShort": "TechnicalProperties",
+          "modelType": {
+            "name": "SubmodelElementCollection"
+          },
+          "value": [
+            {
+              "value": "AdminShell",
+              "semanticId": {
+                "keys": []
+              },
+              "idShort": "host",
+              "modelType": {
+                "name": "Property"
+              },
+              "valueType": {
+                "dataObjectType": {
+                  "name": ""
+                }
+              },
+              "kind": "Instance"
+            },
+            {
+              "value": "Andreas",
+              "semanticId": {
+                "keys": []
+              },
+              "idShort": "maintainer",
+              "modelType": {
+                "name": "Property"
+              },
+              "valueType": {
+                "dataObjectType": {
+                  "name": ""
+                }
+              },
+              "kind": "Instance"
+            }
+          ],
+          "kind": "Instance"
+        }
+      ]
+    },
+    {
+      "semanticId": {
+        "keys": []
+      },
+      "identification": {
+        "idType": "IRI",
+        "id": "www.company.com/ids/sm/2215_8071_1012_8314"
+      },
+      "idShort": "Nameplate",
+      "modelType": {
+        "name": "Submodel"
+      },
+      "kind": "Instance",
+      "submodelElements": [
+        {
+          "value": "LIA OVGU",
+          "semanticId": {
+            "keys": []
+          },
+          "idShort": "ManufacturerName",
+          "modelType": {
+            "name": "Property"
+          },
+          "valueType": {
+            "dataObjectType": {
+              "name": ""
+            }
+          },
+          "kind": "Instance"
+        },
+        {
+          "value": "Verwaltungschalle Vernetzt Registry Infrastructure Component",
+          "semanticId": {
+            "keys": []
+          },
+          "idShort": "ManufacturerProduct",
+          "modelType": {
+            "name": "Property"
+          },
+          "valueType": {
+            "dataObjectType": {
+              "name": ""
+            }
+          },
+          "kind": "Instance"
+        },
+        {
+          "value": "LIA OVGU, Magdeburg, 39106, Germany",
+          "semanticId": {
+            "keys": []
+          },
+          "idShort": "ManufacturerAddress",
+          "modelType": {
+            "name": "Property"
+          },
+          "valueType": {
+            "dataObjectType": {
+              "name": ""
+            }
+          },
+          "kind": "Instance"
+        }
+      ]
+    },
+    {
+      "semanticId": {
+        "keys": []
+      },
+      "identification": {
+        "idType": "IRI",
+        "id": "www.company.com/ids/sm/1040_9071_1012_4944"
+      },
+      "idShort": "Skills",
+      "modelType": {
+        "name": "Submodel"
+      },
+      "kind": "Instance",
+      "submodelElements": [
+        {
+          "ordered": false,
+          "allowDuplicates": false,
+          "semanticId": {
+            "keys": []
+          },
+          "idShort": "RegistryHandler",
+          "modelType": {
+            "name": "SubmodelElementCollection"
+          },
+          "value": [
+            {
+              "value": "RegistryHandler",
+              "semanticId": {
+                "keys": []
+              },
+              "idShort": "SkillName",
+              "modelType": {
+                "name": "Property"
+              },
+              "valueType": {
+                "dataObjectType": {
+                  "name": ""
+                }
+              },
+              "kind": "Instance"
+            },
+            {
+              "value": "Registry Handling Service",
+              "semanticId": {
+                "keys": []
+              },
+              "idShort": "SkillService",
+              "modelType": {
+                "name": "Property"
+              },
+              "valueType": {
+                "dataObjectType": {
+                  "name": ""
+                }
+              },
+              "kind": "Instance"
+            },
+            {
+              "value": "Start",
+              "semanticId": {
+                "keys": []
+              },
+              "idShort": "InitialState",
+              "modelType": {
+                "name": "Property"
+              },
+              "valueType": {
+                "dataObjectType": {
+                  "name": ""
+                }
+              },
+              "kind": "Instance"
+            },
+            {
+              "value": "Y",
+              "semanticId": {
+                "keys": []
+              },
+              "idShort": "enabled",
+              "modelType": {
+                "name": "Property"
+              },
+              "valueType": {
+                "dataObjectType": {
+                  "name": ""
+                }
+              },
+              "kind": "Instance"
+            },
+            {
+              "value": "www.admin-shell.io/interaction/registration",
+              "semanticId": {
+                "keys": []
+              },
+              "idShort": "semanticProtocol",
+              "modelType": {
+                "name": "Property"
+              },
+              "valueType": {
+                "dataObjectType": {
+                  "name": ""
+                }
+              },
+              "kind": "Instance"
+            },
+            {
+              "ordered": false,
+              "allowDuplicates": false,
+              "semanticId": {
+                "keys": []
+              },
+              "idShort": "Transition1",
+              "modelType": {
+                "name": "SubmodelElementCollection"
+              },
+              "value": [
+                {
+                  "value": "Start",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Source",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                },
+                {
+                  "value": "WaitforRegisterMessage",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Target",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                },
+                {
+                  "value": "NA",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Input",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                },
+                {
+                  "value": "-",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Condition",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                },
+                {
+                  "value": "NA",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Output",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                }
+              ],
+              "kind": "Instance"
+            },
+            {
+              "ordered": false,
+              "allowDuplicates": false,
+              "semanticId": {
+                "keys": []
+              },
+              "idShort": "Transition2",
+              "modelType": {
+                "name": "SubmodelElementCollection"
+              },
+              "value": [
+                {
+                  "value": "WaitforRegisterMessage",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Source",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                },
+                {
+                  "value": "ValidateRegisterMessage",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Target",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                },
+                {
+                  "value": "register",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Input",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                },
+                {
+                  "value": "-",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Condition",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                },
+                {
+                  "value": "NA",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Output",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                }
+              ],
+              "kind": "Instance"
+            },
+            {
+              "ordered": false,
+              "allowDuplicates": false,
+              "semanticId": {
+                "keys": []
+              },
+              "idShort": "Transition3",
+              "modelType": {
+                "name": "SubmodelElementCollection"
+              },
+              "value": [
+                {
+                  "value": "ValidateRegisterMessage",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Source",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                },
+                {
+                  "value": "sendMalformedError",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Target",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                },
+                {
+                  "value": "NA",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Input",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                },
+                {
+                  "value": "-",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Condition",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                },
+                {
+                  "value": "NA",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Output",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                }
+              ],
+              "kind": "Instance"
+            },
+            {
+              "ordered": false,
+              "allowDuplicates": false,
+              "semanticId": {
+                "keys": []
+              },
+              "idShort": "Transition4",
+              "modelType": {
+                "name": "SubmodelElementCollection"
+              },
+              "value": [
+                {
+                  "value": "sendMalformedError",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Source",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                },
+                {
+                  "value": "WaitforRegisterMessage",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Target",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                },
+                {
+                  "value": "NA",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Input",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                },
+                {
+                  "value": "-",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Condition",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                },
+                {
+                  "value": "registerack",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Output",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                }
+              ],
+              "kind": "Instance"
+            },
+            {
+              "ordered": false,
+              "allowDuplicates": false,
+              "semanticId": {
+                "keys": []
+              },
+              "idShort": "Transition5",
+              "modelType": {
+                "name": "SubmodelElementCollection"
+              },
+              "value": [
+                {
+                  "value": "ValidateRegisterMessage",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Source",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                },
+                {
+                  "value": "saveDescriptorDetails",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Target",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                },
+                {
+                  "value": "NA",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Input",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                },
+                {
+                  "value": "-",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Condition",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                },
+                {
+                  "value": "NA",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Output",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                }
+              ],
+              "kind": "Instance"
+            },
+            {
+              "ordered": false,
+              "allowDuplicates": false,
+              "semanticId": {
+                "keys": []
+              },
+              "idShort": "Transition6",
+              "modelType": {
+                "name": "SubmodelElementCollection"
+              },
+              "value": [
+                {
+                  "value": "saveDescriptorDetails",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Source",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                },
+                {
+                  "value": "sendRegisterAck",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Target",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                },
+                {
+                  "value": "NA",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Input",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                },
+                {
+                  "value": "-",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Condition",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                },
+                {
+                  "value": "NA",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Output",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                }
+              ],
+              "kind": "Instance"
+            },
+            {
+              "ordered": false,
+              "allowDuplicates": false,
+              "semanticId": {
+                "keys": []
+              },
+              "idShort": "Transition7",
+              "modelType": {
+                "name": "SubmodelElementCollection"
+              },
+              "value": [
+                {
+                  "value": "sendRegisterAck",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Source",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                },
+                {
+                  "value": "WaitforRegisterMessage",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Target",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                },
+                {
+                  "value": "NA",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Input",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                },
+                {
+                  "value": "-",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Condition",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                },
+                {
+                  "value": "registerack",
+                  "semanticId": {
+                    "keys": []
+                  },
+                  "idShort": "Output",
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "valueType": {
+                    "dataObjectType": {
+                      "name": ""
+                    }
+                  },
+                  "kind": "Instance"
+                }
+              ],
+              "kind": "Instance"
+            }
+          ],
+          "kind": "Instance"
+        }
+      ]
+    },
+    {
+      "semanticId": {
+        "keys": []
+      },
+      "identification": {
+        "idType": "IRI",
+        "id": "www.company.com/ids/sm/3041_9071_1012_5417"
+      },
+      "idShort": "AssetSpecificProperties",
+      "modelType": {
+        "name": "Submodel"
+      },
+      "kind": "Instance",
+      "submodelElements": []
+    }
+  ],
+  "conceptDescriptions": []
+}
