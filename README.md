@@ -126,7 +126,7 @@ The MQTT client component of the RIC subscibes to the topic **VWS_RIC**. The reg
 The python project maintains a logger, all the important aspects regarding its functionality  are captured with logger. The entire log information is stored into .LOG files under the src &gt; main &gt; logs folder, in case of docker under logs (the log files will also be mapped to the host system, related mapping information is provided in the docker-compose.yml file).
 
 ## Issues
-If you want to request new features or report bug [submit a new issue](https://github.com/harishpakala/VWS_AAS_Registry/issues/new)
+If you want to request new features or report bug [submit a new issue](https://github.com/admin-shell-io/python-aas-registry/issues/new)
 
 ## License
 
