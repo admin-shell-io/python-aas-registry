@@ -1,6 +1,6 @@
-Copyright (c) 2020-2021 Otto-von-Guericke-Universität Magdeburg (OVGU) - LIA working group, author: Harish Kumar Pakala.
+Copyright (c) 2021-2022 Otto-von-Guericke-Universität Magdeburg, Lehrstuhl Integrierte Automation <harish.pakala@ovgu.de>, author: Harish Kumar Pakala
 
-With respect to VWS_AAS_Registry
+The Python AAS Registry is licensed under the Apache License 2.0 (Apache-2.0, see below).
 =====================================                                 
 
                                 Apache License
@@ -204,3 +204,19 @@ With respect to VWS_AAS_Registry
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+
+--------------------------------------------------------------------------------------------------------------
+
+   With respect to packages used in the Python AAS Registry
+   
+   https://github.com/agronholm/apscheduler/blob/master/LICENSE.txt
+   https://github.com/gijzelaerr/python-snap7/blob/master/LICENSE
+   https://github.com/Julian/jsonschema/blob/main/COPYING
+   https://github.com/chrysn/aiocoap/blob/master/LICENSE
+   https://github.com/beerfactory/hbmqtt/blob/master/license.txt
+   https://github.com/pallets/flask/blob/main/LICENSE.rst
+   https://github.com/pallets/werkzeug/blob/main/LICENSE.rst
+   https://github.com/flask-restful/flask-restful/blob/master/LICENSE
+   https://github.com/theskumar/python-dotenv/blob/master/LICENSE
+   https://github.com/psf/requests/blob/master/LICENSE
+
