@@ -35,7 +35,7 @@ class AASEndPointHandler(AASEndPointHandler):
     @asyncio.coroutine
     def subscribe(self,channel) -> None:
         self.client = hbmqtt.client.MQTTClient()
-        yield from self.client.connect('mqtt://localhost:1883/')#connect("mqtt://"+(self.ipaddressComdrv)+":"+ (self.portComdrv)+"/")
+        yield from self.client.connect("mqtt://"+(self.ipaddressComdrv)+":"+ (self.portComdrv)+"/")
         print("Connected")
         yield from self.client.subscribe([
             (channel, hbmqtt.mqtt.constants.QOS_1)
@@ -92,8 +92,14 @@ class AASEndPointHandler(AASEndPointHandler):
 
     @asyncio.coroutine
     def dispatch(self,publishTopic,send_Message):
-        yield from self.client.publish(publishTopic, str(json.dumps(send_Message)).encode("utf-8"))         
-
+        dispatchClient = hbmqtt.client.MQTTClient()
+        yield from dispatchClient.connect("mqtt://"+(self.ipaddressComdrv)+":"+ (self.portComdrv)+"/")
+        yield from (dispatchClient.publish(publishTopic, str(json.dumps(send_Message)).encode("utf-8")))
+        yield from dispatchClient.disconnect()      
+	
+    async def disp(self,publishTopic,send_Message):
+        await self.dispatch(publishTopic,send_Message)  
+	
     def dispatchMessage(self, send_Message): 
         publishTopic = self.pyAAS.BroadCastMQTTTopic
         try:
@@ -104,10 +110,7 @@ class AASEndPointHandler(AASEndPointHandler):
             if (publishTopic == self.pyAAS.AASID):
                 self.msgHandler.putIbMessage(send_Message)
             else:
-                loop = asyncio.new_event_loop()
-                asyncio.set_event_loop(loop)
-                asyncio.Task(self.dispatch(publishTopic,send_Message))
-                asyncio.get_event_loop().run_forever()                
+                asyncio.run(self.disp(publishTopic,send_Message))
         except Exception as e:
             self.pyAAS.serviceLogger.info("Unable to publish the message to the mqtt server", str(e))
             

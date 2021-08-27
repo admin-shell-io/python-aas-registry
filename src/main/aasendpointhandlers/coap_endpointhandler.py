@@ -36,7 +36,7 @@ class AASEndPointHandler(AASEndPointHandler):
         
     def configure(self):
         
-        self.ipaddressComdrv = "127.0.0.1"#'0.0.0.0'
+        self.ipaddressComdrv = '0.0.0.0'
         self.portComdrv = self.pyAAS.lia_env_variable["LIA_AAS_COAP_PORT_INTERN"]
         self.root = resource.Site()
 
