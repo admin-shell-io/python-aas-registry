@@ -44,8 +44,6 @@ Based on the guidelines of VDI/VDE 2193 [Part 1](https://www.vdi.de/richtlinien/
 | receiver/identification/id     	| VWS_RIC                                         	| Global unique ID                                	| VWS_RIC                                         	| Global unique ID                                	|
 | receiver/identification/idType 	| idShort                                         	| Set by the AAS                                  	| idShort                                         	| Set by the AAS                                  	|
 | receiver/role/name             	| RegistryHandler                                 	| Register                                        	| HeartBeatHandler                                	| AASHeartBeatHandler                             	|
-| replyBy                        	| RESTAPI / MQTT / COAP                           	| RESTAPI / MQTT / COAP                           	| RESTAPI / MQTT / COAP                           	| RESTAPI / MQTT / COAP                           	|
-| replyTo                        	| RESTAPI / MQTT / COAP                           	| RESTAPI / MQTT / COAP                           	| RESTAPI / MQTT / COAP                           	| RESTAPI / MQTT / COAP                           	|
 | conversationId                 	| Set by the AAS                                  	| Same as register packet                         	| Set by the AAS                                  	| Same as in the HeartBeat                        	|
 | interactionElements            	| AASiD part 2   Descriptor                       	| Empty List                                      	| Empty List                                      	| Empty List / Status Submodel                    	|
 
