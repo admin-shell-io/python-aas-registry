@@ -128,7 +128,7 @@ If you want to request new features or report bug [submit a new issue](https://g
 
 ## License
 
-VWS_AAS_Registry License under Apache 2.0, the complete license text including the copy rights is included under [License.txt](https://github.com/admin-shell-io/python-aas-registry/blob/main/LICENSE.txt)
+Python AAS Registry is Licensed under Apache 2.0, the complete license text including the copy rights is included under [License.txt](https://github.com/admin-shell-io/python-aas-registry/blob/main/LICENSE.txt)
 
 * APScheduler,python-snap7,jsonschema,aiocoap,hbmqtt MIT License <br />
 * Flask,werkzeug, Flask-RESTful, python-dotenv BSD-3-Clause <br />
