@@ -110,7 +110,7 @@ The table 2 provides list of rest servises the RIC as a registry provides, it al
                     Table 3 Submodel Registry rest services provided by the RIC
 
 ## RIC ALP Interface Access
-The MQTT client component of the RIC subscibes to the topic **VWS_RIC**. The registration, heartbeat and all other I4.0 messages that are to transported to another AAS should be posted to this topic. Similarly the I4.0 messages should be posted to the appropriate endpoint listed in the table 4.
+The MQTT client component of the RIC subscibes to the topic *AASpillarbox**. The registration, heartbeat and all other I4.0 messages that are to transported to another AAS should be posted to this topic. Similarly the I4.0 messages should be posted to the appropriate endpoint listed in the table 4.
 
 | HTTP URI                          	| Type 	| Description                                           	|
 |-----------------------------------	|------	|-------------------------------------------------------	|
