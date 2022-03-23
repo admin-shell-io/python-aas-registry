@@ -4,6 +4,7 @@ Author: Harish Kumar Pakala
 This source code is licensed under the Apache License 2.0 (see LICENSE.txt).
 This source code may use other Open Source software components (see LICENSE.txt).
 '''
+
 import json
 import os.path
 
@@ -63,7 +64,7 @@ class ConfigParser(object):
             _asyncType = entry["ASYNC"]
             URI = entry["endpoint"]
             if _asyncType == "Y":
-                self.pyAAS.mqttGateWayEntries.add(URI)
+                self.pyAAS.mqttGateWayEntries.add(entry["aasId"])
             else:
                 if URI.split(":")[0] == "http" or URI.split(":")[0] == "https": 
                     self.pyAAS.httpEndPointsDict[entry["aasId"]] = URI
@@ -75,6 +76,7 @@ class ConfigParser(object):
         if (AASDataDB["status"] == 200 and type(AASDataDB["message"][0]) !=str):
             self.jsonData = AASDataDB["message"][0]
             self.updateEndPointDict()
+            print(self.pyAAS.mqttGateWayEntries)
             return True
             
         elif (AASDataDB["message"][0] == "No Asset Administration Shell with passed id found"):

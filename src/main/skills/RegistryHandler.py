@@ -4,6 +4,7 @@ Author: Harish Kumar Pakala
 This source code is licensed under the Apache License 2.0 (see LICENSE.txt).
 This source code may use other Open Source software components (see LICENSE.txt).
 '''
+
 import logging
 import sys
 import time
@@ -149,9 +150,6 @@ except ImportError:
         "SenderAASID" : self.baseClass.AASID,
         "SenderRolename" : "RegistryHandler",
         "conversationId" : "AASNetworkedBidding",
-        "replyBy" :  "",   # "The communication protocol that the AAS needs to use while sending message to other AAS."
-        "replyTo" : "",    # "The communication protocol that the receipient AAS should use for reply"   
-                           # In case the message needs to be routed to another skill please "Internal"
         "ReceiverAASID" :  receiverId,
         "ReceiverRolename" : receiverRole,
         "params" : {},
@@ -345,8 +343,6 @@ class sendMalformedError(object):
                                     "SenderIdType" : "idShort",
                                     "SenderRolename" : self.baseClass.skillName,
                                     "conversationId" : message["frame"]["conversationId"],
-                                    "replyBy" :  "RESTAPI",
-                                    "replyTo" :  message["frame"]["replyBy"],
                                     "ReceiverAASID" :  receiverId,
                                     "ReceiverIdType" : receiverIdType,
                                     "ReceiverRolename" : receiverRole
@@ -496,8 +492,6 @@ class sendRegisterAck(object):
                                     "SenderIdType" : "idShort",
                                     "SenderRolename" : self.baseClass.skillName,
                                     "conversationId" : message["frame"]["conversationId"],
-                                    "replyBy" :  "RESTAPI",
-                                    "replyTo" :  message["frame"]["replyBy"],
                                     "ReceiverAASID" :  receiverId,
                                     "ReceiverIdType" : receiverIdType,
                                     "ReceiverRolename" : receiverRole
@@ -664,8 +658,6 @@ class RegistryHandler(object):
                                 "SenderIdType" : "IRI",
                                 "SenderRolename" : self.skillName,
                                 "conversationId" : "AASNetworkedBidding",
-                                "replyBy" :  "",
-                                "replyTo" :"",
                                 "ReceiverAASID" :  self.pyAAS.AASID + "/"+self.skillName,
                                 "ReceiverIdType" : "IRI",
                                 "ReceiverRolename" : "SkillStatusChange"

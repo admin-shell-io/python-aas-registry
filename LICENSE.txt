@@ -219,4 +219,5 @@ The Python AAS Registry is licensed under the Apache License 2.0 (Apache-2.0, se
    https://github.com/flask-restful/flask-restful/blob/master/LICENSE
    https://github.com/theskumar/python-dotenv/blob/master/LICENSE
    https://github.com/psf/requests/blob/master/LICENSE
+   https://github.com/eclipse/paho.mqtt.python/blob/master/LICENSE.txt
 

@@ -5,7 +5,6 @@ This source code is licensed under the Apache License 2.0 (see LICENSE.txt).
 This source code may use other Open Source software components (see LICENSE.txt).
 '''
 
-
 class Generic(object):
     def __init__(self):
         pass
@@ -25,7 +24,6 @@ class Generic(object):
                     "SenderRolename":"restAPI",
                     "ReceiverAASID":"",
                     "rolename":"",
-                    "replyBy":"NA",
                     "conversationId":"AASNetworkedBidding",
                     "semanticProtocol":"www.admin-shell.io/interaction/restapi"
                 }
@@ -54,8 +52,6 @@ class Generic(object):
                             "name": I40Frame["SenderRolename"]
                             }
                         },
-                    "replyBy": I40Frame["replyBy"],
-                    "replyTo": I40Frame["replyTo"],
                     "conversationId": I40Frame["conversationId"]
                 }
         

@@ -4,6 +4,7 @@ Author: Harish Kumar Pakala
 This source code is licensed under the Apache License 2.0 (see LICENSE.txt).
 This source code may use other Open Source software components (see LICENSE.txt).
 '''
+
 import json
 import requests
 import  threading
@@ -149,80 +150,98 @@ class MessageHandler(object):
             for skillName in self.skillName.keys():
                 return self.assigntoSkill(skillName).receiveMessage(jMessage)
 
+    
+    def fetchDataAdaptor(self,ob_Message):
+        try:
+            receiverId = ob_Message["frame"]["receiver"]["identification"]["id"]
+            if receiverId in self.pyAAS.mqttGateWayEntries:
+                return "MQTT"
+            if receiverId in self.pyAAS.httpEndPointsDict:
+                return "RESTAPI"
+            elif receiverId in self.pyAAS.coapEndPointsDict:
+                return "COAP"
+            else :
+                return "Empty"
+        except Exception as E:
+            return "Empty"
+
     def sendOutBoundMessage(self, ob_Message):
         try:
-            adaptorType = ob_Message["frame"]["replyTo"]
-            self.AASendPointHandlerObjects[adaptorType].dispatchMessage(ob_Message)
+            adaptorType = self.fetchDataAdaptor(ob_Message)
+            if (adaptorType != "Empty"):
+                self.AASendPointHandlerObjects[adaptorType].dispatchMessage(ob_Message)
         except Exception as E:
             self.putIbMessage(ob_Message)
 
     def __sendTransportMessage_(self,oT_Message):
-        targetAdaptor = oT_Message["frame"]["replyTo"]
-        if targetAdaptor == "RESTAPI" :
-            try :
-                targetResponse = self.AASendPointHandlerObjects["RESTAPI"].dispatchMessage(oT_Message)
-                if targetResponse:
-                    pass
-                else:
+        targetAdaptor = self.fetchDataAdaptor(oT_Message)
+        if (targetAdaptor != "Empty"):
+            if targetAdaptor == "RESTAPI" :
+                try :
+                    targetResponse = self.AASendPointHandlerObjects["RESTAPI"].dispatchMessage(oT_Message)
+                    if targetResponse:
+                        pass
+                    else:
+                        time.sleep(2)
+                        self.putTransportP1Message(oT_Message)
+                except Exception as E:
                     time.sleep(2)
                     self.putTransportP1Message(oT_Message)
-            except Exception as E:
-                time.sleep(2)
-                self.putTransportP1Message(oT_Message)
-        elif targetAdaptor == "COAP":
-            try :
-                targetResponse = self.AASendPointHandlerObjects["COAP"].dispatchMessage(oT_Message)
-                if targetResponse:
-                    pass
-                else:
+            elif targetAdaptor == "COAP":
+                try :
+                    targetResponse = self.AASendPointHandlerObjects["COAP"].dispatchMessage(oT_Message)
+                    if targetResponse:
+                        pass
+                    else:
+                        time.sleep(2)
+                        self.putTransportP1Message(oT_Message)
+                except Exception as E:
                     time.sleep(2)
                     self.putTransportP1Message(oT_Message)
-            except Exception as E:
-                time.sleep(2)
-                self.putTransportP1Message(oT_Message)
-        else:
-            targetResponse = self.AASendPointHandlerObjects["MQTT"].dispatchMessage(oT_Message)
+            else:
+                targetResponse = self.AASendPointHandlerObjects["MQTT"].dispatchMessage(oT_Message)
             
     def __sendTransportP1Message_(self,oT_P1Message):
-        targetAdaptor = oT_P1Message["frame"]["replyTo"]
-       
-        if  targetAdaptor == "RESTAPI":
-            try :
-                targetResponseP1 = self.AASendPointHandlerObjects["RESTAPI"].dispatchMessage(oT_P1Message)
-                if targetResponseP1:
-                    pass
-                else:
+        targetAdaptor = self.fetchDataAdaptor(oT_P1Message)
+        if (targetAdaptor != "Empty"):
+            if  targetAdaptor == "RESTAPI":
+                try :
+                    targetResponseP1 = self.AASendPointHandlerObjects["RESTAPI"].dispatchMessage(oT_P1Message)
+                    if targetResponseP1:
+                        pass
+                    else:
+                        time.sleep(2)
+                        self.putTransportP2Message(oT_P1Message)
+                except Exception as E:
                     time.sleep(2)
                     self.putTransportP2Message(oT_P1Message)
-            except Exception as E:
-                time.sleep(2)
-                self.putTransportP2Message(oT_P1Message)
-                  
-        elif targetAdaptor == "COAP":
-            try :
-                targetResponseP1 = self.AASendPointHandlerObjects["COAP"].dispatchMessage(oT_P1Message)
-                if targetResponseP1:
-                    pass
-                else:
+                      
+            elif targetAdaptor == "COAP":
+                try :
+                    targetResponseP1 = self.AASendPointHandlerObjects["COAP"].dispatchMessage(oT_P1Message)
+                    if targetResponseP1:
+                        pass
+                    else:
+                        time.sleep(2)
+                        self.putTransportP2Message(oT_P1Message)
+                except Exception as E:
                     time.sleep(2)
-                    self.putTransportP2Message(oT_P1Message)
-            except Exception as E:
-                time.sleep(2)
-                self.putTransportP2Message(oT_P1Message)   
+                    self.putTransportP2Message(oT_P1Message)   
     
 
     def __sendTransportP2Message_(self,oT_P2Message):
-        targetAdaptor = oT_P2Message["frame"]["replyTo"]
-        if targetAdaptor == "RESTAPI":
-            try :
-                targetResponseP2 = self.AASendPointHandlerObjects["RESTAPI"].dispatchMessage(oT_P2Message)
-            except Exception as E:
-                pass
-        else:
-            try :
-                targetResponseP2 = self.AASendPointHandlerObjects["COAP"].dispatchMessage(oT_P2Message)
-            except Exception as E:
-                pass     
+        targetAdaptor = self.fetchDataAdaptor(oT_P2Message)
+        if (targetAdaptor != "Empty"):
+            if targetAdaptor == "RESTAPI":
+                try :
+                    self.AASendPointHandlerObjects["RESTAPI"].dispatchMessage(oT_P2Message)
+                except Exception as E:
+                    pass
+            else:
+                try :
+                    self.AASendPointHandlerObjects["COAP"].dispatchMessage(oT_P2Message)
+                except Exception as E:
+                    pass     
                    
     def __processCprotMessage__(self,cpMessage):
         try:
@@ -269,4 +288,3 @@ class MessageHandler(object):
         
         for key in list(self.pyAAS.connectBotsDict.keys()):
             self.pyAAS.connectBotsDict[key]["iframesList"].append(bcMessage)
-        

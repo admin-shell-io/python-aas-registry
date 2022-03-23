@@ -94,4 +94,3 @@ class AAS_Database_Server(object):
                 return {"data":"Not found","message":"failure"}
         except Exception as E:
             return {"data":"Not found","message":"error"}
-        

@@ -282,10 +282,10 @@ class DB_ADAPTOR(object):
             else:
                 returnMessageDict = response
             if (not httpEdpStatus):
-                query = self.getDescriptorIndexData(descData) 
-                self.deleteDescriptorEndPoint(query)
-                query["endpoint"] = descData["identification"]["id"]
-                query["ASYNC"] = "Y"
+                query = self.getDescriptorIndexData(descData)
+                deleteResult = self.AAS_Database_Server.remove("aasDescEndPointVWS_RIC",{ "$or": [ { "aasId":query["aasId"] }, { "aasetId":query["aasId"]},{"idShort":query["aasId"]} ] })
+                query["endpoint"] = ""
+                query["ASYNC"] = "Y" 
                 self.insertDescriptorEndPoint(query)
                 self.pyAAS.mqttGateWayEntries.add(descData["identification"]["id"])
         except Exception as E:
@@ -542,4 +542,3 @@ class DB_ADAPTOR(object):
 if __name__ == "__main__":
     dba = DB_ADAPTOR()
     dba.getAAS()
-    

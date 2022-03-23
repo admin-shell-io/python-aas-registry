@@ -5,6 +5,7 @@ This source code is licensed under the Apache License 2.0 (see LICENSE.txt).
 This source code may use other Open Source software components (see LICENSE.txt).
 '''
 
+
 import json
 import logging
 import threading
@@ -113,8 +114,6 @@ class AASEndPointHandler(AASEndPointHandler):
                                 "SenderIdType" : "idShort",
                                 "SenderRolename" : "HTTP_ENDPoint",
                                 "conversationId" : "AASNetworkedBidding",
-                                "replyBy" :  "",
-                                "replyTo" :  "",                                
                                 "ReceiverAASID" :  self.pyAAS.AASID,
                                 "ReceiverIdType" : "idShort",
                                 "ReceiverRolename" : "Register"

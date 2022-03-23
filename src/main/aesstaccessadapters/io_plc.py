@@ -5,31 +5,60 @@ This source code is licensed under the Apache License 2.0 (see LICENSE.txt).
 This source code may use other Open Source software components (see LICENSE.txt).
 '''
 
-import abc
+
+from opcua import Client
+from opcua import ua
+import os
+import glob
+
+try:
+    from abstract.assetendpointhandler import AsssetEndPointHandler
+except ImportError:
+    from main.abstract.assetendpointhandler import AsssetEndPointHandler
 
 
-
-class AsssetEndPointHandler(object):
-    __metaclass__ = abc.ABCMeta
+class AsssetEndPointHandler(AsssetEndPointHandler):
 
     def __init__(self, saas, ip, port, username, password, propertylist):
-        self.saas = saas
-        self.ip = ip
-        self.port = port
-        self.username = username
-        self.password = password 
-        self.propertylist = propertylist
+        super(AsssetEndPointHandler, self).__init__(saas, ip, port, username, password, propertylist)
+ 
+        self.plc_opcua_Client = Client("opc.tcp://" + ip + ":" + port + "/")
         
-    def add_raw_channel_ref(self, ref_id, address):
-        self.raw_channel_refs[ref_id] = address
+        if (self.username != "-"):
+            self.plc_opcua_Client._username = self.username
+            self.plc_opcua_Client._password = self.password
 
-    def configure(self, ioAdaptor):
-        pass
+    def read(self, nodeID):
+        
+        MW_VALUE = 0
+        
+        try:
+            self.plc_opcua_Client.connect() 
+            MW_VALUE = self.plc_opcua_Client.get_node(nodeID).get_value()
+        
+        except Exception as e:
+            print(e)
+            self.plc_opcua_Client.disconnect()
+            MW_VALUE = 1 
+        
+        finally:
+            self.plc_opcua_Client.disconnect()
+            return MW_VALUE
+    
+    def write(self, nodeID, value):
+        
+        MW_VALUE = 0
+        
+        try:
+            self.plc_opcua_Client.connect() 
+            plcnode = self.plc_opcua_Client.get_node(nodeID)
+            plcnode.set_value(value)
 
-    @abc.abstractmethod
-    def read(self, address):
-        pass
-
-    @abc.abstractmethod
-    def write(self, address, value):
-        pass
+        except:
+            self.plc_opcua_Client.disconnect()
+            MW_VALUE = 1 
+        
+        finally:
+            self.plc_opcua_Client.disconnect()
+            return MW_VALUE
+   

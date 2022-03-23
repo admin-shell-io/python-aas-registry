@@ -7,19 +7,18 @@ This source code may use other Open Source software components (see LICENSE.txt)
 
 
 import json
-import logging
 import os
-import requests
 import threading
-import uuid
+import asyncio
+ 
+import hbmqtt.client
+import hbmqtt.mqtt
 
 try:
     from abstract.endpointhandler import AASEndPointHandler
 except ImportError:
     from main.abstract.endpointhandler import AASEndPointHandler
 
-import paho.mqtt.client as mqtt
-import paho.mqtt.publish as publish
 from datetime import datetime,timedelta
 
 try:
@@ -33,46 +32,75 @@ class AASEndPointHandler(AASEndPointHandler):
         self.pyAAS = pyAAS
         self.topicname = pyAAS.AASID
         self.msgHandler = msgHandler
+    
+    @asyncio.coroutine
+    def subscribe(self,channel) -> None:
+        self.client = hbmqtt.client.MQTTClient()
+        yield from self.client.connect("mqtt://"+(self.ipaddressComdrv)+":"+ (self.portComdrv)+"/")
+        print("Connected")
+        yield from self.client.subscribe([
+            (channel, hbmqtt.mqtt.constants.QOS_1)
+        ])
+        print("Subscribed")
+        try:
+            while True:
+                message = yield from self.client.deliver_message()
+                packet = message.publish_packet
+                receivedMessage = (packet.payload.data).decode("utf-8")
+                mqttClientThread1 = threading.Thread(target=self.retrieveMessage, args=(receivedMessage,))
+                mqttClientThread1.start() 
+        except Exception as E:
+            self.pyAAS.serviceLogger.info('Unable to connect to the mqtt server ' + E)
         
     
     def on_connect(self, client, userdata, flags, rc):
         self.pyAAS.serviceLogger.info("MQTT channels are succesfully connected.")
         
     def configure(self):
-        self.ipaddressComdrv = self.pyAAS.lia_env_variable["LIA_AAS_MQTT_HOST"]
-        self.portComdrv = int(self.pyAAS.lia_env_variable["LIA_AAS_MQTT_PORT"])
-        
-        self.client = mqtt.Client(client_id=str(uuid.uuid4()))
-        self.client.on_connect = self.on_connect
-        self.client.on_message = self.retrieveMessage
-        
-    def update(self, channel):
-        self.client.subscribe(channel)
-        self.client.loop_forever()
-        
+        self.ipaddressComdrv = str(self.pyAAS.lia_env_variable["LIA_AAS_MQTT_HOST"])
+        self.portComdrv = str(self.pyAAS.lia_env_variable["LIA_AAS_MQTT_PORT"])
+
+    def update(self,chaneel):
+        try :
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)
+            asyncio.Task(self.subscribe(chaneel))
+            asyncio.get_event_loop().run_forever()
+        except Exception as e:
+            self.pyAAS.serviceLogger.info('Unable to connect to the mqtt server ' + str(e))
+            os._exit(0)    
+    
     def start(self, pyAAS, tpn):
         self.pyAAS = pyAAS
         self.tpn = "AASpillarbox"#tpn
         try :
-            self.client.connect(self.ipaddressComdrv, port=(self.portComdrv))
-            mqttClientThread1 = threading.Thread(target=self.update, args=(self.tpn,))
-            mqttClientThread1.start()
-          
+            mqttClientThread1 = threading.Thread(target=self.update, args=(tpn,))
+            mqttClientThread1.start() 
         except Exception as e:
             self.pyAAS.serviceLogger.info('Unable to connect to the mqtt server ' + str(e))
             os._exit(0)
 
         self.pyAAS.serviceLogger.info("MQTT channels are started")
             
-
+ 
     def stop(self):
         try: 
-            self.client.loop_stop(force=False)
-            self.client.disconnect()
-            
+            yield from self.client.unsubscribe(['$SYS/broker/uptime', '$SYS/broker/load/#'])
+            yield from self.client.disconnect()
+             
         except Exception as e:
             self.pyAAS.serviceLogger.info('Error disconnecting to the server ' + str(e))
 
+    @asyncio.coroutine
+    def dispatch(self,publishTopic,send_Message):
+        dispatchClient = hbmqtt.client.MQTTClient()
+        yield from dispatchClient.connect("mqtt://"+(self.ipaddressComdrv)+":"+ (self.portComdrv)+"/")
+        yield from (dispatchClient.publish(publishTopic, str(json.dumps(send_Message)).encode("utf-8")))
+        yield from dispatchClient.disconnect()      
+	
+    async def disp(self,publishTopic,send_Message):
+        await self.dispatch(publishTopic,send_Message)  
+	
     def dispatchMessage(self, send_Message): 
         publishTopic = self.pyAAS.BroadCastMQTTTopic
         try:
@@ -83,14 +111,13 @@ class AASEndPointHandler(AASEndPointHandler):
             if (publishTopic == self.pyAAS.AASID):
                 self.msgHandler.putIbMessage(send_Message)
             else:
-                self.client.publish(publishTopic, str(json.dumps(send_Message)))
+                asyncio.run(self.disp(publishTopic,send_Message))
         except Exception as e:
             self.pyAAS.serviceLogger.info("Unable to publish the message to the mqtt server", str(e))
             
-    def retrieveMessage(self, client, userdata, msg): 
+    def retrieveMessage(self,msg): 
         try:
-            msg1 = str(msg.payload, "utf-8")
-            jsonMessage = json.loads(msg1)  
+            jsonMessage = json.loads(msg)  
             _type = jsonMessage["frame"]["type"]
             if (_type == "HeartBeat"):
                 _sender = jsonMessage["frame"]["sender"]["identification"]["id"]
@@ -116,15 +143,17 @@ class AASEndPointHandler(AASEndPointHandler):
                         self.pyAAS.idDict[_receiver] = str(datetime.utcnow().isoformat(sep=' ', timespec='microseconds'))[17:]
                         self.pyAAS.msgHandler.putTransportMessage(jsonMessage)
         except Exception as E:
-            print(str(E))
+            self.pyAAS.serviceLogger.info(str(E))
             #spass
     
     def sendBroadCatMessage(self,send_Message,aasId):
         try:
-            self.client.publish(aasId, str(json.dumps(send_Message)))
-            print("A new broadcast message is sent to the AAS "+ aasId)
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)
+            asyncio.Task(self.dispatch(aasId,send_Message))
+            asyncio.get_event_loop().run_forever()                    
         except Exception as E:
-            pass        
+            self.pyAAS.serviceLogger.info(str(E))        
     
     def dispatchBroadCastMessage(self,send_Message):
         for x in self.pyAAS.mqttGateWayEntries:

@@ -133,3 +133,4 @@ Python AAS Registry is Licensed under Apache 2.0, the complete license text incl
 * APScheduler,python-snap7,jsonschema,aiocoap,hbmqtt MIT License <br />
 * Flask,werkzeug, Flask-RESTful, python-dotenv BSD-3-Clause <br />
 * requests Apache License, Version 2.0 <br />
+* paho-mqtt Eclipse Public License 2.0 and the Eclipse Distribution License 1.0 <br />

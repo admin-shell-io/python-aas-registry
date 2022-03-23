@@ -172,6 +172,7 @@ class EndpointObject(object):
     
     def insert(self,aasD,query):
         try:
+            deleteResult = self.pyAAS.dba.AAS_Database_Server.remove("aasDescEndPointVWS_RIC",{ "$or": [ { "aasId":query["aasId"] }, { "aasetId":query["aasId"]},{"idShort":query["aasId"]} ] })
             for endpoint in aasD["endpoints"]:
                 if endpoint["interface"] == "communication":
                     protocol = endpoint["protocol_information"]["endpoint_protocol"]
@@ -183,7 +184,6 @@ class EndpointObject(object):
                         self.pyAAS.coapEndPointsDict[aasD["identification"]["id"]] = endpoint["protocol_information"]["endpoint_address"]
                         query["endpoint"] = endpoint["protocol_information"]["endpoint_address"]
                         query["ASYNC"] = "N"
-                    self.pyAAS.dba.deleteDescriptorEndPoint(query)
                     self.pyAAS.dba.insertDescriptorEndPoint(query)
                     return True
             return False    
@@ -211,7 +211,7 @@ class ConnectResponse(object):
                     "messageId": str(uuid.uuid1()), 
                     "sender": {
                         "identification": {
-                            "id": "VWS_RIC",
+                            "id": "AASpillarbox",
                             "idType": "idShort"
                         }, 
                         "role": {
@@ -226,9 +226,7 @@ class ConnectResponse(object):
                         "role": {
                             "name": "AASHeartBeatHandler"
                             }
-                        },                    
-                    "replyBy": "RESTHTTP",
-                    "replyTo": "RESTHTTP",
+                        },
                     "conversationId": coversationId
                 }
         
@@ -250,7 +248,7 @@ class ConnectResponse(object):
                     "messageId": str(uuid.uuid1()), 
                     "sender": {
                         "identification": {
-                            "id": "VWS_RIC",
+                            "id": "AASpillarbox",
                             "idType": "idShort"
                         }, 
                         "role": {
@@ -265,9 +263,7 @@ class ConnectResponse(object):
                         "role": {
                             "name": "AASHeartBeatHandler"
                             }
-                        },                    
-                    "replyBy": "RESTHTTP",
-                    "replyTo": "RESTHTTP",
+                        },  
                     "conversationId": coversationId
                 }
         return {"frame":frame, "interactionElements": []}  
@@ -288,7 +284,7 @@ class ConnectResponse(object):
                     "messageId": str(uuid.uuid1()), 
                     "sender": {
                         "identification": {
-                            "id": "VWS_RIC",
+                            "id": "AASpillarbox",
                             "idType": "idShort"
                         }, 
                         "role": {
@@ -303,9 +299,7 @@ class ConnectResponse(object):
                         "role": {
                             "name": "AASHeartBeatHandler"
                             }
-                        },                    
-                    "replyBy": "MQTT",
-                    "replyTo": "MQTT",
+                        },  
                     "conversationId": coversationId
                 }
         return {"frame":frame, "interactionElements": []}     
@@ -334,7 +328,7 @@ class ConnectResponse(object):
                     "messageId": str(uuid.uuid1()), 
                     "sender": {
                         "identification": {
-                            "id": "VWS_RIC",
+                            "id": "AASpillarbox",
                             "idType": "idShort"
                         }, 
                         "role": {
@@ -349,9 +343,7 @@ class ConnectResponse(object):
                         "role": {
                             "name": "AASHeartBeatHandler"
                             }
-                        },                    
-                    "replyBy": "COAP",
-                    "replyTo": "COAP",
+                        },
                     "conversationId": coversationId
                 }
         return {"frame":frame, "interactionElements": []}     
@@ -377,4 +369,3 @@ class ConnectResponse(object):
     
     def createRegistrerData(self,senderId,coversationId):
         return self.creatIframeData(senderId,coversationId,"getDirectory","getDirectory")
-    

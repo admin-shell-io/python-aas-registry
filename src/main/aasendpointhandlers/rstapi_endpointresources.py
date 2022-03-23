@@ -5,6 +5,7 @@ This source code is licensed under the Apache License 2.0 (see LICENSE.txt).
 This source code may use other Open Source software components (see LICENSE.txt).
 '''
 
+
 import json
 from datetime import datetime,timedelta
 from requests.utils import unquote
@@ -278,7 +279,7 @@ class RetrieveMessage(Resource):
             else :
                 if "receiver" not in list(tMessage["frame"].keys()):
                     self.pyAAS.msgHandler.putBroadCastMessage(tMessage)
-                elif tMessage["frame"]["receiver"]["identification"]["id"] == "VWS_RIC" and tMessage["frame"]["type"] == "register":
+                elif tMessage["frame"]["receiver"]["identification"]["id"] == "AASpillarbox" and tMessage["frame"]["type"] == "register":
                     return make_response(self.pyAAS.skillInstanceDict["RegistryHandler"].restAPIHandler(tMessage),200)
                 else:
                     _receiver = tMessage["frame"]["receiver"]["identification"]["id"]

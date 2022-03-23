@@ -149,7 +149,6 @@ except ImportError:
         "SenderAASID" : self.baseClass.AASID,
         "SenderRolename" : "{{MetaData/Name}}",
         "conversationId" : "AASNetworkedBidding",
-        "replyBy" :  "",
         "ReceiverAASID" :  receiverId,
         "ReceiverRolename" : receiverRole,
         "params" : {},
@@ -251,8 +250,6 @@ class {{StateName}}(object):
                                     "SenderAASID" : self.baseClass.saas.AASID,
                                     "SenderRolename" : self.baseClass.skillName,
                                     "conversationId" : message["frame"]["conversationId"],
-                                    "replyBy" :  self.baseClass.saas.preferedI40EndPoint,
-                                    "replyTo" :  message["frame"]["replyBy"],
                                     "ReceiverAASID" :  receiverId,
                                     "ReceiverRolename" : receiverRole
                                 }
@@ -401,8 +398,6 @@ class {{MetaData/Name}}(object):
                                 "SenderAASID" : self.saas.AASID,
                                 "SenderRolename" : self.skillName,
                                 "conversationId" : "AASNetworkedBidding",
-                                "replyBy" :  "",
-                                "replyTo" :"",
                                 "ReceiverAASID" :  self.saas.AASID + "/"+self.skillName,
                                 "ReceiverRolename" : "SkillStatusChange"
                             }
@@ -420,8 +415,6 @@ class {{MetaData/Name}}(object):
                                 "SenderAASID" : self.saas.AASID,
                                 "SenderRolename" : "InternalRequester",
                                 "conversationId" : "AASNetworkedBidding",
-                                "replyBy" :  "MQTT",
-                                "replyTo" :"MQTT",
                                 "ReceiverAASID" :  self.saas.AASID + "/"+self.skillName,
                                 "ReceiverRolename" : "ProductionManager"
                             }

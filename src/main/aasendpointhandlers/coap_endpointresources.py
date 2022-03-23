@@ -4,6 +4,8 @@ Author: Harish Kumar Pakala
 This source code is licensed under the Apache License 2.0 (see LICENSE.txt).
 This source code may use other Open Source software components (see LICENSE.txt).
 '''
+
+
 import json
 from datetime import datetime
 import aiocoap.resource as resource
@@ -42,7 +44,7 @@ class RetrieveMessageCoap(resource.Resource):
             else :
                 if "receiver" not in list(tMessage["frame"].keys()):
                     self.pyAAS.msgHandler.putBroadCastMessage(tMessage)
-                elif tMessage["frame"]["receiver"]["identification"]["id"] == "VWS_RIC" and tMessage["frame"]["type"] == "register":
+                elif tMessage["frame"]["receiver"]["identification"]["id"] == "AASpillarbox" and tMessage["frame"]["type"] == "register":
                     data = self.pyAAS.skillInstanceDict["RegistryHandler"].restAPIHandler(tMessage)
                     message =  aiocoap.Message(code=Code.CHANGED, payload=json.dumps(data).encode("utf-8"))
                 else:

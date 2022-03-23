@@ -5,10 +5,13 @@ This source code is licensed under the Apache License 2.0 (see LICENSE.txt).
 This source code may use other Open Source software components (see LICENSE.txt).
 '''
 
+
 import json
 import os
+import sys
 import threading
 import time
+import web3
 
 from web3 import Web3,HTTPProvider
 
@@ -111,8 +114,6 @@ class AASEndPointHandler(AASEndPointHandler):
                 newMessage["propertyY"] = self.gen.toString(message[7])
                 newMessage["listPrice"] = self.gen.toString(message[8])
                 newMessage["conversationId"] = self.gen.toString(message[9])
-                newMessage["replyBy"] = self.gen.toString(message[10])
-                newMessage["replyTo"] = self.gen.toString(message[11])
                 self.jsonMessage = self.gen.createInMessage(newMessage)
                 self.msgHandler.putIbMessage(self.jsonMessage)
                 self.pyAAS.serviceLogger.info("A new Message received from the sender " + self.jsonMessage["frame"]["sender"]["identification"]["id"])
