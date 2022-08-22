@@ -1,9 +1,10 @@
 '''
-Copyright (c) 2021-2022 Otto-von-Guericke-Universität Magdeburg, Lehrstuhl Integrierte Automation
+Copyright (c) 2021-2022 Otto-von-Guericke-Universitaet Magdeburg, Lehrstuhl Integrierte Automation
 Author: Harish Kumar Pakala
 This source code is licensed under the Apache License 2.0 (see LICENSE.txt).
 This source code may use other Open Source software components (see LICENSE.txt).
 '''
+
 
 import json
 import os
@@ -24,9 +25,9 @@ except ImportError:
     from main.abstract.endpointhandler import AASEndPointHandler
 
 try:
-    from aasendpointhandlers.rstapi_endpointresources import RetrieveMessage,HandleConnectProtocol,StatusUI,HandleConnect,RefreshUI,AASDescriptors,AASDescriptorsbyId,AASbyIdSubmodelDescriptors,AASbyIdSubmodelDescriptorbyId,SubModelDescriptors,SubModelDescriptorsbyId,DescriptorSchema
+    from aasendpointhandlers.rstapi_endpointresources import RetrieveMessage,HandleConnectProtocol,StatusUI,HandleConnect,RefreshUI,DescriptorSchema,AssetAdministrationShellDescriptorById,SubmodelDescriptorById,AssetAdministrationShellDescriptor,SubmodelDescriptor
 except ImportError:
-    from aasendpointhandlers.rstapi_endpointresources import RetrieveMessage,HandleConnectProtocol,StatusUI,HandleConnect,RefreshUI,AASDescriptors,AASDescriptorsbyId,AASbyIdSubmodelDescriptors,AASbyIdSubmodelDescriptorbyId,SubModelDescriptors,SubModelDescriptorsbyId,DescriptorSchema
+    from aasendpointhandlers.rstapi_endpointresources import RetrieveMessage,HandleConnectProtocol,StatusUI,HandleConnect,RefreshUI,DescriptorSchema,AssetAdministrationShellDescriptorById,SubmodelDescriptorById,AssetAdministrationShellDescriptor,SubmodelDescriptor
 
 drv_rst_app = Flask(__name__)
 drv_rst_app.secret_key = os.urandom(24)
@@ -66,14 +67,17 @@ class AASEndPointHandler(AASEndPointHandler):
                 
         # Resgitry API
         # ShellDescriptors API
-        drv_rst_api.add_resource(AASDescriptors, "/registry/shellDescriptors", resource_class_args=tuple([self.pyAAS]))
-        drv_rst_api.add_resource(AASDescriptorsbyId, "/registry/shellDescriptors/<path:aasId>", resource_class_args=tuple([self.pyAAS]))
-        drv_rst_api.add_resource(AASbyIdSubmodelDescriptors, "/registry/shellDescriptors/<path:aasId>/submodelDescriptors", resource_class_args=tuple([self.pyAAS]))
-        #drv_rst_api.add_resource(AASbyIdSubmodelDescriptorbyId, "/registry/shellDescriptors/<path:aasId>/submodelDescriptors/<path:submodelId>", resource_class_args=tuple([self.pyAAS]))
+        drv_rst_api.add_resource(AssetAdministrationShellDescriptorById, "/registry/shell-descriptors/<path:aasId>", resource_class_args=tuple([self.pyAAS]))
+        drv_rst_api.add_resource(SubmodelDescriptorById, "/registry/shell-descriptors/<path:aasId>/submodel-descriptors/<path:submodelId>", resource_class_args=tuple([self.pyAAS]))
+        
+        drv_rst_api.add_resource(AssetAdministrationShellDescriptor, "/registry/shell-descriptors", resource_class_args=tuple([self.pyAAS]))
+        drv_rst_api.add_resource(SubmodelDescriptor, "/registry/shell-descriptors/<path:aasId>/submodel-descriptors", resource_class_args=tuple([self.pyAAS]))
+        
+        
         
         # Submodel ShellDescriptors API
-        drv_rst_api.add_resource(SubModelDescriptors, "/registry/submodelDescriptors", resource_class_args=tuple([self.pyAAS]))
-        drv_rst_api.add_resource(SubModelDescriptorsbyId, "/registry/submodelDescriptors/<path:submodelId>", resource_class_args=tuple([self.pyAAS]))   
+       # drv_rst_api.add_resource(SubModelDescriptors, "/registry/submodel-descriptors", resource_class_args=tuple([self.pyAAS]))
+       # drv_rst_api.add_resource(SubModelDescriptorsbyId, "/registry/submodel-descriptors/<path:submodelId>", resource_class_args=tuple([self.pyAAS]))   
         
         drv_rst_api.add_resource(DescriptorSchema, "/descriptor/<path:descriptorId>", resource_class_args=tuple([self.pyAAS]))
         self.pyAAS.serviceLogger.info("REST API namespaces are configured")
