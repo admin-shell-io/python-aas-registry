@@ -81,7 +81,7 @@ LIA_preferredCommunicationFormat=JSON               The prefeered communication 
 2) As a docker container <br/>
 <pre><code>docker pull harishpakala/vws-ovgu:python_aas_registry</code></pre> <br/>
 <pre><code>docker run -e LIA_AAS_MQTT_HOST='localhost' -e LIA_AAS_RESTAPI_PORT_INTERN='9021' -e LIA_AAS_RESTAPI_PORT_EXTERN='9021' -e LIA_AAS_COAP_PORT_INTERN='50683' -e LIA_AAS_MQTT_PORT='1883' -p 9021:9021 -p 50683:50683/udp --name python_aas_registry_cont harishpakala/vws-ovgu:python_aas_registry</code></pre> <br/>
-3) [Reference Implementation](https://vwsvernetzt.de/wp-content/uploads/2021/07/Reference_Implementation_VWSvernetzt_RIC_V1.pdf) <br/>
+3) [Reference Implementation](https://vwsvernetzt.de/wp-content/uploads/20x^^21/07/Reference_Implementation_VWSvernetzt_RIC_V1.pdf) <br/>
 
 ## AAS Registry Rest API Services
 The table 2 provides list of rest servises the RIC as a registry provides, it also lists down the allowed operations for each of the service. The services are as per the guidelines of [AAS Detail Part 2](https://www.plattform-i40.de/PI40/Redaktion/DE/Downloads/Publikation/Details_of_the_Asset_Administration_Shell_Part_2_V1.html). 
@@ -89,25 +89,14 @@ The table 2 provides list of rest servises the RIC as a registry provides, it al
 {aas-identifier} = idShort or global unique identifier of AAS or global unique identifier of the aaset that the AAS is representing <br />
 {submodel-identifier} = idShort or global unique identifier of Submodel <br />
 
-|                         HTTP URI                                               |        GET         |        PUT         |       DELETE       |
-|----------------------------------------------------------------------------------| ------------------ | ------------------ | ------------------ |
-|<http://localhost:9021/registry/shellDescriptors>                                 | :heavy_check_mark: |       :x:          |      :x:           |  
-|<http://localhost:9021/registry/shellDescriptors/{aas-identifier}>                   | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |              
-|<http://localhost:9021/registry/shellDescriptors/{aas-identifier}/submodelDescriptors/>     | :heavy_check_mark: | :x: | :x: |              
-|<http://localhost:9021/registry/descriptor/shellDescriptor> | :heavy_check_mark: |       :x:          |      :x:           |                
+|                         HTTP URI                                                 |        GET         |        PUT         |       DELETE       |     POST      |
+|----------------------------------------------------------------------------------| ------------------ | ------------------ | ------------------ | --------------|
+|<http://localhost:9021/registry/shell-descriptors>                                | :heavy_check_mark: |       :x:          |      :x:         |:heavy_check_mark:|
+|<http://localhost:9021/registry/shell-descriptors/{aas-identifier}>               | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |    :x:        |
+|<http://localhost:9021/registry/shell-descriptors/{aas-identifier}/submodel-descriptors>     | :heavy_check_mark: | :x: | :x: | :heavy_check_mark:|
+|<http://localhost:9021//registry/shell-descriptors/{aas-identifier}/submodel-descriptors/{path:submodelId}> | :heavy_check_mark: |       :x:          |      :x:           |        :x:        |
 
                     Table 2 AAS Registry rest services provided by the RIC
-
-
-## Submodel Registry Rest API Services
-
-|                         HTTP URI                                                 |        GET         |        PUT         |       DELETE       |
-|----------------------------------------------------------------------------------| ------------------ | ------------------ | ------------------ |
-|<http://localhost:9021/registry/submodelDescriptors>                              | :heavy_check_mark: |       :x:          |      :x:           |  
-|<http://localhost:9021/registry/submodelDescriptors//{submodel-identifier}>       | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |  
-|<http://localhost:9021/registry/descriptor/submodelDescriptor>                       | :heavy_check_mark: |       :x:          |      :x:           |  
-    
-                    Table 3 Submodel Registry rest services provided by the RIC
 
 ## RIC ALP Interface Access
 The MQTT client component of the RIC subscibes to the topic *AASpillarbox**. The registration, heartbeat and all other I4.0 messages that are to transported to another AAS should be posted to this topic. Similarly the I4.0 messages should be posted to the appropriate endpoint listed in the table 4.
@@ -117,7 +106,7 @@ The MQTT client component of the RIC subscibes to the topic *AASpillarbox**. The
 | <http://localhost:9021/i40commu>  	| POST 	| Post an I4.0 message packet to HTTP server of the RIC 	|
 | <coap://localhost:50683/i40commu> 	| POST 	| Post an I4.0 message packet to COAP server of the RIC 	|
                 
-                Table 4 HTTP and COAP endpoints of RIC for I4.o message communication
+                Table 3 HTTP and COAP endpoints of RIC for I4.o message communication
 
 
 ## Logs
