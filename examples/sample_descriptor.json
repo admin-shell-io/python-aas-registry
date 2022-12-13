@@ -1,0 +1,41 @@
+{
+  "identification": "test_aas",
+  "idShort": "test_aas",
+  "administration": null,
+  "endpoints": [
+    {
+      "interface": "AAS-1.0",
+      "protocolInformation": {
+        "endpointAddress": "http://localhost:5000/shells/test_aas",
+        "subprotocolBodyEncoding": null,
+        "endpointProtocolVersion": null,
+        "subprotocol": null,
+        "endpointProtocol": null,
+        "subprotocolBody": null
+      }
+    }
+  ],
+  "submodelDescriptors": [
+    {
+      "identification": "test_submodel",
+      "description": null,
+      "semanticId": {},
+      "endpoints": [
+		{
+		  "interface": "SUBMODEL-1.0",
+		  "protocolInformation": {
+			"endpointAddress": ""http://localhost:5000/submodels/test_submodel",
+			"subprotocolBodyEncoding": null,
+			"endpointProtocolVersion": null,
+			"subprotocol": null,
+			"endpointProtocol": nulll,
+			"subprotocolBody": null
+		  }
+		}
+      ],
+      "idShort": "test_submodel",
+      "administration": {}
+    }
+  ],
+  "description": null
+}
