@@ -1,9 +1,10 @@
 '''
-Copyright (c) 2021-2022 Otto-von-Guericke-Universität Magdeburg, Lehrstuhl Integrierte Automation
+Copyright (c) 2021-2022 Otto-von-Guericke-Universitaet Magdeburg, Lehrstuhl Integrierte Automation
 Author: Harish Kumar Pakala
 This source code is licensed under the Apache License 2.0 (see LICENSE.txt).
 This source code may use other Open Source software components (see LICENSE.txt).
 '''
+
 
 import logging
 import sys
@@ -201,7 +202,7 @@ class saveDescriptorDetails(object):
     def getDescParams(self,descData):
         params = {}
         try:
-            params["aasId"] = descData["identification"]["id"]
+            params["aasId"] = descData["identification"]
         except Exception as E:
             params["aasId"] = ""
         
@@ -221,7 +222,11 @@ class saveDescriptorDetails(object):
         descParams = self.getDescParams(data)
         descParams["updateData"] = data
         edm = ExecuteDBModifier(self.baseClass.pyAAS)
-        dataBaseResponse = edm.executeModifer({"data":descParams,"method":"putAASDescByID"})
+        dataBaseResponse = edm.executeModifer({"data":descParams,"method":"putAssetAdministrationShellDescriptorById"})
+        
+        if (dataBaseResponse["message"][0] == "No Asset Administration Shell with passed identifier found"):
+            dataBaseResponse = edm.executeModifer({"data":descParams,"method":"postAssetAdministrationShellDescriptor"})
+        
         if (dataBaseResponse["status"] == 500):
             self.baseClass.responseMessage["status"] = "E"  
             self.baseClass.responseMessage["code"] = dataBaseResponse["status"]
@@ -672,14 +677,14 @@ class RegistryHandler(object):
         Constructor
         '''
         
-        self.SKILL_STATES = {
-                          "saveDescriptorDetails": "saveDescriptorDetails", 
-                           "Start": "Start",
-                             "sendMalformedError": "sendMalformedError", 
-                              "ValidateRegisterMessage": "ValidateRegisterMessage", 
-                               "sendRegisterAck": "sendRegisterAck", 
+        self.SKILL_STATES = {  
+                                "saveDescriptorDetails": "saveDescriptorDetails", 
+                                "Start": "Start",
+                                "sendMalformedError": "sendMalformedError", 
+                                "ValidateRegisterMessage": "ValidateRegisterMessage", 
+                                "sendRegisterAck": "sendRegisterAck", 
                                 "WaitforRegisterMessage": "WaitforRegisterMessage",
-                       }
+                            }
         
         self.pyAAS = pyAAS
         self.skillName = "RegistryHandler"

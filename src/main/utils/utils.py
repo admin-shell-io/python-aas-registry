@@ -1,9 +1,10 @@
 '''
-Copyright (c) 2021-2022 Otto-von-Guericke-Universität Magdeburg, Lehrstuhl Integrierte Automation
+Copyright (c) 2021-2022 Otto-von-Guericke-Universitaet Magdeburg, Lehrstuhl Integrierte Automation
 Author: Harish Kumar Pakala
 This source code is licensed under the Apache License 2.0 (see LICENSE.txt).
 This source code may use other Open Source software components (see LICENSE.txt).
 '''
+
 
 from jsonschema import validate
 import uuid
@@ -39,7 +40,7 @@ class AASDescriptor(object):
         try:
             aasDescriptor[desc] = aasxData["assetAdministrationShells"][0][desc]
         except Exception as E:
-            pass
+            aasDescriptor[desc] = None
         return aasDescriptor
 
     def createSubmodelDescriptorElement(self,desc,sumodelDescriptor,submodel):
@@ -50,28 +51,39 @@ class AASDescriptor(object):
         return sumodelDescriptor
     
     def createndPoint(self,desc,interface):
-        endPoint =    {"protocol_information":{
-                                "endpoint_address" : desc,
-                                "endpoint_protocol" : "http"
+        endPoint =    {"protocolInformation":{
+                                "endpointAddress" : desc,
+                                "endpointProtocol" : "http",
+                                        "endpointProtocol": None,
+                                        "endpointProtocolVersion": None,
+                                        "subprotocol": None,
+                                        "subprotocolBody": None,
+                                        "subprotocolBodyEncoding": None
                                 },
                         "interface": interface
                         }
         return endPoint
     
+    
     def createDescriptor(self):
         aasxData = self.pyAAS.aasConfigurer.jsonData
         aasDescriptor = {}
-        descList = ["idShort","identification","description"]
+        
+        descList = ["idShort","description"]
         for desc in descList:
             aasDescriptor = self.createAASDescriptorElement(desc,aasDescriptor,aasxData)
-
+        try:
+            aasDescriptor["identification"] =  aasxData["assetAdministrationShells"][0]["identification"]["id"]
+        except:
+            aasDescriptor["identification"] = None
+            
         ip = self.pyAAS.lia_env_variable["LIA_AAS_ADMINSHELL_CONNECT_IP"]
         port = self.pyAAS.lia_env_variable["LIA_AAS_RESTAPI_PORT_EXTERN"]
         descString = "http://"+ip+":"+port+"/aas/"+self.pyAAS.AASID 
         endpointsList = []
 
         
-        endpointsList.append(self.createndPoint(descString, "restapi"))
+        endpointsList.append(self.createndPoint(descString, "AAS-1.0"))
         endpointsList.append(self.createndPoint("http://"+ip+":"+port+"/i40commu","communication"))  
   
         aasDescriptor["endpoints"]  =  endpointsList
@@ -81,9 +93,14 @@ class AASDescriptor(object):
             sumodelDescriptor = {}
             for desc in descList:
                 sumodelDescriptor = self.createSubmodelDescriptorElement(desc, sumodelDescriptor, submodel)
+            
+            try:
+                sumodelDescriptor["identification"]  = submodel["identification"]["id"]
+            except:
+                sumodelDescriptor["identification"]  = None
             sumodelDescriptor = self.createSubmodelDescriptorElement("semanticId", sumodelDescriptor, submodel)
             submodeldescString = descString +"/submodels/"+sumodelDescriptor["idShort"]
-            sumodelDescriptor["endpoints"]  = [self.createndPoint(submodeldescString,"restapi")] 
+            sumodelDescriptor["endpoints"]  = [self.createndPoint(submodeldescString,"SUBMODEL-1.0")] 
             submodelDescList.append(sumodelDescriptor)
         
         aasDescriptor["submodelDescriptors"] = submodelDescList
@@ -175,14 +192,14 @@ class EndpointObject(object):
             deleteResult = self.pyAAS.dba.AAS_Database_Server.remove("aasDescEndPointVWS_RIC",{ "$or": [ { "aasId":query["aasId"] }, { "aasetId":query["aasId"]},{"idShort":query["aasId"]} ] })
             for endpoint in aasD["endpoints"]:
                 if endpoint["interface"] == "communication":
-                    protocol = endpoint["protocol_information"]["endpoint_protocol"]
+                    protocol = endpoint["protocolInformation"]["endpointProtocol"]
                     if protocol == "http" or protocol == "https": 
-                        self.pyAAS.httpEndPointsDict[aasD["identification"]["id"]] = endpoint["protocol_information"]["endpoint_address"]
-                        query["endpoint"] = endpoint["protocol_information"]["endpoint_address"]
+                        self.pyAAS.httpEndPointsDict[aasD["identification"]] = endpoint["protocolInformation"]["endpointAddress"]
+                        query["endpoint"] = endpoint["protocolInformation"]["endpointAddress"]
                         query["ASYNC"] = "N"                        
                     elif protocol == "coap":
-                        self.pyAAS.coapEndPointsDict[aasD["identification"]["id"]] = endpoint["protocol_information"]["endpoint_address"]
-                        query["endpoint"] = endpoint["protocol_information"]["endpoint_address"]
+                        self.pyAAS.coapEndPointsDict[aasD["identification"]] = endpoint["protocolInformation"]["endpointAddress"]
+                        query["endpoint"] = endpoint["protocolInformation"]["endpointAddress"]
                         query["ASYNC"] = "N"
                     self.pyAAS.dba.insertDescriptorEndPoint(query)
                     return True
@@ -227,6 +244,8 @@ class ConnectResponse(object):
                             "name": "AASHeartBeatHandler"
                             }
                         },
+                    "replyBy": 000000,
+                    "inReplyTo":"",
                     "conversationId": coversationId
                 }
         
@@ -263,7 +282,9 @@ class ConnectResponse(object):
                         "role": {
                             "name": "AASHeartBeatHandler"
                             }
-                        },  
+                        },
+                    "replyBy": 000000,
+                    "inReplyTo":"",  
                     "conversationId": coversationId
                 }
         return {"frame":frame, "interactionElements": []}  
@@ -299,7 +320,9 @@ class ConnectResponse(object):
                         "role": {
                             "name": "AASHeartBeatHandler"
                             }
-                        },  
+                        },
+                    "replyBy": 000000,
+                    "inReplyTo":"",
                     "conversationId": coversationId
                 }
         return {"frame":frame, "interactionElements": []}     
@@ -344,6 +367,8 @@ class ConnectResponse(object):
                             "name": "AASHeartBeatHandler"
                             }
                         },
+                    "replyBy": 000000,
+                    "inReplyTo":"",
                     "conversationId": coversationId
                 }
         return {"frame":frame, "interactionElements": []}     

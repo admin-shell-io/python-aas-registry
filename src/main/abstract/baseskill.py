@@ -1,9 +1,10 @@
 '''
-Copyright (c) 2021-2022 Otto-von-Guericke-Universität Magdeburg, Lehrstuhl Integrierte Automation
+Copyright (c) 2021-2022 Otto-von-Guericke-Universitaet Magdeburg, Lehrstuhl Integrierte Automation
 Author: Harish Kumar Pakala
 This source code is licensed under the Apache License 2.0 (see LICENSE.txt).
 This source code may use other Open Source software components (see LICENSE.txt).
 '''
+
 
 import json
 import logging
@@ -24,10 +25,6 @@ try:
     from utils.i40data import Generic
 except ImportError:
     from main.utils.i40data import Generic
-try:
-    from utils.submodelupdate import SubmodelUpdate,SubmodelElement
-except ImportError:
-    from main.utils.submodelupdate import SubmodelUpdate,SubmodelElement
 try:
     from utils.aaslog import serviceLogHandler,LogList
 except ImportError:

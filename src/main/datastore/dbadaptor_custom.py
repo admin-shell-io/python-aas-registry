@@ -1,9 +1,10 @@
 '''
-Copyright (c) 2021-2022 Otto-von-Guericke-Universität Magdeburg, Lehrstuhl Integrierte Automation
+Copyright (c) 2021-2022 Otto-von-Guericke-Universitaet Magdeburg, Lehrstuhl Integrierte Automation
 Author: Harish Kumar Pakala
 This source code is licensed under the Apache License 2.0 (see LICENSE.txt).
 This source code may use other Open Source software components (see LICENSE.txt).
 '''
+
 
 try:
     from utils.utils import EndpointObject
@@ -181,18 +182,19 @@ class DB_ADAPTOR(object):
 
 ## Message Level Entries
 
-
-#### AASDescritpors Registry Start ######################
+#===============================================================================
+#### AASDescritpors Registry Start ######################  
+#===============================================================================
 
     def getDescParams(self,descData):
         params = {}
         try:
-            params["aasId"] = descData["identification"]["id"]
+            params["aasId"] = descData["identification"]
         except:
             params["aasId"] = ""
         
         try:
-            params["aasetId"] = descData["globalAssetId"]["keys"][0]["value"]
+            params["aasetId"] = descData["globalAssetId"]["value"][0]
         except:
             params["aasetId"] = ""
         
@@ -201,8 +203,184 @@ class DB_ADAPTOR(object):
         except:
             params["idShort"] = ""
         return params
-    
-    def getAllDesc(self,data):
+
+    def getAssetAdministrationShellDescriptorById(self,data):
+        returnMessageDict = {}
+        try:
+            aasDescriptors = self.AAS_Database_Server.find(self.mongocol_aasDesc,{ "$or": [ { "aasId":data["aasId"] }, { "aasetId":data["aasId"]},{"idShort":data["aasId"]} ] })
+            if (aasDescriptors["message"] == "success"):
+                returnMessageDict = {"message":[aasDescriptors["data"]["data"]],"status":200}
+            elif (aasDescriptors["message"] == "failure"):
+                returnMessageDict = {"message":["No Asset Administration Shell with passed identifier found"],"status":200}
+            else :
+                returnMessageDict = {"message" : ["Unexpected Internal Server Error"], "status":500}
+        except Exception as E:
+            returnMessageDict = {"message" : ["Unexpected Internal Server Error"+str(E)], "status":500}
+        return returnMessageDict
+
+##### Get a New Descriptor End ###################
+
+##### Delete a New Descriptor Start ###################
+
+    def deleteEndpointInformation(self,aasId):
+        try:
+            self.AAS_Database_Server.remove(self.mongocol_aasDescEndPoint,{ "$or": [ { "aasId":aasId }, { "aasetId":aasId},{"idShort":aasId} ] })
+            if aasId in self.pyAAS.mqttGateWayEntries: 
+                self.pyAAS.mqttGateWayEntries.remove(aasId)
+            if aasId in self.pyAAS.httpEndPointsDict:
+                del self.pyAAS.httpEndPointsDict[aasId]                                       
+            if aasId in self.pyAAS.coapEndPointsDict:
+                del self.pyAAS.coapEndPointsDict[aasId]        
+        except:
+            pass
+        
+    def deleteAssetAdministrationShellDescriptorById(self,data):
+        returnMessageDict = {}
+        try:
+            deleteResult = self.AAS_Database_Server.remove(self.mongocol_aasDesc,{ "$or": [ { "aasId":data["aasId"] }, { "aasetId":data["aasId"]},{"idShort":data["aasId"]} ] })
+            if (deleteResult["message"] == "failure"):
+                returnMessageDict = {"message" : ["No Asset Administration Shell with passed identifier found"], "status": 200}
+            elif (deleteResult["message"] == "success"):
+                self.deleteEndpointInformation(data["aasId"])
+                returnMessageDict = {"message" : ["The Asset Administration Shell Descriptor is successfull unregistered"], "status": 200,"index":deleteResult["index"]}                                      
+            else:
+                returnMessageDict = {"message" : ["Unexpected Internal Server Error"], "status":500}
+        except Exception as E:
+            returnMessageDict = {"message" : ["Unexpected Internal Server Error"+str(E)], "status":500}
+        return returnMessageDict
+
+##### Delete a New Descriptor End ###################
+
+##### Put a New Descriptor Start ###################
+
+    def putAssetAdministrationShellDescriptorById(self,data):
+        returnMessageDict = {}
+        descData = data["updateData"]
+        descInsertData = self.getDescParams(descData)
+        descInsertData["data"] = descData
+        try:
+            response = self.deleteAssetAdministrationShellDescriptorById(data)
+            epO = EndpointObject(self.pyAAS)
+            httpEdpStatus = True
+            if(response["message"][0] == "The Asset Administration Shell Descriptor is successfull unregistered"):
+                self.AAS_Database_Server.insert_at(self.mongocol_aasDesc,descInsertData,response["index"])
+                query = self.getDescriptorIndexData(descData) 
+                httpEdpStatus = epO.insert(descData,query)
+                returnMessageDict = {"message" : ["The Asset Administration Shell's descriptor registration is successfully renewed"],"status":200}
+                if (not httpEdpStatus):
+                    query = self.getDescriptorIndexData(descData)
+                    self.AAS_Database_Server.remove("aasDescEndPointVWS_RIC",{ "$or": [ { "aasId":query["aasId"] }, { "aasetId":query["aasId"]},{"idShort":query["aasId"]} ] })
+                    query["endpoint"] = ""
+                    query["ASYNC"] = "Y" 
+                    self.insertDescriptorEndPoint(query)
+                    self.pyAAS.mqttGateWayEntries.add(descData["identification"])                
+            else:
+                returnMessageDict = response
+        except Exception as E:
+            self.pyAAS.serviceLogger.info(str(E))
+            returnMessageDict = {"message": ["Unexpected Internal Server Error"],"status":500}
+        return returnMessageDict    
+
+
+    def getDescriptorIndexData(self,aasD):
+        try:
+            aasId  = aasD["identification"]
+        except:
+            aasId = ""
+        try:
+            aasetId  = aasD["globalAssetId"]["keys"][0]["value"]
+        except:
+            aasetId = ""
+        try:
+            idShort  = aasD["idShort"]
+        except:
+            idShort = ""
+        descQuery = {"aasId" : aasId, "aasetId":aasetId, "idShort" : idShort}
+        return descQuery
+        
+    def getSubmodelDescriptorById(self,data):
+        returnMessageDict = {}
+        submodelId = data["submodelId"]
+        try:
+            response = self.getAssetAdministrationShellDescriptorById(data)
+            if (response["status"] == 200 and str(response["message"][0]) != "No Asset Administration Shell with passed identifier found"):
+                present = False
+                for submodelDesc in response["message"][0]["submodelDescriptors"]:
+                    if submodelDesc["idShort"] == submodelId or submodelDesc["identification"] == submodelId:
+                        returnMessageDict = {"message" : [submodelDesc], "status": 200}
+                        present = True
+                if (not present):
+                    returnMessageDict = {"message" : ["No Submodel descriptor with passed id found"], "status": 200}
+            else:
+                returnMessageDict = response
+        except Exception as E:
+            self.pyAAS.serviceLogger.info()
+            returnMessageDict = {"message" : ["Unexpected Internal Server Error"+str(E)], "status":500}
+        return returnMessageDict
+
+    def putSubmodelDescriptorById(self,data):
+        try:
+            returnMessageDict = {}
+            descData = data["updateData"]
+            response = self.deleteSubmodelDescriptorById(data)
+            if (response["status"] == 200 and response["message"][0] == "The Submodel Descriptor is successfully unregistered"):
+                    response1 = self.getAssetAdministrationShellDescriptorById(data) 
+                    if (response1["status"] == 200 and str(response1["message"]) != "No Asset Administration Shell with passed identifier found"):
+                        aasDescdataNew = response1["message"][0]
+                        aasDescdataNew["submodelDescriptors"].insert(response["index"],descData)
+                        response2 = self.putAssetAdministrationShellDescriptorById({"updateData":aasDescdataNew,"aasId":data["aasId"]})
+                        if (response2["status"] == 200):
+                            returnMessageDict = {"message" : ["The Submodel descriptor is successfully renewed"],"status":200}
+                        elif(response2["status"] == 500):
+                            returnMessageDict = response2
+                        else:
+                            returnMessageDict = {"message" : ["No Submodel descriptor with passed id found"],"status":200}
+                    else:
+                        returnMessageDict = {"message" : ["No Submodel descriptor with passed id found"],"status":200}
+            else:
+                returnMessageDict = response 
+        except Exception as E:
+            self.pyAAS.serviceLogger.info(str(E)+"Hereeeeeeee")
+            returnMessageDict = {"message" : ["Unexpected Internal Server Error"], "status":500}
+        return returnMessageDict
+
+    def deleteSubmodelDescriptorById(self,data):
+        returnMessageDict = {}
+        submodelId = data["submodelId"]
+        aasId = data["aasId"]
+        try:
+            response = self.getAssetAdministrationShellDescriptorById(data)
+            if (response["status"] == 200 and str(response["message"][0]) != "No Asset Administration Shell with passed identifier found"):
+                aasDescData = response["message"][0]
+                aasSubmodelDescData = response["message"][0]["submodelDescriptors"]
+                i = 0
+                K = 0
+                present = False
+                for submodelDesc in response["message"][0]["submodelDescriptors"]:
+                    if submodelDesc["idShort"] == submodelId or submodelDesc["identification"] == submodelId:
+                        del aasSubmodelDescData[i]
+                        present = True
+                        k = i
+                        break
+                    i = i + 1
+                if (not present):
+                    returnMessageDict = {"message" : ["Submodel Descriptor with passed id not found"], "status": 200}
+                else:
+                    aasDescData["submodelDescriptors"] = aasSubmodelDescData
+                    response2 = self.putAssetAdministrationShellDescriptorById({"updateData" :aasDescData,"aasId":aasId})
+                    if response2["status"] == 200:
+                        returnMessageDict = {"message" : ["The Submodel Descriptor is successfully unregistered"], "index" : k, "status": 200}
+                    else:
+                        returnMessageDict = response2
+            else:
+                returnMessageDict = response
+        except Exception as E:
+            self.pyAAS.serviceLogger.info(str(E))
+            returnMessageDict = {"message" : ["Unexpected Internal Server Error"], "status":500}
+        return returnMessageDict    
+
+
+    def getAllAssetAdministrationShellDescriptor(self,data):
         data = data
         returnMessageDict = {}
         resultDict = {}
@@ -222,78 +400,30 @@ class DB_ADAPTOR(object):
             returnMessageDict = {"message" : ["Unexpected Internal Server Error"+str(E)], "status":500}
         return returnMessageDict
 
-##### Get a New Descriptor Start ###################
-
-    def getAASDescByID(self,data):
-        returnMessageDict = {}
-        try:
-            aasDescriptors = self.AAS_Database_Server.find(self.mongocol_aasDesc,{ "$or": [ { "aasId":data["aasId"] }, { "aasetId":data["aasId"]},{"idShort":data["aasId"]} ] })
-            if (aasDescriptors["message"] == "success"):
-                returnMessageDict = {"message":[aasDescriptors["data"]["data"]],"status":200}
-            elif (aasDescriptors["message"] == "failure"):
-                returnMessageDict = {"message":["No Asset Administration Shell with passed identifier found"],"status":200}
-            else :
-                returnMessageDict = {"message" : ["Unexpected Internal Server Error"], "status":500}
-        except Exception as E:
-            returnMessageDict = {"message" : ["Unexpected Internal Server Error"+str(E)], "status":500}
-        return returnMessageDict
-
-##### Get a New Descriptor End ###################
-
-##### Delete a New Descriptor Start ###################
-
-    def deleteAASDescById(self,data):
-        returnMessageDict = {}
-        try:
-            deleteResult = self.AAS_Database_Server.remove(self.mongocol_aasDesc,{ "$or": [ { "aasId":data["aasId"] }, { "aasetId":data["aasId"]},{"idShort":data["aasId"]} ] })
-            if (deleteResult["message"] == "failure"):
-                returnMessageDict = {"message" : ["No Asset Administration Shell with passed identifier found"], "status": 200}
-            elif (deleteResult["message"] == "success"):
-                returnMessageDict = {"message" : ["The Asset Administration Shell Descriptor was deleted successfully"], "status": 200}
-            else:
-                returnMessageDict = {"message" : ["Unexpected Internal Server Error"], "status":500}
-        except Exception as E:
-            returnMessageDict = {"message" : ["Unexpected Internal Server Error"+str(E)], "status":500}
-        return returnMessageDict
-
-##### Delete a New Descriptor End ###################
-
-##### Put a New Descriptor Start ###################
-
-    def putAASDescByID(self,data):
+    def postAssetAdministrationShellDescriptor(self,data):
         returnMessageDict = {}
         descData = data["updateData"]
         descInsertData = self.getDescParams(descData)
         descInsertData["data"] = descData
         try:
-            response = self.deleteAASDescById(data)
             epO = EndpointObject(self.pyAAS)
             httpEdpStatus = True
-            if (response["message"][0] == "No Asset Administration Shell with passed identifier found"):
-                self.AAS_Database_Server.insert_one(self.mongocol_aasDesc,descInsertData)
-                query = self.getDescriptorIndexData(descData) 
-                httpEdpStatus = epO.insert(descData,query)
-                returnMessageDict = {"message" : ["The Asset Administration Shell's descriptor registration is successfull"],"status":200}
-            elif(response["message"][0] == "The Asset Administration Shell Descriptor was deleted successfully"):
-                self.AAS_Database_Server.insert_one(self.mongocol_aasDesc,descInsertData)
-                query = self.getDescriptorIndexData(descData) 
-                httpEdpStatus = epO.insert(descData,query)
-                returnMessageDict = {"message" : ["The Asset Administration Shell's descriptor registration is successfully renewed"],"status":200}
-            else:
-                returnMessageDict = response
+            self.AAS_Database_Server.insert_one(self.mongocol_aasDesc,descInsertData)
+            query = self.getDescriptorIndexData(descData) 
+            httpEdpStatus = epO.insert(descData,query)
+            returnMessageDict = {"message" : ["The Asset Administration Shell's descriptor registration is successfull"],"status":200}
             if (not httpEdpStatus):
                 query = self.getDescriptorIndexData(descData)
-                deleteResult = self.AAS_Database_Server.remove("aasDescEndPointVWS_RIC",{ "$or": [ { "aasId":query["aasId"] }, { "aasetId":query["aasId"]},{"idShort":query["aasId"]} ] })
                 query["endpoint"] = ""
                 query["ASYNC"] = "Y" 
                 self.insertDescriptorEndPoint(query)
-                self.pyAAS.mqttGateWayEntries.add(descData["identification"]["id"])
+                self.pyAAS.mqttGateWayEntries.add(descData["identification"])
         except Exception as E:
             self.pyAAS.serviceLogger.info(str(E))
             returnMessageDict = {"message": ["Unexpected Internal Server Error"],"status":500}
-        return returnMessageDict    
+        return returnMessageDict  
 
-    def getSubmodelDescsByAASId(self,data):
+    def getAllSubmodelDescriptors(self,data):
         returnMessageDict = {}
         resultDict = {}
         try:
@@ -305,12 +435,33 @@ class DB_ADAPTOR(object):
                     i = i + 1
                 returnMessageDict = {"message":[resultDict],"status":200}
             elif (aasDescriptors["message"] == "failure"):
-                returnMessageDict = {"message":["No Asset Administration Shell with passed identifier found"],"status":200}
+                returnMessageDict = {"message":["No submodel descriptor with passed identifier found"],"status":200}
             else :
                 returnMessageDict = {"message" : ["Unexpected Internal Server Error"], "status":500}
         except Exception as E:
             returnMessageDict = {"message" : ["Unexpected Internal Server Error"+str(E)], "status":500}
         return returnMessageDict
+
+    def postSubmodelDescriptor(self,data):
+        try:
+            returnMessageDict = {}
+            descData = data["updateData"]
+            response = self.getAssetAdministrationShellDescriptorById(data)
+            if (response["status"] == 200 and str(response["message"][0]) != "No Asset Administration Shell with passed identifier found"):
+                aasDescdataNew = response["message"][0]
+                aasDescdataNew["submodelDescriptors"].append(descData)
+                response2 = self.postAssetAdministrationShellDescriptor({"updateData":aasDescdataNew,"aasId":data["aasId"]})
+                if (response2["status"] == 200):
+                    returnMessageDict = {"message" : ["The Submodel descriptor is created successfully"],"status":200}
+                else :
+                    returnMessageDict = response2
+            else:
+                returnMessageDict = response
+        except Exception as E:
+            self.pyAAS.serviceLogger.info(str(E))
+            returnMessageDict = {"message" : ["Unexpected Internal Server Error"], "status":500}
+        return returnMessageDict
+
 
 
 #===============================================================================
@@ -319,113 +470,8 @@ class DB_ADAPTOR(object):
 # #### AASDescritpors Registry End ######################    
 #===============================================================================
 
+   
     
-    def getDescriptorIndexData(self,aasD):
-        try:
-            aasId  = aasD["identification"]["id"]
-        except:
-            aasId = ""
-        try:
-            aasetId  = aasD["globalAssetId"]["keys"][0]["value"]
-        except:
-            aasetId = ""
-        try:
-            idShort  = aasD["idShort"]
-        except:
-            idShort = ""
-        descQuery = {"aasId" : aasId, "aasetId":aasetId, "idShort" : idShort}
-        return descQuery
-        
-    def getSubmodelDescByID(self,data):
-        returnMessageDict = {}
-        submodelId =data["submodelId"]
-        try:
-            response = self.getAASDescByID(data)
-            if (response["status"] == 200):
-                present = False
-                for submodelDesc in response["message"][0]["submodelDescriptors"]:
-                    if submodelDesc["idShort"] == submodelId:
-                        returnMessageDict = {"message" : [submodelDesc], "status": 200}
-                        present = True
-                if (not present):
-                    returnMessageDict = {"message" : ["Submodel with passed id not found"], "status": 200}
-            else:
-                returnMessageDict = response
-        except Exception as E:
-            self.pyAAS.serviceLogger.info()
-            returnMessageDict = {"message" : ["Unexpected Internal Server Error"+str(E)], "status":500}
-        return returnMessageDict
-
-    def putSubmodelDescByID(self,data):
-        try:
-            returnMessageDict = {}
-            descData = data["updateData"]
-            response1 = self.getSubmodelDescByID(data)
-            if (response1["status"] == 200):
-                response2 = self.deleteSubmodelDescByID(data)
-                if (response2["status"] == 200):
-                    response3 = self.getAASDescByID(data) 
-                    if (response3["status"] == 200):
-                        aasDescdataNew = response3["message"][0]
-                        aasDescdataNew["submodelDescriptors"].append(descData)
-                        response4 = self.putAASDescByID({"updateData":aasDescdataNew,"aasId":data["aasId"]})
-                        if (response4["status"] == 200):
-                            returnMessageDict = {"message" : ["The Submodel descriptor was successfully renewed"],"status":200}
-                        else :
-                            returnMessageDict = response4
-                    else:
-                        returnMessageDict = response3
-                else:
-                    returnMessageDict = response2 
-            elif response1["status"] == 400:
-                response5 = self.getAASDescByID(data) 
-                if (response5["status"] == 200):
-                    aasDescdataNew1 = response5["message"][0]
-                    aasDescdataNew1["submodelDescriptors"].append(descData)
-                    response6 = self.putAASDescByID({"updateData":aasDescdataNew1,"aasId":data["aasId"]})
-                    if (response6["status"] == 200):
-                        returnMessageDict = {"message" : ["The Submodel descriptor was created successfully"],"status":200}
-                    else :
-                        returnMessageDict = response6
-            else:
-                returnMessageDict = {"message" : ["Unexpected Internal Server Error"], "status":500}
-        except Exception as E:
-            self.pyAAS.serviceLogger.info(str(E))
-            returnMessageDict = {"message" : ["Unexpected Internal Server Error"], "status":500}
-        return returnMessageDict
-
-    def deleteSubmodelDescByID(self,data):
-        returnMessageDict = {}
-        submodelId = data["submodelId"]
-        aasId = data["aasId"]
-        try:
-            response = self.getAASDescByID(data)
-            if (response["status"] == 200):
-                aasDescData = response["message"][0]
-                aasSubmodelDescData = response["message"][0]["submodelDescriptors"]
-                i = 0
-                present = False
-                for submodelDesc in response["message"][0]["submodelDescriptors"]:
-                    if submodelDesc["idShort"] == submodelId:
-                        del aasSubmodelDescData[i]
-                        present = True
-                        break
-                    i = i + 1
-                if (not present):
-                    returnMessageDict = {"message" : ["Submodel Descriptor with passed id not found"], "status": 400}
-                else:
-                    aasDescData["submodelDescriptors"] = aasSubmodelDescData
-                    response2 = self.putAASDescByID({"updateData" :aasDescData,"aasId":aasId})
-                    if response2["status"] == 200:
-                        returnMessageDict = {"message" : ["The Submodel Descriptor was successfully unregistered"], "status": 200}
-                    else:
-                        returnMessageDict = response2
-            else:
-                returnMessageDict = response
-        except Exception as E:
-            self.pyAAS.serviceLogger.info(str(E))
-            returnMessageDict = {"message" : ["Unexpected Internal Server Error"], "status":500}
-        return returnMessageDict    
     
     def insertDescriptorEndPoint(self,data):
         try:
@@ -444,7 +490,10 @@ class DB_ADAPTOR(object):
         try:
             query = { }
             descriptorEndpoint = self.AAS_Database_Server.find(self.mongocol_aasDescEndPoint,query)            
-            returnMessageDict = {"message": descriptorEndpoint["data"],"status":200}
+            if (descriptorEndpoint["message"] == "failure"):
+                returnMessageDict = {"message": ["No Data Found"],"status":200}
+            else:
+                returnMessageDict = {"message": descriptorEndpoint["data"],"status":200}
         except Exception as E:
             returnMessageDict = {"message" : ["Unexpected Internal Server Error"+str(E)], "status":500}
         return returnMessageDict        
@@ -456,7 +505,7 @@ class DB_ADAPTOR(object):
     def getSubmodelDescParams(self,submodelDescData):
         params = {}
         try:
-            params["submodelId"] = submodelDescData["identification"]["id"]
+            params["submodelId"] = submodelDescData["identification"]
         except Exception as E:
             self.pyAAS.serviceLogger.info(str(E))
             params["submodelId"] = ""
@@ -509,12 +558,11 @@ class DB_ADAPTOR(object):
         submodeldescInsertData["data"] = descData
         try:
             response = self.deleteSubmodelDescriptorsById(data)
-            if (response["message"][0] == "The submodel Descriptor is successfully unregistered"):
+            if (response["message"][0] == "The Submodel Descriptor is successfully unregistered"):
                 self.AAS_Database_Server.insert_one(self.mongocol_submodelDesccriptors,submodeldescInsertData)
                 returnMessageDict = {"message" : ["The submodel descriptor successfully renewed"],"status":200}
             elif(response["message"][0] == "The submodel descriptor with passed identifier not found"):
-                self.AAS_Database_Server.insert_one(self.mongocol_submodelDesccriptors,submodeldescInsertData)
-                returnMessageDict = {"message" : ["The submodel descriptor is successfully registered"],"status":200}
+                returnMessageDict = {"message" : ["The submodel descriptor with passed identifier not found"],"status":200}
             else:
                 returnMessageDict = response
         except Exception as E:

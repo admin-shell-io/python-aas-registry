@@ -1,5 +1,5 @@
 '''
-Copyright (c) 2021-2022 Otto-von-Guericke-Universität Magdeburg, Lehrstuhl Integrierte Automation
+Copyright (c) 2021-2022 Otto-von-Guericke-Universitaet Magdeburg, Lehrstuhl Integrierte Automation
 Author: Harish Kumar Pakala
 This source code is licensed under the Apache License 2.0 (see LICENSE.txt).
 This source code may use other Open Source software components (see LICENSE.txt).
@@ -15,12 +15,6 @@ from dotenv import load_dotenv
 from datetime import  datetime
 from importlib import import_module
 from dotenv.main import find_dotenv
-
-
-try:
-    from abstract.channel import Channel
-except ImportError:
-    from main.abstract.channel import Channel
 
 try:
     from datastore.datamanager import DataManager
@@ -66,7 +60,6 @@ class vws_ric(object):
         self.idDict = {}
         self.mCount = 0
     def reset(self):
-        self.channels = {}
         self.io_adapters = {}
         self.AASendPointHandles = {}   
         self.scheduler = None
@@ -161,17 +154,6 @@ class vws_ric(object):
             endPoint0.configure()
         
         self.serviceLogger.info('The AAS I40 End Points are configured')
- 
-        
-    def configurePropertyRefChannels(self,channelRefList):
-        # configure the channels
-        for channelRefs in channelRefList:
-            for channelRef in channelRefs["propertyReferences"]: 
-                channel = Channel(self)
-                channel.configure(channelRef)
-                self.channels[channel.id] = channel
-        
-        self.serviceLogger.info('The property channels are configured')
         
     def configureAssetAccessPoints(self):
         # configure the IOAdapters

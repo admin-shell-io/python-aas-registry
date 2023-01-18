@@ -1,9 +1,10 @@
 '''
-Copyright (c) 2021-2022 Otto-von-Guericke-Universität Magdeburg, Lehrstuhl Integrierte Automation
+Copyright (c) 2021-2022 Otto-von-Guericke-Universitaet Magdeburg, Lehrstuhl Integrierte Automation
 Author: Harish Kumar Pakala
 This source code is licensed under the Apache License 2.0 (see LICENSE.txt).
 This source code may use other Open Source software components (see LICENSE.txt).
 '''
+
 
 import json
 import os.path
@@ -58,25 +59,24 @@ class ConfigParser(object):
     
     def updateEndPointDict(self):
         AASDescDataDB = self.pyAAS.dba.getDescriptorEndPoint()
-        if (AASDescDataDB["status"] == 200):
+        if (AASDescDataDB["status"] == 200 and type(AASDescDataDB["message"][0]) != str):
             data = AASDescDataDB["message"]
-        for entry in data:
-            _asyncType = entry["ASYNC"]
-            URI = entry["endpoint"]
-            if _asyncType == "Y":
-                self.pyAAS.mqttGateWayEntries.add(entry["aasId"])
-            else:
-                if URI.split(":")[0] == "http" or URI.split(":")[0] == "https": 
-                    self.pyAAS.httpEndPointsDict[entry["aasId"]] = URI
-                elif URI.split(":")[0] == "coap":
-                    self.pyAAS.coapEndPointsDict[entry["aasId"]] = URI
+            for entry in data:
+                _asyncType = entry["ASYNC"]
+                URI = entry["endpoint"]
+                if _asyncType == "Y":
+                    self.pyAAS.mqttGateWayEntries.add(entry["aasId"])
+                else:
+                    if URI.split(":")[0] == "http" or URI.split(":")[0] == "https": 
+                        self.pyAAS.httpEndPointsDict[entry["aasId"]] = URI
+                    elif URI.split(":")[0] == "coap":
+                        self.pyAAS.coapEndPointsDict[entry["aasId"]] = URI
              
     def configureAASJsonData(self):
         AASDataDB = self.pyAAS.dba.getAAS({"aasId":self.pyAAS.AASID})
         if (AASDataDB["status"] == 200 and type(AASDataDB["message"][0]) !=str):
             self.jsonData = AASDataDB["message"][0]
             self.updateEndPointDict()
-            print(self.pyAAS.mqttGateWayEntries)
             return True
             
         elif (AASDataDB["message"][0] == "No Asset Administration Shell with passed id found"):
@@ -89,7 +89,7 @@ class ConfigParser(object):
                 aaD = AASDescriptor(self.pyAAS)
                 desc = aaD.createDescriptor()
                 descdata = {"updateData" :desc,"aasId":self.pyAAS.AASID}
-                descResponse = self.pyAAS.dba.putAASDescByID(descdata)
+                descResponse = self.pyAAS.dba.putAssetAdministrationShellDescriptorById(descdata)
                 
                 if (descResponse["status"] == 500):
                     return False

@@ -1,10 +1,9 @@
 '''
-Copyright (c) 2021-2022 Otto-von-Guericke-Universität Magdeburg, Lehrstuhl Integrierte Automation
+Copyright (c) 2021-2022 Otto-von-Guericke-Universitaet Magdeburg, Lehrstuhl Integrierte Automation
 Author: Harish Kumar Pakala
 This source code is licensed under the Apache License 2.0 (see LICENSE.txt).
 This source code may use other Open Source software components (see LICENSE.txt).
 '''
-
 
 import json
 from datetime import datetime,timedelta
@@ -21,21 +20,8 @@ except ImportError:
 
 #### AAS Descriptor Information Start##############
 
-## All AAS ShellDescriptors  
-class AASDescriptors(Resource):
-    def __init__(self,pyAAS):
-        self.pyAAS = pyAAS
-    
-    def get(self):
-        try:
-            edbR = ExecuteDBRetriever(self.pyAAS)
-            dataBaseResponse = edbR.execute({"data":{"updateData":"emptyData"},"method":"getAllDesc"})
-            return make_response(dataBaseResponse["message"][0],dataBaseResponse["status"])
-        except Exception as E:
-            return make_response("Unexpected Internal Server Error"+str(E),500)
-
 # A specific AAS Descriptor
-class AASDescriptorsbyId(Resource):
+class AssetAdministrationShellDescriptorById(Resource):
     def __init__(self,pyAAS):
         self.pyAAS = pyAAS
     
@@ -43,7 +29,7 @@ class AASDescriptorsbyId(Resource):
         try:
             escapeId = unquote(aasId)
             edbR = ExecuteDBRetriever(self.pyAAS)
-            dataBaseResponse = edbR.execute({"data":{"updateData":"emptyData","aasId":escapeId},"method":"getAASDescByID"})            
+            dataBaseResponse = edbR.execute({"data":{"updateData":"emptyData","aasId":escapeId},"method":"getAssetAdministrationShellDescriptorById"})            
             return make_response(dataBaseResponse["message"][0],dataBaseResponse["status"])
         except Exception as E:
             return make_response("Unexpected Internal Server Error"+str(E),500)
@@ -51,12 +37,12 @@ class AASDescriptorsbyId(Resource):
     def getDescParams(self,descData):
         params = {"aasId":"","aasetId":"","idShort":""}
         try:
-            params["aasId"] = descData["identification"]["id"]
+            params["aasId"] = descData["identification"]
         except :
             pass
         
         try:
-            params["aasetId"] = descData["assets"][0]["identification"]["id"]
+            params["aasetId"] =  descData["globalAssetId"]["value"][0]
         except :
             pass
         
@@ -78,10 +64,10 @@ class AASDescriptorsbyId(Resource):
                     descParams = self.getDescParams(data)
                     if (escapeId == descParams["aasId"] or escapeId == descParams["aasetId"] or escapeId == descParams["idShort"] ):
                         edm = ExecuteDBModifier(self.pyAAS)
-                        dataBaseResponse = edm.executeModifer({"data":{"updateData":data,"aasId":escapeId},"method":"putAASDescByID"})              
+                        dataBaseResponse = edm.executeModifer({"data":{"updateData":data,"aasId":escapeId},"method":"putAssetAdministrationShellDescriptorById"})              
                         return make_response(dataBaseResponse["message"][0],dataBaseResponse["status"])
                     else:
-                        return make_response("TThe aas-identifier in the uri and in descriptor do not match",500)
+                        return make_response("TThe aas-identifier in the uri and in descriptor do not match",200)
                 else :
                     return make_response("The syntax of the passed Asset Administration Shell descriptor is not valid or malformed request",500)
         except Exception as E:
@@ -92,13 +78,88 @@ class AASDescriptorsbyId(Resource):
         escapeId = unquote(aasId)
         try:
             edm = ExecuteDBModifier(self.pyAAS)
-            dataBaseResponse = edm.executeModifer({"data":{"updateData":"emptyData","aasId":escapeId},"method":"deleteAASDescById"})              
+            dataBaseResponse = edm.executeModifer({"data":{"updateData":"emptyData","aasId":escapeId},"method":"deleteAssetAdministrationShellDescriptorById"})              
             return make_response(dataBaseResponse["message"][0],dataBaseResponse["status"])
         except Exception as E:
             return make_response("Unexpected Internal Server Error"+str(E),500)
 
+# Specific submodel descriptor 
+class SubmodelDescriptorById(Resource):
+    def __init__(self,pyAAS):
+        self.pyAAS = pyAAS
+    
+    def get(self,aasId,submodelId):
+        try:
+            escapeId = unquote(aasId)
+            edbR = ExecuteDBRetriever(self.pyAAS)
+            dataBaseResponse = edbR.execute({"data":{"updateData":"emptyData","aasId":escapeId,"submodelId":submodelId},"method":"getSubmodelDescriptorById"})            
+            return make_response(dataBaseResponse["message"][0],dataBaseResponse["status"])
+        except:
+            return make_response("Unexpected Internal Server Error",500)
+                
+    def put(self,aasId,submodelId):
+        descValid = DescriptorValidator(self.pyAAS)
+        try:
+            escapeId = unquote(aasId)
+            data = request.json
+            if "interactionElements" in data:
+                pass
+                #return self.pyAAS.skillInstanceDict["RegistryHandler"].restAPIHandler(data)
+            else:
+                if(descValid.valitdateSubmodelDescriptor(data)):
+                    if (submodelId == data["idShort"] or submodelId == data["identification"]):
+                        edm = ExecuteDBModifier(self.pyAAS)
+                        dataBaseResponse = edm.executeModifer({"data":{"updateData":data,"aasId":escapeId,"submodelId":submodelId},"method":"putSubmodelDescriptorById"})            
+                        return make_response(dataBaseResponse["message"][0],dataBaseResponse["status"])
+                    else:
+                        return make_response("The Namespace SubmodelId value and the IdShort or the identification value in the data are not matching",500)  
+                else :
+                    return make_response("The syntax of the passed Submodel Descriptor is not valid or malformed request",200)
+        except Exception as E:
+            return make_response("Unexpected Internal Server Error"+str(E),500)
+
+    def delete(self,aasId,submodelId):
+        try:
+            escapeId = unquote(aasId)
+            edm = ExecuteDBModifier(self.pyAAS)
+            dataBaseResponse = edm.executeModifer({"data":{"updateData":"emptyData","aasId":escapeId,"submodelId":submodelId},"method":"deleteSubmodelDescriptorById"})              
+            return make_response(dataBaseResponse["message"][0],dataBaseResponse["status"])
+        except Exception as E:
+            return make_response("Unexpected Internal Server Error"+str(E),500)
+
+
+## All AAS ShellDescriptors  
+class AssetAdministrationShellDescriptor(Resource):
+    def __init__(self,pyAAS):
+        self.pyAAS = pyAAS
+    
+    def get(self):
+        try:
+            edbR = ExecuteDBRetriever(self.pyAAS)
+            dataBaseResponse = edbR.execute({"data":{"updateData":"emptyData"},"method":"getAllAssetAdministrationShellDescriptor"})
+            return make_response(dataBaseResponse["message"][0],dataBaseResponse["status"])
+        except Exception as E:
+            return make_response("Unexpected Internal Server Error"+str(E),500)
+
+    def post(self):
+        descValid = DescriptorValidator(self.pyAAS)
+        try:
+            data = request.json
+            if "interactionElements" in data:
+                return self.pyAAS.skillInstanceDict["RegistryHandler"].restAPIHandler(data)
+            else:
+                if(descValid.valitdateAASDescriptor(data)):
+                    edm = ExecuteDBModifier(self.pyAAS)
+                    dataBaseResponse = edm.executeModifer({"data":{"updateData":data},"method":"postAssetAdministrationShellDescriptor"})              
+                    return make_response(dataBaseResponse["message"][0],dataBaseResponse["status"])
+                else :
+                    return make_response("The syntax of the passed Asset Administration Shell descriptor is not valid or malformed request",200)
+        except Exception as E:
+            print(str(E))
+            return make_response("Unexpected Internal Server Error",500)
+
 # Submodel Descriptors of a specific AAS Descriptor
-class AASbyIdSubmodelDescriptors(Resource):
+class SubmodelDescriptor(Resource):
     def __init__(self,pyAAS):
         self.pyAAS = pyAAS
     
@@ -106,11 +167,28 @@ class AASbyIdSubmodelDescriptors(Resource):
         try:
             escapeId = unquote(aasId)
             edbR = ExecuteDBRetriever(self.pyAAS)
-            dataBaseResponse = edbR.execute({"data":{"updateData":"emptyData","aasId":escapeId},"method":"getSubmodelDescsByAASId"})
+            dataBaseResponse = edbR.execute({"data":{"updateData":"emptyData","aasId":escapeId},"method":"getAllSubmodelDescriptors"})
             return make_response(dataBaseResponse["message"][0],dataBaseResponse["status"])
         except Exception as E:
             return make_response("Unexpected Internal Server Error"+str(E),500)
- 
+
+    def post(self,aasId):
+        descValid = DescriptorValidator(self.pyAAS)
+        try:
+            escapeId = unquote(aasId)
+            data = request.json
+            if "interactionElements" in data:
+                pass
+                #return self.pyAAS.skillInstanceDict["RegistryHandler"].restAPIHandler(data)
+            else:
+                if(descValid.valitdateSubmodelDescriptor(data)):
+                    edm = ExecuteDBModifier(self.pyAAS)
+                    dataBaseResponse = edm.executeModifer({"data":{"updateData":data,"aasId":escapeId},"method":"postSubmodelDescriptor"})            
+                    return make_response(dataBaseResponse["message"][0],dataBaseResponse["status"])
+                else :
+                    return make_response("The syntax of the passed submodel descriptor is not valid or malformed request",200)
+        except Exception as E:
+            return make_response("Unexpected Internal Server Error"+str(E),500) 
 
 #### AAS Descriptor Information End##############
 
@@ -137,7 +215,7 @@ class SubModelDescriptorsbyId(Resource):
     def getSubmodelDescriptorParams(self,descData):
         params = {"identificationId":"","idShort":""}
         try:
-            params["identificationId"] = descData["identification"]["id"]
+            params["identificationId"] = descData["identification"]
         except :
             pass
 
@@ -298,51 +376,6 @@ class RetrieveMessage(Resource):
 
 
 
-# Specific Submodel Descriptor  of a specific AAS Descriptor
-# Needs to be deprectated
-class AASbyIdSubmodelDescriptorbyId(Resource):
-    def __init__(self,pyAAS):
-        self.pyAAS = pyAAS
-    
-    def get(self,aasId,submodelId):
-        try:
-            escapeId = unquote(aasId)
-            edbR = ExecuteDBRetriever(self.pyAAS)
-            dataBaseResponse = edbR.execute({"data":{"updateData":"emptyData","aasId":escapeId,"submodelId":submodelId},"method":"getSubmodelDescByID"})            
-            return make_response(dataBaseResponse["message"][0],dataBaseResponse["status"])
-        except:
-            return make_response("Unexpected Internal Server Error",500)
-                
-    def put(self,aasId,submodelId):
-        descValid = DescriptorValidator(self.pyAAS)
-        try:
-            escapeId = unquote(aasId)
-            data = request.json
-            if "interactionElements" in data:
-                pass
-                #return self.pyAAS.skillInstanceDict["RegistryHandler"].restAPIHandler(data)
-            else:
-                message = {"submodelDescriptors":data}
-                if(descValid.valitdateSubmodelDescriptor(message)):
-                    if (submodelId == data["idShort"]):
-                        edm = ExecuteDBModifier(self.pyAAS)
-                        dataBaseResponse = edm.executeModifer({"data":{"updateData":data,"aasId":escapeId,"submodelId":submodelId},"method":"putSubmodelDescByID"})            
-                        return make_response(dataBaseResponse["message"][0],dataBaseResponse["status"])
-                    else:
-                        return make_response("The Namespace SubmodelId value and the IdShort value in the data are not matching",500)  
-                else :
-                    return make_response("The syntax of the passed Asset Administration Shell is not valid or malformed request",200)
-        except Exception as E:
-            return make_response("Unexpected Internal Server Error"+str(E),500)
-
-    def delete(self,aasId,submodelId):
-        try:
-            escapeId = unquote(aasId)
-            edm = ExecuteDBModifier(self.pyAAS)
-            dataBaseResponse = edm.executeModifer({"data":{"updateData":"emptyData","aasId":escapeId,"submodelId":submodelId},"method":"deleteSubmodelDescByID"})              
-            return make_response(dataBaseResponse["message"][0],dataBaseResponse["status"])
-        except Exception as E:
-            return make_response("Unexpected Internal Server Error"+str(E),500)
 
 
 
