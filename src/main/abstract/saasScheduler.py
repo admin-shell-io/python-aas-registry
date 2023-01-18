@@ -18,7 +18,7 @@ import sys
 try:
     from config import aasxconfig as aasxconfig
 except ImportError:
-    from main.config import aasxconfig as aasxconfig
+    from src.main.config import aasxconfig as aasxconfig
 
 data_dir = os.path.join(aasxconfig.script_dir, "data")
 

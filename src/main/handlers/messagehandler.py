@@ -20,12 +20,12 @@ except ImportError:
 try:
     from datastore.datamanager import DataManager
 except ImportError:
-    from main.datastore.datamanager import DataManager
+    from src.main.datastore.datamanager import DataManager
 
 try:
     from utils.aaslog import serviceLogHandler,LogList
 except ImportError:
-    from main.utils.aaslog import serviceLogHandler,LogList
+    from src.main.utils.aaslog import serviceLogHandler,LogList
 
 
 class MessageHandler(object):
@@ -267,7 +267,7 @@ class MessageHandler(object):
                         descriptorData = json.loads(jsonData["interactionElements"][0])
                         descUrl = "http://localhost:9021/api/v1/registry/"+descriptorData["idShort"]
                         _putRegistryResponse = requests.put(descUrl,data=json.dumps(descriptorData),headers=self.connectHeader)
-                        self.pyAAS.serviceLogger.info("AASID : "+ descriptorData["idShort"] +_putRegistryResponse.text)
+                        self.pyAAS.service_logger.info("AASID : "+ descriptorData["idShort"] +_putRegistryResponse.text)
                 else:
                     _receiver = data["frame"]["receiver"]["identification"]["id"]
                     if _receiver in list(self.pyAAS.connectBotsDict.keys()):
@@ -276,10 +276,10 @@ class MessageHandler(object):
                         self.putTransportMessage(jsonData)   
                 
         except Exception as E:
-            self.pyAAS.serviceLogger.info("ERROR OCCURED " + str(E))
+            self.pyAAS.service_logger.info("ERROR OCCURED " + str(E))
     
     def __processbroadCastMessage__(self,bcMessage):
-        self.pyAAS.serviceLogger.info("A new broadcasting message has arrived")
+        self.pyAAS.service_logger.info("A new broadcasting message has arrived")
         restAPIThread = threading.Thread(target=self.AASendPointHandlerObjects["RESTAPI"].dispatchBroadCastMessage(bcMessage))
         restAPIThread.start()
         MQTTThread = threading.Thread(target=self.AASendPointHandlerObjects["MQTT"].dispatchBroadCastMessage(bcMessage))

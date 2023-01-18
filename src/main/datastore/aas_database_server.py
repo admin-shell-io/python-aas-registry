@@ -9,7 +9,7 @@ This source code may use other Open Source software components (see LICENSE.txt)
 class AAS_Database_Server(object):
     def __init__(self,pyAAS):
         self.pyAAS = pyAAS
-        self.AASRegistryDatabase = self.pyAAS.aasConfigurer.dataBaseFile
+        self.AASRegistryDatabase = self.pyAAS.aas_configurer.dataBaseFile
     
     def createNewDataBaseColumn(self,colName):
         if colName in self.AASRegistryDatabase:
@@ -21,11 +21,11 @@ class AAS_Database_Server(object):
     
     def insert_one(self,colName,insertData):
         self.AASRegistryDatabase[colName].append(insertData)
-        self.pyAAS.aasConfigurer.saveToDatabase(self.AASRegistryDatabase)
+        self.pyAAS.aas_configurer.saveToDatabase(self.AASRegistryDatabase)
     
     def insert_at(self,colName,insertData,index):
         self.AASRegistryDatabase[colName].insert(index,insertData)
-        self.pyAAS.aasConfigurer.saveToDatabase(self.AASRegistryDatabase)
+        self.pyAAS.aas_configurer.saveToDatabase(self.AASRegistryDatabase)
     
     def remove(self,colName,query):
         try:
@@ -38,7 +38,7 @@ class AAS_Database_Server(object):
                         for key in queryTerm:
                             if (queryTerm[key] == databaseRow[key]):
                                 del self.AASRegistryDatabase[colName][i]
-                                self.pyAAS.aasConfigurer.saveToDatabase(self.AASRegistryDatabase)
+                                self.pyAAS.aas_configurer.saveToDatabase(self.AASRegistryDatabase)
                                 return { "message": "success","index":i}
                     i = i + 1
                 return {"message":"failure","data":"error"}
@@ -55,7 +55,7 @@ class AAS_Database_Server(object):
                             i = i + 1
                     if (i == checkLength):
                         del self.AASRegistryDatabase[colName][i]
-                        self.pyAAS.aasConfigurer.saveToDatabase(self.AASRegistryDatabase)
+                        self.pyAAS.aas_configurer.saveToDatabase(self.AASRegistryDatabase)
                         return {"message": "success","index":i}
                     k = k + 1
                 return {"message":"failure","data":"error"}    

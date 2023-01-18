@@ -16,12 +16,12 @@ import time
 try:
     from utils.i40data import Generic
 except ImportError:
-    from main.utils.i40data import Generic
+    from src.main.utils.i40data import Generic
 
 try:
     from abstract.endpointhandler import AASEndPointHandler
 except ImportError:
-    from main.abstract.endpointhandler import AASEndPointHandler
+    from src.main.abstract.endpointhandler import AASEndPointHandler
 
 
 
@@ -43,7 +43,7 @@ class AASEndPointHandler(AASEndPointHandler):
         self.adminShellConnectURI = "https://" + self.ipaddressComdrv + ":" + self.portComdrv + "/publish"
         self.connectHeader = {"content-type": "application/json"}
         
-        self.pyAAS.serviceLogger.info("ADMINSHELL Connect Adaptor is configured")
+        self.pyAAS.service_logger.info("ADMINSHELL Connect Adaptor is configured")
                 
     def update(self, channel):
         pass
@@ -60,9 +60,9 @@ class AASEndPointHandler(AASEndPointHandler):
                             descUrl = "http://localhost:9021/api/v1/registry/"+descriptorData["idShort"]
                             _putRegistryResponse = requests.put(descUrl,data=json.dumps(descriptorData),headers=self.connectHeader)
                 else:
-                    pass#self.pyAAS.serviceLogger.info(r.text)
+                    pass#self.pyAAS.service_logger.info(r.text)
             except Exception as E:
-                self.pyAAS.serviceLogger.info(str(E) + "ADMIn SHELL CONNECT ERROR")
+                self.pyAAS.service_logger.info(str(E) + "ADMIn SHELL CONNECT ERROR")
             time.sleep(1)
 
     
@@ -72,11 +72,11 @@ class AASEndPointHandler(AASEndPointHandler):
 
     def stop(self):
         self.connectionHandler = False
-        self.pyAAS.serviceLogger.info("ADMINSHELL Connect Adaptor is stopped.")
+        self.pyAAS.service_logger.info("ADMINSHELL Connect Adaptor is stopped.")
     
     def dispatchMessage(self, send_Message): 
-        self.pyAAS.serviceLogger.info("A new message is dispatched.")
+        self.pyAAS.service_logger.info("A new message is dispatched.")
     
     
     def retrieveMessage(self, message):  # todo
-        self.pyAAS.serviceLogger.info("A new message is arrived .")
+        self.pyAAS.service_logger.info("A new message is arrived .")

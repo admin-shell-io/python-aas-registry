@@ -15,12 +15,12 @@ from aiocoap.numbers import Code
 try:
     from utils.i40data import Generic
 except ImportError:
-    from main.utils.i40data import Generic
+    from src.main.utils.i40data import Generic
 
 try:
     from utils.utils import ExecuteDBModifier,ExecuteDBRetriever,AASMetaModelValidator,DescriptorValidator,ConnectResponse
 except ImportError:
-    from main.utils.utils import ExecuteDBModifier,ExecuteDBRetriever,AASMetaModelValidator,DescriptorValidator,ConnectResponse
+    from src.main.utils.utils import ExecuteDBModifier,ExecuteDBRetriever,AASMetaModelValidator,DescriptorValidator,ConnectResponse
 
 class RetrieveMessageCoap(resource.Resource):    
     def __init__(self, pyAAS):

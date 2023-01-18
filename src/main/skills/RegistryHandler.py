@@ -23,17 +23,17 @@ except ImportError:
 try:
     from utils.i40data import Generic
 except ImportError:
-    from main.utils.i40data import Generic
+    from src.main.utils.i40data import Generic
 
 try:
     from utils.utils import ExecuteDBModifier,ExecuteDBRetriever,DescriptorValidator
 except ImportError:
-    from main.utils.utils import ExecuteDBModifier,ExecuteDBRetriever,DescriptorValidator
+    from src.main.utils.utils import ExecuteDBModifier,ExecuteDBRetriever,DescriptorValidator
 
 try:
     from utils.aaslog import serviceLogHandler,LogList
 except ImportError:
-    from main.utils.aaslog import serviceLogHandler,LogList
+    from src.main.utils.aaslog import serviceLogHandler,LogList
 
 '''
     The skill generator extracts all the states from the transitions list.
@@ -181,7 +181,7 @@ except ImportError:
     
     def saveMessage(self,message):
         self.instanceId = str(uuid.uuid1())
-        self.baseClass.pyAAS.dataManager.pushInboundMessage({"functionType":3,"data":message,"instanceid":self.instanceId,
+        self.baseClass.pyAAS.data_manager.pushInboundMessage({"functionType":3,"data":message,"instanceid":self.instanceId,
                                                             "messageType":message["frame"]["type"]})
         
     
@@ -238,25 +238,25 @@ class saveDescriptorDetails(object):
 
     def run(self):
             
-        self.baseClass.skillLogger.info("\n #############################################################################")
+        self.baseClass.skill_logger.info("\n #############################################################################")
         # StartState
-        self.baseClass.skillLogger.info("StartState: saveDescriptorDetails")
+        self.baseClass.skill_logger.info("StartState: saveDescriptorDetails")
         # InputDocumentType"
         InputDocument = "NA"
-        self.baseClass.skillLogger.info("InputDocument : " + InputDocument)
+        self.baseClass.skill_logger.info("InputDocument : " + InputDocument)
         
         self.saveDescriptorDetails_Logic()
         
     def next(self):
         OutputDocument = "NA"
-        self.baseClass.skillLogger.info("OutputDocumentType : " + OutputDocument)
+        self.baseClass.skill_logger.info("OutputDocumentType : " + OutputDocument)
         
         
         if (self.sendRegisterAck_Enabled):
-            self.baseClass.skillLogger.info("Condition :" + "-")
+            self.baseClass.skill_logger.info("Condition :" + "-")
             ts = sendRegisterAck(self.baseClass)
-            self.baseClass.skillLogger.info("TargettState: " + ts.__class__.__name__)
-            self.baseClass.skillLogger.info("############################################################################# \n")
+            self.baseClass.skill_logger.info("TargettState: " + ts.__class__.__name__)
+            self.baseClass.skill_logger.info("############################################################################# \n")
             return ts
         
 class Start(object):
@@ -279,25 +279,25 @@ class Start(object):
     
     def run(self):
             
-        self.baseClass.skillLogger.info("\n #############################################################################")
+        self.baseClass.skill_logger.info("\n #############################################################################")
         # StartState
-        self.baseClass.skillLogger.info("StartState: Start")
+        self.baseClass.skill_logger.info("StartState: Start")
         # InputDocumentType"
         InputDocument = "NA"
-        self.baseClass.skillLogger.info("InputDocument : " + InputDocument)
+        self.baseClass.skill_logger.info("InputDocument : " + InputDocument)
         
         self.Start_Logic()
         
     def next(self):
         OutputDocument = "NA"
-        self.baseClass.skillLogger.info("OutputDocumentType : " + OutputDocument)
+        self.baseClass.skill_logger.info("OutputDocumentType : " + OutputDocument)
         
         
         if (self.WaitforRegisterMessage_Enabled):
-            self.baseClass.skillLogger.info("Condition :" + "-")
+            self.baseClass.skill_logger.info("Condition :" + "-")
             ts = WaitforRegisterMessage(self.baseClass)
-            self.baseClass.skillLogger.info("TargettState: " + ts.__class__.__name__)
-            self.baseClass.skillLogger.info("############################################################################# \n")
+            self.baseClass.skill_logger.info("TargettState: " + ts.__class__.__name__)
+            self.baseClass.skill_logger.info("############################################################################# \n")
             return ts
         
 class sendMalformedError(object):
@@ -364,7 +364,7 @@ class sendMalformedError(object):
             oMessage_Out ={"frame": self.frame,
                                     "interactionElements":self.InElem}
             self.instanceId = str(uuid.uuid1())
-            self.baseClass.pyAAS.dataManager.pushInboundMessage({"functionType":3,"instanceid":self.instanceId,
+            self.baseClass.pyAAS.data_manager.pushInboundMessage({"functionType":3, "instanceid":self.instanceId,
                                                             "conversationId":oMessage_Out["frame"]["conversationId"],
                                                             "messageType":oMessage_Out["frame"]["type"],
                                                             "messageId":oMessage_Out["frame"]["messageId"],
@@ -374,18 +374,18 @@ class sendMalformedError(object):
     
     def run(self):
             
-        self.baseClass.skillLogger.info("\n #############################################################################")
+        self.baseClass.skill_logger.info("\n #############################################################################")
         # StartState
-        self.baseClass.skillLogger.info("StartState: sendMalformedError")
+        self.baseClass.skill_logger.info("StartState: sendMalformedError")
         # InputDocumentType"
         InputDocument = "NA"
-        self.baseClass.skillLogger.info("InputDocument : " + InputDocument)
+        self.baseClass.skill_logger.info("InputDocument : " + InputDocument)
         
         self.sendMalformedError_Logic()
         
     def next(self):
         OutputDocument = "registerack"
-        self.baseClass.skillLogger.info("OutputDocumentType : " + OutputDocument)
+        self.baseClass.skill_logger.info("OutputDocumentType : " + OutputDocument)
         
         if (OutputDocument != "NA"):
             self.outboundMessages = self.create_Outbound_Message()
@@ -393,10 +393,10 @@ class sendMalformedError(object):
                 self.baseClass.sendMessage(outbMessage)
         
         if (self.WaitforRegisterMessage_Enabled):
-            self.baseClass.skillLogger.info("Condition :" + "-")
+            self.baseClass.skill_logger.info("Condition :" + "-")
             ts = WaitforRegisterMessage(self.baseClass)
-            self.baseClass.skillLogger.info("TargettState: " + ts.__class__.__name__)
-            self.baseClass.skillLogger.info("############################################################################# \n")
+            self.baseClass.skill_logger.info("TargettState: " + ts.__class__.__name__)
+            self.baseClass.skill_logger.info("############################################################################# \n")
             return ts
         
 class ValidateRegisterMessage(object):
@@ -423,31 +423,31 @@ class ValidateRegisterMessage(object):
     
     def run(self):
             
-        self.baseClass.skillLogger.info("\n #############################################################################")
+        self.baseClass.skill_logger.info("\n #############################################################################")
         # StartState
-        self.baseClass.skillLogger.info("StartState: ValidateRegisterMessage")
+        self.baseClass.skill_logger.info("StartState: ValidateRegisterMessage")
         # InputDocumentType"
         InputDocument = "NA"
-        self.baseClass.skillLogger.info("InputDocument : " + InputDocument)
+        self.baseClass.skill_logger.info("InputDocument : " + InputDocument)
         
         self.ValidateRegisterMessage_Logic()
         
     def next(self):
         OutputDocument = "NA"
-        self.baseClass.skillLogger.info("OutputDocumentType : " + OutputDocument)
+        self.baseClass.skill_logger.info("OutputDocumentType : " + OutputDocument)
         
         
         if (self.sendMalformedError_Enabled):
-            self.baseClass.skillLogger.info("Condition :" + "-")
+            self.baseClass.skill_logger.info("Condition :" + "-")
             ts = sendMalformedError(self.baseClass)
-            self.baseClass.skillLogger.info("TargettState: " + ts.__class__.__name__)
-            self.baseClass.skillLogger.info("############################################################################# \n")
+            self.baseClass.skill_logger.info("TargettState: " + ts.__class__.__name__)
+            self.baseClass.skill_logger.info("############################################################################# \n")
             return ts
         if (self.saveDescriptorDetails_Enabled):
-            self.baseClass.skillLogger.info("Condition :" + "-")
+            self.baseClass.skill_logger.info("Condition :" + "-")
             ts = saveDescriptorDetails(self.baseClass)
-            self.baseClass.skillLogger.info("TargettState: " + ts.__class__.__name__)
-            self.baseClass.skillLogger.info("############################################################################# \n")
+            self.baseClass.skill_logger.info("TargettState: " + ts.__class__.__name__)
+            self.baseClass.skill_logger.info("############################################################################# \n")
             return ts
         
 class sendRegisterAck(object):
@@ -513,7 +513,7 @@ class sendRegisterAck(object):
             oMessage_Out ={"frame": self.frame,
                                     "interactionElements":self.InElem}
             self.instanceId = str(uuid.uuid1())
-            self.baseClass.pyAAS.dataManager.pushInboundMessage({"functionType":3,"instanceid":self.instanceId,
+            self.baseClass.pyAAS.data_manager.pushInboundMessage({"functionType":3, "instanceid":self.instanceId,
                                                             "conversationId":oMessage_Out["frame"]["conversationId"],
                                                             "messageType":oMessage_Out["frame"]["type"],
                                                             "messageId":oMessage_Out["frame"]["messageId"],
@@ -523,18 +523,18 @@ class sendRegisterAck(object):
     
     def run(self):
             
-        self.baseClass.skillLogger.info("\n #############################################################################")
+        self.baseClass.skill_logger.info("\n #############################################################################")
         # StartState
-        self.baseClass.skillLogger.info("StartState: sendRegisterAck")
+        self.baseClass.skill_logger.info("StartState: sendRegisterAck")
         # InputDocumentType"
         InputDocument = "NA"
-        self.baseClass.skillLogger.info("InputDocument : " + InputDocument)
+        self.baseClass.skill_logger.info("InputDocument : " + InputDocument)
         
         self.sendRegisterAck_Logic()
         
     def next(self):
         OutputDocument = "registerack"
-        self.baseClass.skillLogger.info("OutputDocumentType : " + OutputDocument)
+        self.baseClass.skill_logger.info("OutputDocumentType : " + OutputDocument)
         
         if (OutputDocument != "NA"):
             self.outboundMessages = self.create_Outbound_Message()
@@ -542,10 +542,10 @@ class sendRegisterAck(object):
                 self.baseClass.sendMessage(outbMessage)
         
         if (self.WaitforRegisterMessage_Enabled):
-            self.baseClass.skillLogger.info("Condition :" + "-")
+            self.baseClass.skill_logger.info("Condition :" + "-")
             ts = WaitforRegisterMessage(self.baseClass)
-            self.baseClass.skillLogger.info("TargettState: " + ts.__class__.__name__)
-            self.baseClass.skillLogger.info("############################################################################# \n")
+            self.baseClass.skill_logger.info("TargettState: " + ts.__class__.__name__)
+            self.baseClass.skill_logger.info("############################################################################# \n")
             return ts
         
 class WaitforRegisterMessage(object):
@@ -569,7 +569,7 @@ class WaitforRegisterMessage(object):
         for i in range (0, self.baseClass.WaitforRegisterMessage_Queue.qsize()):
             message = inboundQueueList[i]
             self.instanceId = str(uuid.uuid1())
-            self.baseClass.pyAAS.dataManager.pushInboundMessage({"functionType":3,"instanceid":self.instanceId,
+            self.baseClass.pyAAS.data_manager.pushInboundMessage({"functionType":3, "instanceid":self.instanceId,
                                                             "conversationId":message["frame"]["conversationId"],
                                                             "messageType":message["frame"]["type"],
                                                             "messageId":message["frame"]["messageId"],
@@ -583,12 +583,12 @@ class WaitforRegisterMessage(object):
     
     def run(self):
             
-        self.baseClass.skillLogger.info("\n #############################################################################")
+        self.baseClass.skill_logger.info("\n #############################################################################")
         # StartState
-        self.baseClass.skillLogger.info("StartState: WaitforRegisterMessage")
+        self.baseClass.skill_logger.info("StartState: WaitforRegisterMessage")
         # InputDocumentType"
         InputDocument = "register"
-        self.baseClass.skillLogger.info("InputDocument : " + InputDocument)
+        self.baseClass.skill_logger.info("InputDocument : " + InputDocument)
         
         '''
             In case a class expects an input document then.
@@ -616,14 +616,14 @@ class WaitforRegisterMessage(object):
         
     def next(self):
         OutputDocument = "NA"
-        self.baseClass.skillLogger.info("OutputDocumentType : " + OutputDocument)
+        self.baseClass.skill_logger.info("OutputDocumentType : " + OutputDocument)
         
         
         if (self.ValidateRegisterMessage_Enabled):
-            self.baseClass.skillLogger.info("Condition :" + "-")
+            self.baseClass.skill_logger.info("Condition :" + "-")
             ts = ValidateRegisterMessage(self.baseClass)
-            self.baseClass.skillLogger.info("TargettState: " + ts.__class__.__name__)
-            self.baseClass.skillLogger.info("############################################################################# \n")
+            self.baseClass.skill_logger.info("TargettState: " + ts.__class__.__name__)
+            self.baseClass.skill_logger.info("############################################################################# \n")
             return ts
         
 
@@ -697,8 +697,8 @@ class RegistryHandler(object):
         
         self.semanticProtocol = "www.admin-shell.io/interaction/registration"
 
-        self.skillLogger = logging.getLogger(str(self.__class__.__name__) + ' Service Instance' )
-        self.skillLogger.setLevel(logging.DEBUG)
+        self.skill_logger = logging.getLogger(str(self.__class__.__name__) + ' Service Instance' )
+        self.skill_logger.setLevel(logging.DEBUG)
         self.gen = Generic()
         self.createStatusMessage()
         self.responseMessage = {}
@@ -723,9 +723,9 @@ class RegistryHandler(object):
         self.commandLogger_handler.setFormatter(self.Handler_format)
         self.fileLogger_Handler.setFormatter(self.Handler_format)
         
-        self.skillLogger.addHandler(self.listHandler)
-        self.skillLogger.addHandler(self.commandLogger_handler)
-        self.skillLogger.addHandler(self.fileLogger_Handler)
+        self.skill_logger.addHandler(self.listHandler)
+        self.skill_logger.addHandler(self.commandLogger_handler)
+        self.skill_logger.addHandler(self.fileLogger_Handler)
         
         self.skillDetails = skillDetails
         Start_1 = Start(self)
@@ -793,7 +793,7 @@ class RegistryHandler(object):
                     pass
             
         except:
-            self.skillLogger.info("Raise an Exception")
+            self.skill_logger.info("Raise an Exception")
 
     def restAPIThread(self,message):
         self.QueueDict["register"].put(message)

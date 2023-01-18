@@ -12,7 +12,7 @@ import uuid
 try:
     from utils.i40data import Generic
 except ImportError:
-    from main.utils.i40data import Generic
+    from src.main.utils.i40data import Generic
 
 class ExecuteDBModifier(object):
     def __init__(self,pyAAS):
@@ -20,15 +20,15 @@ class ExecuteDBModifier(object):
         self.pyAAS = pyAAS
             
     def executeModifer(self,instanceData):
-        self.pyAAS.dataManager.pushInboundMessage({"functionType":1,"instanceid":self.instanceId,
+        self.pyAAS.data_manager.pushInboundMessage({"functionType":1, "instanceid":self.instanceId,
                                                             "data":instanceData["data"],
                                                             "method":instanceData["method"]})
         vePool = True
         while(vePool):
-            if (len(self.pyAAS.dataManager.outBoundProcessingDict.keys())!= 0):
-                if (self.pyAAS.dataManager.outBoundProcessingDict[self.instanceId] != ""):
-                    modiferResponse = self.pyAAS.dataManager.outBoundProcessingDict[self.instanceId]
-                    del self.pyAAS.dataManager.outBoundProcessingDict[self.instanceId]
+            if (len(self.pyAAS.data_manager.outBoundProcessingDict.keys())!= 0):
+                if (self.pyAAS.data_manager.outBoundProcessingDict[self.instanceId] != ""):
+                    modiferResponse = self.pyAAS.data_manager.outBoundProcessingDict[self.instanceId]
+                    del self.pyAAS.data_manager.outBoundProcessingDict[self.instanceId]
                     vePool = False
         return modiferResponse
 
@@ -66,7 +66,7 @@ class AASDescriptor(object):
     
     
     def createDescriptor(self):
-        aasxData = self.pyAAS.aasConfigurer.jsonData
+        aasxData = self.pyAAS.aas_configurer.jsonData
         aasDescriptor = {}
         
         descList = ["idShort","description"]
@@ -113,7 +113,7 @@ class DescriptorValidator(object):
     
     def valitdateAASDescriptor(self,aasDescData):
         try :
-            aasDescSchema = self.pyAAS.aasConfigurer.aasDescSchema
+            aasDescSchema = self.pyAAS.aas_configurer.aasDescSchema
             if(not validate(instance = aasDescData, schema= aasDescSchema)):
                 return True
             else:
@@ -123,7 +123,7 @@ class DescriptorValidator(object):
     
     def valitdateSubmodelDescriptor(self,submodelDescData):
         try :
-            submodelDescSchema = self.pyAAS.aasConfigurer.submodelDescSchema
+            submodelDescSchema = self.pyAAS.aas_configurer.submodelDescSchema
             if(not validate(instance = submodelDescData, schema= submodelDescSchema)):
                 return True
             else:
@@ -137,7 +137,7 @@ class AASMetaModelValidator(object):
     
     def valitdateAAS(self,aasData):
         try :
-            aasJsonSchema = self.pyAAS.aasConfigurer.aasJsonSchema
+            aasJsonSchema = self.pyAAS.aas_configurer.aasJsonSchema
             if(not validate(instance = aasData, schema= aasJsonSchema)):
                 return True
             else:
@@ -147,7 +147,7 @@ class AASMetaModelValidator(object):
     
     def valitdateSubmodel(self,submodelData):
         try :
-            submodelJsonSchema = self.pyAAS.aasConfigurer.submodelJsonSchema
+            submodelJsonSchema = self.pyAAS.aas_configurer.submodelJsonSchema
             if(not validate(instance = submodelData, schema= submodelJsonSchema)):
                 return True
             else:
@@ -157,7 +157,7 @@ class AASMetaModelValidator(object):
 
     def valitdateAsset(self,assetData):
         try :
-            assetJsonSchema = self.pyAAS.aasConfigurer.assetJsonSchema
+            assetJsonSchema = self.pyAAS.aas_configurer.assetJsonSchema
             if(not validate(instance = assetData, schema= assetJsonSchema)):
                 return True
             else:
@@ -171,15 +171,15 @@ class ExecuteDBRetriever(object):
         self.pyAAS = pyAAS
             
     def execute(self,instanceData):
-        self.pyAAS.dataManager.pushInboundMessage({"functionType":1,"instanceid":self.instanceId,
+        self.pyAAS.data_manager.pushInboundMessage({"functionType":1, "instanceid":self.instanceId,
                                                             "data":instanceData["data"],
                                                             "method":instanceData["method"]})
         vePool = True
         while(vePool):
-            if (len(self.pyAAS.dataManager.outBoundProcessingDict.keys())!= 0):
-                if (self.pyAAS.dataManager.outBoundProcessingDict[self.instanceId] != ""):
-                    response = self.pyAAS.dataManager.outBoundProcessingDict[self.instanceId]
-                    del self.pyAAS.dataManager.outBoundProcessingDict[self.instanceId]
+            if (len(self.pyAAS.data_manager.outBoundProcessingDict.keys())!= 0):
+                if (self.pyAAS.data_manager.outBoundProcessingDict[self.instanceId] != ""):
+                    response = self.pyAAS.data_manager.outBoundProcessingDict[self.instanceId]
+                    del self.pyAAS.data_manager.outBoundProcessingDict[self.instanceId]
                     vePool = False
         return response
 

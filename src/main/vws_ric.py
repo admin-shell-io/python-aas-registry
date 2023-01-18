@@ -5,50 +5,53 @@ This source code is licensed under the Apache License 2.0 (see LICENSE.txt).
 This source code may use other Open Source software components (see LICENSE.txt).
 '''
 
-import sys
-import time
-import threading
 import logging
 import os
+import sys
+import threading
+import time
+from datetime import datetime
+from importlib import import_module
 
 from dotenv import load_dotenv
-from datetime import  datetime
-from importlib import import_module
 from dotenv.main import find_dotenv
 
 try:
     from datastore.datamanager import DataManager
 except ImportError:
-    from main.datastore.datamanager import DataManager
+    from src.main.datastore.datamanager import DataManager
 
 try:
     from handlers.messagehandler import MessageHandler
 except ImportError:
-    from main.handlers.messagehandler import MessageHandler
-    
+    from src.main.handlers.messagehandler import MessageHandler
+
 try:
     from config.aasxconfig import ConfigParser
 except ImportError:
-    from main.config.aasxconfig  import ConfigParser
-
+    from src.main.config.aasxconfig import ConfigParser
 
 try:
     from datastore.dbadaptor_custom import DB_ADAPTOR
 except ImportError:
-    from main.datastore.dbadaptor_custom import DB_ADAPTOR 
+    from src.main.datastore.dbadaptor_custom import DB_ADAPTOR
 
 try:
-    from utils.aaslog import serviceLogHandler,LogList
+    from utils.aaslog import serviceLogHandler, LogList
 except ImportError:
-    from main.utils.aaslog import serviceLogHandler,LogList
+    from src.main.utils.aaslog import serviceLogHandler, LogList
 
-class vws_ric(object):
+
+class RIC:
 
     def __init__(self):
+        """
+
+        """
         self.reset()
         self.endPointmodules = {}
         self.AASendPointHandles = {}
-        self.assetaccessEndpointHandlers = {}
+        self.aas_end_point_handler_objects = {}
         self.aasSkillHandles = {}
         self.AASID = ''
         self.BroadCastMQTTTopic = ''
@@ -56,136 +59,143 @@ class vws_ric(object):
         self.skillDetailsDict = {}
         self.skillInstanceDict = {}
         self.base_dir = os.path.dirname(os.path.realpath(__file__))
-        self.lia_env_variable = {} 
+        self.lia_env_variable = {}
         self.idDict = {}
         self.mCount = 0
-    def reset(self):
-        self.io_adapters = {}
-        self.AASendPointHandles = {}   
-        self.scheduler = None
+        self.service_log_List = LogList()
+        self.service_logger = logging.getLogger(
+            str(self.__class__.__name__) + ' Service Instance')
+        self.file_logger_handler = logging.FileHandler(
+            self.base_dir + "/logs/vws_ric.LOG")
+        self.command_logger_handler = logging.StreamHandler()
+        self.list_handler = serviceLogHandler(self.service_log_List)
+        self.handler_format = logging.Formatter(
+            '%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+            datefmt='%m/%d/%Y %I:%M:%S %p')
 
-    def reconfigure(self):
+    def reset(self) -> None:
+        """
+
+        """
+        self.AASendPointHandles = {}
+
+    def reconfigure(self) -> None:
+        """
+
+        """
         self.stop()
         self.reset()
         self.configure()
         self.start()
-    
-    ######## Configure Service Entities ##################
-    
-    def configureLogger(self):
-        
-        self.ServiceLogList = LogList()
-        self.ServiceLogList.setMaxSize(maxSize= 200)
-        
-        self.serviceLogger = logging.getLogger(str(self.__class__.__name__) + ' Service Instance' )
-        self.serviceLogger.setLevel(logging.DEBUG)
-        
-        self.commandLogger_handler = logging.StreamHandler()
-        self.commandLogger_handler.setLevel(logging.DEBUG)
 
-        self.fileLogger_Handler = logging.FileHandler(self.base_dir+"/logs/vws_ric.LOG")
-        self.fileLogger_Handler.setLevel(logging.DEBUG)
-        
-        self.listHandler_Handler = serviceLogHandler(self.ServiceLogList)
-        self.listHandler_Handler.setLevel(logging.DEBUG)
-        
-        self.Handler_format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s',datefmt='%m/%d/%Y %I:%M:%S %p')
+    # Configure Service Entities
 
-        self.commandLogger_handler.setFormatter(self.Handler_format)
-        self.listHandler_Handler.setFormatter(self.Handler_format)
-        self.fileLogger_Handler.setFormatter(self.Handler_format)
-        
-        self.serviceLogger.addHandler(self.commandLogger_handler)
-        self.serviceLogger.addHandler(self.listHandler_Handler)
-        self.serviceLogger.addHandler(self.fileLogger_Handler)
-        
-        self.serviceLogger.info('The service Logger is Configured.')
-    
-    def configureAASConfigureParser(self):
-        self.aasConfigurer = ConfigParser(self)
-    
-    def configureExternalVariables(self):
+    def configure_logger(self) -> None:
+        """
+
+        """
+        self.service_log_List.setMaxSize(maxSize=200)
+        self.service_logger.setLevel(logging.DEBUG)
+
+        self.command_logger_handler.setLevel(logging.DEBUG)
+        self.file_logger_handler.setLevel(logging.DEBUG)
+        self.list_handler.setLevel(logging.DEBUG)
+
+        self.command_logger_handler.setFormatter(self.handler_format)
+        self.list_handler.setFormatter(self.handler_format)
+        self.file_logger_handler.setFormatter(self.handler_format)
+
+        self.service_logger.addHandler(self.command_logger_handler)
+        self.service_logger.addHandler(self.list_handler)
+        self.service_logger.addHandler(self.file_logger_handler)
+
+        self.service_logger.info('The service Logger is Configured.')
+
+    def configure_aas_configurer_parser(self) -> None:
+        """
+
+        """
+        self.aas_configurer = ConfigParser(self)
+
+    def configure_external_variables(self) -> None:
+        """
+
+        """
         load_dotenv(find_dotenv())
-        self.aasConfigurer.setExternalVariables(os.environ)
-        self.serviceLogger.info('External Variables are configured.')
-        
-    def configureAASID(self):
-        self.AASID = self.aasConfigurer.setAASID()
-        self.serviceLogger.info('The AAS ID is configured.')
+        self.aas_configurer.setExternalVariables(os.environ)
+        self.service_logger.info('External Variables are configured.')
 
-    def configureInternalVariables(self):
+    def configure_aas_id(self) -> None:
+        """
+
+        """
+        self.AASID = self.aas_configurer.setAASID()
+        self.service_logger.info('The AAS ID is configured.')
+
+    def configure_internal_variables(self):
         self.registryAPI = ""
         self.productionSequenceList = []
         self.productionStepList = []
         self.conversationIdList = []
-        self.submodelPropertyDict = self.aasConfigurer.getSubmodePropertyDict()
         self.httpEndPointsDict = {}
         self.coapEndPointsDict = {}
         self.connectBotsDict = {}
         self.aasBotsDict = {}
-        self.aasBotsDict[self.AASID] = (datetime.now()).strftime("%Y-%m-%d %H:%M:%S")
+        self.aasBotsDict[self.AASID] = (
+            datetime.now()).strftime("%Y-%m-%d %H:%M:%S")
         self.mqttGateWayEntries = set()
-    
-    def configureDataAdaptor(self):
+
+    def configure_data_adaptor(self) -> None:
+        """
+
+        """
         self.dba = DB_ADAPTOR(self)
 
-    def configureAASData(self):    
-        configStatus = self.aasConfigurer.configureAASJsonData()
-        if (configStatus):
-            self.serviceLogger.info('The External DB is configured')
+    def configure_aas_data(self) -> None:
+        if self.aas_configurer.configureAASJsonData():
+            self.service_logger.info('The External DB is configured')
         else:
-            self.shutDown()
-            
-    def confiureDataManager(self):
-        self.dataManager = DataManager(self)
+            self.shut_down()
 
-    def configureEndPoints(self):
-        # configure Industrie 4.0 communication drivers
-        aasEndPoints = self.aasConfigurer.getAASEndPoints()
-        for endPoint in aasEndPoints:
+    def configure_data_manager(self) -> None:
+        """
+
+        """
+        self.data_manager = DataManager(self)
+
+    def configure_end_points(self) -> None:
+        """
+
+        """
+        for endPoint in self.aas_configurer.getAASEndPoints():
             name = endPoint["Name"]
             module = endPoint["Module"]
             if module not in sys.modules:
-                self.endPointmodules[module] = import_module("aasendpointhandlers"+module)
-            
-            endPoint0 = self.endPointmodules[module].AASEndPointHandler(self,self.msgHandler)
-            self.AASendPointHandles[name] = endPoint0
+                self.endPointmodules[module] = import_module(
+                    "aasendpointhandlers" + module)
 
-            endPoint0.configure()
-        
-        self.serviceLogger.info('The AAS I40 End Points are configured')
-        
-    def configureAssetAccessPoints(self):
-        # configure the IOAdapters
-        assetAccessEndPointsList = self.aasConfigurer.getAssetAccessEndPoints()
-        for accessEndPointConfig in assetAccessEndPointsList:
+            endpoint = self.endPointmodules[module].AASEndPointHandler(
+                self, self.msgHandler)
+            self.AASendPointHandles[name] = endpoint
 
-            name = accessEndPointConfig["Name"]
-            module = accessEndPointConfig["Module"]
-            ip = accessEndPointConfig["ipaddress"]
-            port = accessEndPointConfig["port"]
-            username = accessEndPointConfig["username"]
-            password = accessEndPointConfig["password"]
-            porpertyList = accessEndPointConfig["PropertyList"]
-            
-            if module not in sys.modules:
-                self.assetmodule = import_module("aesstaccessadapters"+module)
-                endPoint0 = self.assetmodule.AsssetEndPointHandler(self,ip,port,username,password,porpertyList)
-                self.assetaccessEndpointHandlers[name] = endPoint0
-        
-        self.serviceLogger.info('The Asset Access points are configured')
-       
-    def configureSkills(self): 
-        #configure skills
-        self.skillDetailsDict = self.aasConfigurer.GetAAsxSkills()
+            endpoint.configure()
+
+        self.service_logger.info('The AAS I40 End Points are configured')
+
+    def configure_skills(self) -> None:
+        # configure skills
+        self.skillDetailsDict = self.aas_configurer.GetAAsxSkills()
         for skill in self.skillDetailsDict.keys():
-            skillModule = import_module("." + skill, package="skills")
-            skillBaseclass_ = getattr(skillModule, skill)
-            skillInstance = skillBaseclass_(self)
-            self.skillInstanceDict[skill] = skillInstance
-        self.serviceLogger.info('The skills are configured')
-    
-    def configureSkillWebList(self):
+            skill_module = import_module("." + skill, package="skills")
+            skill_baseclass_ = getattr(skill_module, skill)
+            skill_instance = skill_baseclass_(self)
+            self.skillInstanceDict[skill] = skill_instance
+        self.service_logger.info('The skills are configured')
+
+    def configure_skill_webList(self) -> None:
+        """
+
+        """
         self.skillListDict = self.skillDetailsDict
         self.skillListWeb = list(self.skillListDict.keys())
         i = 0
@@ -194,149 +204,115 @@ class vws_ric(object):
                 del self.skillListWeb[i]
                 break
             i = i + 1
-            
-    def getSubmodelProperties(self):
-        self.submodelPropertyDict = self.aasConfigurer.getSubmodePropertyDict() 
-        return self.submodelPropertyDict
-    
-    def getSubmodelPropertyListDict(self):
-        self.submodelPropertyListDict = self.aasConfigurer.getSubmodelPropertyListDict()
-        return self.submodelPropertyListDict
-        
-    def getSubmodelList(self):
-        self.submodelList = self.aasConfigurer.getSubmodelPropertyList()
-        return self.submodelList
-    ####### Start Service Entities ################
-        
-    def startEndPoints(self):
-        self.AASendPointHandlerObjects = {}
+
+    # Start Service Entities
+
+    def start_end_points(self) -> None:
+        """
+
+        """
+
         for module_name, endPointHandler in self.AASendPointHandles.items():
             try:
-                endPointHandler.start(self,self.AASID)
-                self.AASendPointHandlerObjects[module_name] = endPointHandler
+                endPointHandler.start(self, self.AASID)
+                self.aas_end_point_handler_objects[module_name] = endPointHandler
             except Exception as E:
-                self.serviceLogger.info('The AAS end Points are Started' + str(E))
-            
-        self.serviceLogger.info('The AAS end Points are Started')
-        
-    def startAssetEndPoints(self):
-        self.serviceLogger.info('The Asset end Points are Started')
-    
-    def startMsgHandlerThread(self):
-        msgHandlerThread = threading.Thread(target=self.msgHandler.start, args=(self.skillInstanceDict,self.AASendPointHandlerObjects,))     
-        msgHandlerThread.start()
-    
-        self.serviceLogger.info('The message handler started')
-    
-   
-    def startSkills(self):      
+                self.service_logger.info(
+                    'The AAS end Points are Started' + str(E))
+
+        self.service_logger.info('The AAS end Points are Started')
+
+    def start_msg_handler(self) -> None:
+        """
+
+        """
+        msg_handler_thread = threading.Thread(
+            target=self.msgHandler.start, args=(
+                self.skillInstanceDict, self.aas_end_point_handler_objects,))
+        msg_handler_thread.start()
+
+        self.service_logger.info('The message handler started')
+
+    def startSkills(self) -> None:
+        """
+
+        """
         # Start remaining skills that are part of the skill instance list
         for skill in self.skillInstanceDict.keys():
-            skillInstanceTh = threading.Thread(target=self.skillInstanceDict[skill].Start, args=(self.msgHandler, self.skillDetailsDict[skill],))
-            skillInstanceTh.start()
-        
-        self.serviceLogger.info('The Skills are Started')
-    
-    def startDataManager(self):
-        dataManagerThread = threading.Thread(target=self.dataManager.start, args=())     
-        dataManagerThread.start()
-    
-        self.serviceLogger.info('The message handler started')
-    
+            skill_instance_thread = threading.Thread(
+                target=self.skillInstanceDict[skill].Start, args=(
+                    self.msgHandler, self.skillDetailsDict[skill],))
+            skill_instance_thread.start()
+
+        self.service_logger.info('The Skills are Started')
+
+    def start_data_manager(self) -> None:
+        """
+            This method starts data manager instance as a separate thread
+        """
+        data_manager_thread = threading.Thread(
+            target=self.data_manager.start, args=())
+        data_manager_thread.start()
+
+        self.service_logger.info('The message handler started')
+
     def configure(self):
-        
-        self.commList = [] # List of communication drivers
-        self.skilLList = [] # List of Skills
-        self.skillInstanceList = {} # List consisting of instances of skills
+        """
 
-        #configure Service Logger
-        self.configureLogger()
-        self.serviceLogger.info('Configuring the Service Entities.')
-        #configure AASXConfigParser
-        self.configureAASConfigureParser() 
-        #configure AASID
-        self.configureAASID()
-        #configure External Variables
-        self.configureExternalVariables()
-        #configure registryAPI
-        self.configureInternalVariables()
-        self.serviceLogger.info("Configuration Parameters are Set.")
+        """
 
-        #configure Data Adaptor
-        self.configureDataAdaptor()
-        #configure the Data Manager
-        self.confiureDataManager()
-        self.configureAASData()
-        #configure EndPoints
-        self.configureEndPoints()
-        #configure IA Adaptors
-        self.configureAssetAccessPoints()
-        #configure Skill
-        self.configureSkills()
-        self.configureSkillWebList()
-   
-    def testingThread(self):
-        self.rcidsList = []
-        
-        self.sequenceList = [200]
-        self.rcidsList_HTTP = ["AASId_"+str(i) for i in range(53400,53400+200)]
-        self.rcidsList_MQTT = ["AASId_"+str(i)+"_MQTT" for i in range(53400,53400+200)]
+        # configure Service Logger
+        self.configure_logger()
+        self.service_logger.info('Configuring the Service Entities.')
+        # configure AASXConfigParser
+        self.configure_aas_configurer_parser()
+        # configure AASID
+        self.configure_aas_id()
+        # configure External Variables
+        self.configure_external_variables()
+        # configure registryAPI
+        self.configure_internal_variables()
+        self.service_logger.info("Configuration Parameters are Set.")
 
-        i = 0
-        k = self.sequenceList[0]
-        while True :
-            time.sleep(5)
-            if len(list(self.idDict.keys())) == 200:
-                temp_HTTP = []
-                temp_MQTT = []
-                
-                for j in range(0,200):
-                    temp_HTTP.append(self.idDict[self.rcidsList_HTTP[j]])
-                #for j in range(0,200):
-                #    temp_MQTT.append(self.idDict[self.rcidsList_MQTT[j]])                    
-                
-                #===============================================================
-                # with open("C:\\Users\\pakala\\eclipse-workspace1\\RIC_Testing\\TestNew\\"+str(k)+"\\log_"+str(k)+"_rcv_vws_http.csv", "w") as outfile:
-                #     outfile.write("\n".join(temp_HTTP))
-                # 
-                # with open("C:\\Users\\pakala\\eclipse-workspace1\\RIC_Testing\\TestNew\\"+str(k)+"\\log_"+str(k)+"_rcv_vws_mqtt.csv", "w") as outfile:
-                #     outfile.write("\n".join(temp_MQTT))
-                #===============================================================
-                
-                self.idDict = {}
-                i = i + 1
-                if (i > 20):
-                    break
-                
+        # configure Data Adaptor
+        self.configure_data_adaptor()
+        # configure the Data Manager
+        self.configure_data_manager()
+        self.configure_aas_data()
+        # configure EndPoints
+        self.configure_end_points()
+        # configure Skill
+        self.configure_skills()
+        self.configure_skill_webList()
+
     def start(self):
-        
-        self.serviceLogger.info('Starting the Service Entities')
-        
-        self.cdrivers = {}
-        self.cdrv_mqtt = None
-        #start the Data Manager
-        self.startDataManager()
-        #start the communication drivers
-        self.startEndPoints()
-        #start the message handler thread
-        self.startMsgHandlerThread()
-        #start the skills
+        """
+
+        """
+        self.service_logger.info('Starting the Service Entities')
+        # start the Data Manager
+        self.start_data_manager()
+        # start the communication drivers
+        self.start_end_points()
+        # start the message handler thread
+        self.start_msg_handler()
+        # start the skills
         self.startSkills()
-        #start the testing Schedular thread
-        #testingSThread = threading.Thread(target=self.testingThread)     
-        #testingSThread.start()
-                
+
     def stop(self):
-        self.scheduler.stop()
-        for module_name, cdrv in self.cdrvs.items():
-            cdrv.stop()
-    
-    def shutDown(self):
-        self.serviceLogger.info("The Service Logger is shutting down.")
-        os._exit(0)
+        """
+
+        """
+        for module_name, endPointHandler in self.AASendPointHandles.items():
+            endPointHandler.stop()
+
+    def shut_down(self):
+        self.service_logger.info("The Service Logger is shutting down.")
+        os._exit()
+
 
 if __name__ == "__main__":
-    pyAAS = vws_ric()
+    pyAAS = RIC()
     pyAAS.configure()
     pyAAS.start()
     print('Press Ctrl+{0} to exit'.format('C'))
@@ -345,4 +321,3 @@ if __name__ == "__main__":
             time.sleep(2)
     except (KeyboardInterrupt, SystemExit):
         pyAAS.stop()
-

@@ -9,11 +9,11 @@ This source code may use other Open Source software components (see LICENSE.txt)
 try:
     from utils.utils import EndpointObject
 except ImportError:
-    from main.utils.utils import EndpointObject
+    from src.main.utils.utils import EndpointObject
 try:
     from datastore.aas_database_server import AAS_Database_Server
 except ImportError:
-    from main.datastore.aas_database_server import AAS_Database_Server
+    from src.main.datastore.aas_database_server import AAS_Database_Server
 
 class DB_ADAPTOR(object):
     '''
@@ -102,14 +102,14 @@ class DB_ADAPTOR(object):
             else:
                 returnMessageDict = response
         except Exception as E:
-            self.pyAAS.serviceLogger.info(str(E))
+            self.pyAAS.service_logger.info(str(E))
             returnMessageDict = {"message": ["Unexpected Internal Server Error"],"status":500}
         return returnMessageDict
     
 
     def getAAsSubmodelsbyId(self,aasId,submodelId):
         if (submodelId == "StatusResponse"):
-            return {"message":[self.pyAAS.aasConfigurer.submodel_statusResponse_path],"status":200}
+            return {"message":[self.pyAAS.aas_configurer.submodel_statusResponse_path], "status":200}
         
         returnMessageDict = {}
         resultList = []
@@ -277,7 +277,7 @@ class DB_ADAPTOR(object):
             else:
                 returnMessageDict = response
         except Exception as E:
-            self.pyAAS.serviceLogger.info(str(E))
+            self.pyAAS.service_logger.info(str(E))
             returnMessageDict = {"message": ["Unexpected Internal Server Error"],"status":500}
         return returnMessageDict    
 
@@ -314,7 +314,7 @@ class DB_ADAPTOR(object):
             else:
                 returnMessageDict = response
         except Exception as E:
-            self.pyAAS.serviceLogger.info()
+            self.pyAAS.service_logger.info()
             returnMessageDict = {"message" : ["Unexpected Internal Server Error"+str(E)], "status":500}
         return returnMessageDict
 
@@ -340,7 +340,7 @@ class DB_ADAPTOR(object):
             else:
                 returnMessageDict = response 
         except Exception as E:
-            self.pyAAS.serviceLogger.info(str(E)+"Hereeeeeeee")
+            self.pyAAS.service_logger.info(str(E)+"Hereeeeeeee")
             returnMessageDict = {"message" : ["Unexpected Internal Server Error"], "status":500}
         return returnMessageDict
 
@@ -375,7 +375,7 @@ class DB_ADAPTOR(object):
             else:
                 returnMessageDict = response
         except Exception as E:
-            self.pyAAS.serviceLogger.info(str(E))
+            self.pyAAS.service_logger.info(str(E))
             returnMessageDict = {"message" : ["Unexpected Internal Server Error"], "status":500}
         return returnMessageDict    
 
@@ -419,7 +419,7 @@ class DB_ADAPTOR(object):
                 self.insertDescriptorEndPoint(query)
                 self.pyAAS.mqttGateWayEntries.add(descData["identification"])
         except Exception as E:
-            self.pyAAS.serviceLogger.info(str(E))
+            self.pyAAS.service_logger.info(str(E))
             returnMessageDict = {"message": ["Unexpected Internal Server Error"],"status":500}
         return returnMessageDict  
 
@@ -458,7 +458,7 @@ class DB_ADAPTOR(object):
             else:
                 returnMessageDict = response
         except Exception as E:
-            self.pyAAS.serviceLogger.info(str(E))
+            self.pyAAS.service_logger.info(str(E))
             returnMessageDict = {"message" : ["Unexpected Internal Server Error"], "status":500}
         return returnMessageDict
 
@@ -477,13 +477,13 @@ class DB_ADAPTOR(object):
         try:
             self.AAS_Database_Server.insert_one(self.mongocol_aasDescEndPoint,data)
         except Exception as E:
-            self.pyAAS.serviceLogger.info(str(E))
+            self.pyAAS.service_logger.info(str(E))
     
     def deleteDescriptorEndPoint(self,queryI):
         try:
             self.AAS_Database_Server.remove(self.mongocol_aasDescEndPoint,queryI)
         except Exception as E:
-            self.pyAAS.serviceLogger.info(str(E))        
+            self.pyAAS.service_logger.info(str(E))        
         
     def getDescriptorEndPoint(self):
         returnMessageDict = {}
@@ -507,13 +507,13 @@ class DB_ADAPTOR(object):
         try:
             params["submodelId"] = submodelDescData["identification"]
         except Exception as E:
-            self.pyAAS.serviceLogger.info(str(E))
+            self.pyAAS.service_logger.info(str(E))
             params["submodelId"] = ""
                 
         try:
             params["idShort"] = submodelDescData["idShort"]
         except Exception as E:
-            self.pyAAS.serviceLogger.info(str(E))
+            self.pyAAS.service_logger.info(str(E))
             params["idShort"] = ""
         return params
 

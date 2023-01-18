@@ -28,11 +28,11 @@ class DataManager(object):
         self.InBoundProcessingQueue.put(msg)
      
     def configure(self):
-        self.pyAAS.serviceLogger.info('The Database manager is being configured')
+        self.pyAAS.service_logger.info('The Database manager is being configured')
 
     def start(self):
         self.POLL = True
-        self.pyAAS.serviceLogger.info('The Database manager is being started')
+        self.pyAAS.service_logger.info('The Database manager is being started')
         while self.POLL:
             if (self.InBoundProcessingQueue).qsize() != 0:
                 inMessage = self.InBoundProcessingQueue.get()
@@ -44,12 +44,12 @@ class DataManager(object):
                     dba = self.pyAAS.dba
                     (dba.saveNewConversationMessage(inMessage['conversationId'],inMessage['messageType'],inMessage["messageId"],inMessage["message"]))
 
-        self.pyAAS.serviceLogger.info('The Database manager is started')
+        self.pyAAS.service_logger.info('The Database manager is started')
         
     def stop(self):
-        self.pyAAS.serviceLogger.info('The Database manager is being stopped')
+        self.pyAAS.service_logger.info('The Database manager is being stopped')
         self.POLL = False
-        self.pyAAS.serviceLogger.info('The Database manager is stopped')
+        self.pyAAS.service_logger.info('The Database manager is stopped')
         
     def update(self):
         pass

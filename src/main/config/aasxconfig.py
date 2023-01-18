@@ -12,7 +12,7 @@ import os.path
 try:
     from utils.utils import ExecuteDBModifier,AASDescriptor,ExecuteDBRetriever,AASMetaModelValidator,DescriptorValidator,ConnectResponse
 except ImportError:
-    from main.utils.utils import ExecuteDBModifier,AASDescriptor,ExecuteDBRetriever,AASMetaModelValidator,DescriptorValidator,ConnectResponse
+    from src.main.utils.utils import ExecuteDBModifier,AASDescriptor,ExecuteDBRetriever,AASMetaModelValidator,DescriptorValidator,ConnectResponse
 
 
 script_dir = os.path.dirname(os.path.realpath(__file__))
@@ -83,7 +83,7 @@ class ConfigParser(object):
             data = {"updateData" :self.jsonData,"aasId":self.pyAAS.AASID}
             AASDataDB_1 = self.pyAAS.dba.putAAS(data)
             if AASDataDB_1["status"] == 500:
-                self.pyAAS.serviceLogger.info('Status Message ' + AASDataDB_1["message"][0])
+                self.pyAAS.service_logger.info('Status Message ' + AASDataDB_1["message"][0])
                 return False
             else:
                 aaD = AASDescriptor(self.pyAAS)
@@ -97,7 +97,7 @@ class ConfigParser(object):
                     return True
                 
         elif (AASDataDB["status"] == 500):
-            self.pyAAS.serviceLogger.info('Error configuring the database ' + AASDataDB["message"][0])
+            self.pyAAS.service_logger.info('Error configuring the database ' + AASDataDB["message"][0])
             return False
         
         return False

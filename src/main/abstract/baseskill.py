@@ -24,11 +24,11 @@ except ImportError:
 try:
     from utils.i40data import Generic
 except ImportError:
-    from main.utils.i40data import Generic
+    from src.main.utils.i40data import Generic
 try:
     from utils.aaslog import serviceLogHandler,LogList
 except ImportError:
-    from main.utils.aaslog import serviceLogHandler,LogList
+    from src.main.utils.aaslog import serviceLogHandler,LogList
 
 '''
     The skill generator extracts all the states from the transitions list.
@@ -177,7 +177,7 @@ except ImportError:
     
     def saveMessage(self,message):
         self.instanceId = str(uuid.uuid1())
-        self.baseClass.saas.dataManager.pushInboundMessage({"functionType":3,"data":message,"instanceid":self.instanceId,
+        self.baseClass.saas.data_manager.pushInboundMessage({"functionType":3,"data":message,"instanceid":self.instanceId,
                                                             "messageType":message["frame"]["type"]})
         
     
@@ -208,7 +208,7 @@ class {{StateName}}(object):
         for i in range (0, self.baseClass.{{StateName}}_Queue.qsize()):
             message = inboundQueueList[i]
             self.instanceId = str(uuid.uuid1())
-            self.baseClass.saas.dataManager.pushInboundMessage({"functionType":3,"instanceid":self.instanceId,
+            self.baseClass.saas.data_manager.pushInboundMessage({"functionType":3, "instanceid":self.instanceId,
                                                             "conversationId":message["frame"]["conversationId"],
                                                             "messageType":message["frame"]["type"],
                                                             "messageId":message["frame"]["messageId"],
@@ -262,7 +262,7 @@ class {{StateName}}(object):
             #oMessage_Out ={"frame": self.frame,
             #                        "interactionElements":self.InElem["message"]}
             self.instanceId = str(uuid.uuid1())
-            self.baseClass.saas.dataManager.pushInboundMessage({"functionType":3,"instanceid":self.instanceId,
+            self.baseClass.saas.data_manager.pushInboundMessage({"functionType":3, "instanceid":self.instanceId,
                                                             "conversationId":oMessage_Out["frame"]["conversationId"],
                                                             "messageType":oMessage_Out["frame"]["type"],
                                                             "messageId":oMessage_Out["frame"]["messageId"],
@@ -273,12 +273,12 @@ class {{StateName}}(object):
     
     def run(self):
             
-        self.baseClass.skillLogger.info("\n #############################################################################")
+        self.baseClass.skill_logger.info("\n #############################################################################")
         # StartState
-        self.baseClass.skillLogger.info("StartState: {{StateName}}")
+        self.baseClass.skill_logger.info("StartState: {{StateName}}")
         # InputDocumentType"
         InputDocument = "{{InMessageList}}"
-        self.baseClass.skillLogger.info("InputDocument : " + InputDocument)
+        self.baseClass.skill_logger.info("InputDocument : " + InputDocument)
         
         {{#each IDCYes}}
         '''
@@ -308,7 +308,7 @@ class {{StateName}}(object):
         
     def next(self):
         OutputDocument = "{{OutputDocument}}"
-        self.baseClass.skillLogger.info("OutputDocumentType : " + OutputDocument)
+        self.baseClass.skill_logger.info("OutputDocumentType : " + OutputDocument)
         
         {{#each ODCYes}}
         if (OutputDocument != "NA"):
@@ -319,10 +319,10 @@ class {{StateName}}(object):
         
         {{#each ConditionList}}
         if (self.{{targetstate}}_Enabled):
-            self.baseClass.skillLogger.info("Condition :" + "{{Condition}}")
+            self.baseClass.skill_logger.info("Condition :" + "{{Condition}}")
             ts = {{targetstate}}(self.baseClass)
-            self.baseClass.skillLogger.info("TargettState: " + ts.__class__.__name__)
-            self.baseClass.skillLogger.info("############################################################################# \n")
+            self.baseClass.skill_logger.info("TargettState: " + ts.__class__.__name__)
+            self.baseClass.skill_logger.info("############################################################################# \n")
             return ts
         {{/each}}
         
@@ -340,9 +340,9 @@ class Exit(object):
         
     def run(self):
             
-        self.baseClass.skillLogger.info("\n #############################################################################")
+        self.baseClass.skill_logger.info("\n #############################################################################")
         # StartState
-        self.baseClass.skillLogger.info("StartState: Exit")
+        self.baseClass.skill_logger.info("StartState: Exit")
         # InputDocumentType"
         '''
             In case a class expects an input document then.
@@ -356,8 +356,8 @@ class Exit(object):
                   please replace it with the needed condition usually True or False
         '''
         if (True):
-            self.baseClass.skillLogger.info("Condition :" + "-")
-            self.baseClass.skillLogger.info("############################################################################# \n")
+            self.baseClass.skill_logger.info("Condition :" + "-")
+            self.baseClass.skill_logger.info("############################################################################# \n")
             return None
 {{/each}}        
 
@@ -438,8 +438,8 @@ class {{MetaData/Name}}(object):
         
         self.semanticProtocol = "{{semanticProtocol}}"
 
-        self.skillLogger = logging.getLogger(str(self.__class__.__name__) + ' Service Instance' )
-        self.skillLogger.setLevel(logging.DEBUG)
+        self.skill_logger = logging.getLogger(str(self.__class__.__name__) + ' Service Instance' )
+        self.skill_logger.setLevel(logging.DEBUG)
         self.gen = Generic()
         self.createStatusMessage()
         self.productionStepSeq = []
@@ -463,9 +463,9 @@ class {{MetaData/Name}}(object):
         self.commandLogger_handler.setFormatter(self.Handler_format)
         self.fileLogger_Handler.setFormatter(self.Handler_format)
         
-        self.skillLogger.addHandler(self.listHandler)
-        self.skillLogger.addHandler(self.commandLogger_handler)
-        self.skillLogger.addHandler(self.fileLogger_Handler)
+        self.skill_logger.addHandler(self.listHandler)
+        self.skill_logger.addHandler(self.commandLogger_handler)
+        self.skill_logger.addHandler(self.fileLogger_Handler)
         
         self.skillDetails = skillDetails
         {{initialState}}_1 = {{initialState}}(self)
@@ -530,7 +530,7 @@ class {{MetaData/Name}}(object):
                     pass
             
         except:
-            self.skillLogger.info("Raise an Exception")
+            self.skill_logger.info("Raise an Exception")
 
 
 
