@@ -180,24 +180,21 @@
       "allOf": [
         {
           "properties": {
-            "endpoint_address": {
+            "endpointAddress": {
               "type": "string"
             },
-            "endpoint_protocol": {
+            "endpointProtocolVersion": {
               "type": "string"
             },
-             "endpoint_protocol_version": {
+             "subprotocol": {
               "type": "string"
             },
-            "subprotocol": {
+            "subprotocolBody": {
               "type": "string"
             },
-             "subprotocol_body": {
+             "subprotocolBodyEncoding": {
               "type": "string"
-            },
-            "subprotocol_body_encoding": {
-              "type": "string"
-            }            
+            }           
           }
         }
       ]
