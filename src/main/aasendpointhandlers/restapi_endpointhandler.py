@@ -85,7 +85,7 @@ class AASEndPointHandler(AASEndPointHandler):
         pass
 
     def run(self):
-        drv_rst_app.run(host=self.ipaddressComdrv, port=self.portComdrv,ssl_context=(self.pyaas.lia_env_variable["LIA_PATH2AUTHCERT"], self.pyaas.lia_env_variable["LIA_PATH2SIGNINGKEY"]))
+        drv_rst_app.run(host=self.ipaddressComdrv, port=self.portComdrv,ssl_context=(self.pyAAS.lia_env_variable["LIA_PATH2AUTHCERT"], self.pyAAS.lia_env_variable["LIA_PATH2SIGNINGKEY"]))
         # serve(drv_rst_app,host=self.ipaddressComdrv, port=self.portComdrv,threads= 10)
         self.pyAAS.service_logger.info("REST API namespaces are started")
 
