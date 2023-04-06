@@ -1,117 +1,1325 @@
-01/18/2023 09:27:59 AM - RegistryHandler Service Instance - INFO - 
+03/20/2023 08:22:59 AM - RegistryHandler Service Instance - INFO - 
  #############################################################################
-01/18/2023 09:27:59 AM - RegistryHandler Service Instance - INFO - StartState: Start
-01/18/2023 09:27:59 AM - RegistryHandler Service Instance - INFO - InputDocument : NA
-01/18/2023 09:27:59 AM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
-01/18/2023 09:27:59 AM - RegistryHandler Service Instance - INFO - Condition :-
-01/18/2023 09:27:59 AM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
-01/18/2023 09:27:59 AM - RegistryHandler Service Instance - INFO - ############################################################################# 
+03/20/2023 08:22:59 AM - RegistryHandler Service Instance - INFO - StartState: Start
+03/20/2023 08:23:00 AM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/20/2023 08:23:00 AM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/20/2023 08:23:00 AM - RegistryHandler Service Instance - INFO - Condition :-
+03/20/2023 08:23:00 AM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/20/2023 08:23:00 AM - RegistryHandler Service Instance - INFO - ############################################################################# 
 
-01/18/2023 09:28:00 AM - RegistryHandler Service Instance - INFO - 
+03/20/2023 08:23:00 AM - RegistryHandler Service Instance - INFO - 
  #############################################################################
-01/18/2023 09:28:00 AM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
-01/18/2023 09:28:00 AM - RegistryHandler Service Instance - INFO - InputDocument : register
-01/18/2023 09:29:28 AM - RegistryHandler Service Instance - INFO - 
+03/20/2023 08:23:00 AM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/20/2023 08:23:00 AM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/20/2023 08:31:25 AM - RegistryHandler Service Instance - INFO - 
  #############################################################################
-01/18/2023 09:29:28 AM - RegistryHandler Service Instance - INFO - StartState: Start
-01/18/2023 09:29:28 AM - RegistryHandler Service Instance - INFO - InputDocument : NA
-01/18/2023 09:29:29 AM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
-01/18/2023 09:29:29 AM - RegistryHandler Service Instance - INFO - Condition :-
-01/18/2023 09:29:29 AM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
-01/18/2023 09:29:29 AM - RegistryHandler Service Instance - INFO - ############################################################################# 
+03/20/2023 08:31:25 AM - RegistryHandler Service Instance - INFO - StartState: Start
+03/20/2023 08:31:25 AM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/20/2023 08:31:25 AM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/20/2023 08:31:25 AM - RegistryHandler Service Instance - INFO - Condition :-
+03/20/2023 08:31:25 AM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/20/2023 08:31:25 AM - RegistryHandler Service Instance - INFO - ############################################################################# 
 
-01/18/2023 09:29:29 AM - RegistryHandler Service Instance - INFO - 
+03/20/2023 08:31:25 AM - RegistryHandler Service Instance - INFO - 
  #############################################################################
-01/18/2023 09:29:29 AM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
-01/18/2023 09:29:29 AM - RegistryHandler Service Instance - INFO - InputDocument : register
-01/18/2023 09:30:13 AM - RegistryHandler Service Instance - INFO - 
+03/20/2023 08:31:25 AM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/20/2023 08:31:25 AM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/20/2023 07:45:40 PM - RegistryHandler Service Instance - INFO - 
  #############################################################################
-01/18/2023 09:30:13 AM - RegistryHandler Service Instance - INFO - StartState: Start
-01/18/2023 09:30:13 AM - RegistryHandler Service Instance - INFO - InputDocument : NA
-01/18/2023 09:30:13 AM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
-01/18/2023 09:30:14 AM - RegistryHandler Service Instance - INFO - Condition :-
-01/18/2023 09:30:14 AM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
-01/18/2023 09:30:14 AM - RegistryHandler Service Instance - INFO - ############################################################################# 
+03/20/2023 07:45:40 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/20/2023 07:45:40 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/20/2023 07:45:40 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/20/2023 07:45:40 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/20/2023 07:45:40 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/20/2023 07:45:40 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
 
-01/18/2023 09:30:14 AM - RegistryHandler Service Instance - INFO - 
+03/20/2023 07:45:40 PM - RegistryHandler Service Instance - INFO - 
  #############################################################################
-01/18/2023 09:30:14 AM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
-01/18/2023 09:30:14 AM - RegistryHandler Service Instance - INFO - InputDocument : register
-01/18/2023 09:32:56 AM - RegistryHandler Service Instance - INFO - 
+03/20/2023 07:45:40 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/20/2023 07:45:40 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/20/2023 08:19:27 PM - RegistryHandler Service Instance - INFO - 
  #############################################################################
-01/18/2023 09:32:56 AM - RegistryHandler Service Instance - INFO - StartState: Start
-01/18/2023 09:32:56 AM - RegistryHandler Service Instance - INFO - InputDocument : NA
-01/18/2023 09:32:56 AM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
-01/18/2023 09:32:56 AM - RegistryHandler Service Instance - INFO - Condition :-
-01/18/2023 09:32:56 AM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
-01/18/2023 09:32:56 AM - RegistryHandler Service Instance - INFO - ############################################################################# 
+03/20/2023 08:19:27 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/20/2023 08:19:28 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/20/2023 08:19:28 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/20/2023 08:19:28 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/20/2023 08:19:28 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/20/2023 08:19:28 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
 
-01/18/2023 09:32:56 AM - RegistryHandler Service Instance - INFO - 
+03/20/2023 08:19:28 PM - RegistryHandler Service Instance - INFO - 
  #############################################################################
-01/18/2023 09:32:56 AM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
-01/18/2023 09:32:56 AM - RegistryHandler Service Instance - INFO - InputDocument : register
-01/18/2023 09:34:14 AM - RegistryHandler Service Instance - INFO - 
+03/20/2023 08:19:28 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/20/2023 08:19:28 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/20/2023 08:39:17 PM - RegistryHandler Service Instance - INFO - 
  #############################################################################
-01/18/2023 09:34:15 AM - RegistryHandler Service Instance - INFO - StartState: Start
-01/18/2023 09:34:15 AM - RegistryHandler Service Instance - INFO - InputDocument : NA
-01/18/2023 09:34:15 AM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
-01/18/2023 09:34:15 AM - RegistryHandler Service Instance - INFO - Condition :-
-01/18/2023 09:34:15 AM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
-01/18/2023 09:34:15 AM - RegistryHandler Service Instance - INFO - ############################################################################# 
+03/20/2023 08:39:17 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/20/2023 08:39:17 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/20/2023 08:39:17 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/20/2023 08:39:17 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/20/2023 08:39:17 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/20/2023 08:39:17 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
 
-01/18/2023 09:34:15 AM - RegistryHandler Service Instance - INFO - 
+03/20/2023 08:39:17 PM - RegistryHandler Service Instance - INFO - 
  #############################################################################
-01/18/2023 09:34:15 AM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
-01/18/2023 09:34:15 AM - RegistryHandler Service Instance - INFO - InputDocument : register
-01/18/2023 09:34:49 AM - RegistryHandler Service Instance - INFO - 
+03/20/2023 08:39:18 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/20/2023 08:39:18 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/20/2023 08:41:11 PM - RegistryHandler Service Instance - INFO - 
  #############################################################################
-01/18/2023 09:34:50 AM - RegistryHandler Service Instance - INFO - StartState: Start
-01/18/2023 09:34:50 AM - RegistryHandler Service Instance - INFO - InputDocument : NA
-01/18/2023 09:34:50 AM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
-01/18/2023 09:34:50 AM - RegistryHandler Service Instance - INFO - Condition :-
-01/18/2023 09:34:50 AM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
-01/18/2023 09:34:50 AM - RegistryHandler Service Instance - INFO - ############################################################################# 
+03/20/2023 08:41:11 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/20/2023 08:41:11 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/20/2023 08:41:11 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/20/2023 08:41:11 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/20/2023 08:41:12 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/20/2023 08:41:12 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
 
-01/18/2023 09:34:50 AM - RegistryHandler Service Instance - INFO - 
+03/20/2023 08:41:12 PM - RegistryHandler Service Instance - INFO - 
  #############################################################################
-01/18/2023 09:34:50 AM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
-01/18/2023 09:34:50 AM - RegistryHandler Service Instance - INFO - InputDocument : register
-01/18/2023 09:36:22 AM - RegistryHandler Service Instance - INFO - 
+03/20/2023 08:41:12 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/20/2023 08:41:12 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/20/2023 08:43:13 PM - RegistryHandler Service Instance - INFO - 
  #############################################################################
-01/18/2023 09:36:22 AM - RegistryHandler Service Instance - INFO - StartState: Start
-01/18/2023 09:36:22 AM - RegistryHandler Service Instance - INFO - InputDocument : NA
-01/18/2023 09:36:22 AM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
-01/18/2023 09:36:22 AM - RegistryHandler Service Instance - INFO - Condition :-
-01/18/2023 09:36:22 AM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
-01/18/2023 09:36:22 AM - RegistryHandler Service Instance - INFO - ############################################################################# 
+03/20/2023 08:43:13 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/20/2023 08:43:14 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/20/2023 08:43:14 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/20/2023 08:43:14 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/20/2023 08:43:14 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/20/2023 08:43:14 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
 
-01/18/2023 09:36:22 AM - RegistryHandler Service Instance - INFO - 
+03/20/2023 08:43:14 PM - RegistryHandler Service Instance - INFO - 
  #############################################################################
-01/18/2023 09:36:22 AM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
-01/18/2023 09:36:22 AM - RegistryHandler Service Instance - INFO - InputDocument : register
-01/18/2023 10:07:42 AM - RegistryHandler Service Instance - INFO - 
+03/20/2023 08:43:15 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/20/2023 08:43:15 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/20/2023 08:49:39 PM - RegistryHandler Service Instance - INFO - 
  #############################################################################
-01/18/2023 10:07:42 AM - RegistryHandler Service Instance - INFO - StartState: Start
-01/18/2023 10:07:42 AM - RegistryHandler Service Instance - INFO - InputDocument : NA
-01/18/2023 10:07:42 AM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
-01/18/2023 10:07:42 AM - RegistryHandler Service Instance - INFO - Condition :-
-01/18/2023 10:07:42 AM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
-01/18/2023 10:07:43 AM - RegistryHandler Service Instance - INFO - ############################################################################# 
+03/20/2023 08:49:40 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/20/2023 08:49:40 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/20/2023 08:49:40 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/20/2023 08:49:40 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/20/2023 08:49:40 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/20/2023 08:49:40 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
 
-01/18/2023 10:07:43 AM - RegistryHandler Service Instance - INFO - 
+03/20/2023 08:49:40 PM - RegistryHandler Service Instance - INFO - 
  #############################################################################
-01/18/2023 10:07:43 AM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
-01/18/2023 10:07:43 AM - RegistryHandler Service Instance - INFO - InputDocument : register
-01/18/2023 11:43:23 AM - RegistryHandler Service Instance - INFO - 
+03/20/2023 08:49:40 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/20/2023 08:49:40 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/20/2023 08:50:47 PM - RegistryHandler Service Instance - INFO - 
  #############################################################################
-01/18/2023 11:43:23 AM - RegistryHandler Service Instance - INFO - StartState: Start
-01/18/2023 11:43:23 AM - RegistryHandler Service Instance - INFO - InputDocument : NA
-01/18/2023 11:43:23 AM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
-01/18/2023 11:43:23 AM - RegistryHandler Service Instance - INFO - Condition :-
-01/18/2023 11:43:23 AM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
-01/18/2023 11:43:23 AM - RegistryHandler Service Instance - INFO - ############################################################################# 
+03/20/2023 08:50:47 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/20/2023 08:50:47 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/20/2023 08:50:47 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/20/2023 08:50:47 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/20/2023 08:50:47 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/20/2023 08:50:47 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
 
-01/18/2023 11:43:23 AM - RegistryHandler Service Instance - INFO - 
+03/20/2023 08:50:47 PM - RegistryHandler Service Instance - INFO - 
  #############################################################################
-01/18/2023 11:43:23 AM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
-01/18/2023 11:43:23 AM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/20/2023 08:50:47 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/20/2023 08:50:47 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/20/2023 08:51:40 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/20/2023 08:51:41 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/20/2023 08:51:41 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/20/2023 08:51:41 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/20/2023 08:51:41 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/20/2023 08:51:41 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/20/2023 08:51:41 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/20/2023 08:51:41 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/20/2023 08:51:41 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/20/2023 08:51:41 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/20/2023 08:52:54 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/20/2023 08:52:54 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/20/2023 08:52:54 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/20/2023 08:52:54 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/20/2023 08:52:55 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/20/2023 08:52:55 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/20/2023 08:52:55 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/20/2023 08:52:55 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/20/2023 08:52:55 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/20/2023 08:52:55 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/20/2023 08:54:25 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/20/2023 08:54:26 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/20/2023 08:54:26 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/20/2023 08:54:26 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/20/2023 08:54:26 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/20/2023 08:54:26 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/20/2023 08:54:26 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/20/2023 08:54:26 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/20/2023 08:54:27 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/20/2023 08:54:27 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/20/2023 08:59:48 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/20/2023 08:59:48 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/20/2023 08:59:48 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/20/2023 08:59:48 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/20/2023 08:59:48 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/20/2023 08:59:48 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/20/2023 08:59:48 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/20/2023 08:59:48 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/20/2023 08:59:48 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/20/2023 08:59:48 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/20/2023 09:02:37 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/20/2023 09:02:37 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/20/2023 09:02:37 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/20/2023 09:02:37 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/20/2023 09:02:37 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/20/2023 09:02:37 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/20/2023 09:02:38 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/20/2023 09:02:38 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/20/2023 09:02:38 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/20/2023 09:02:38 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/20/2023 09:04:27 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/20/2023 09:04:28 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/20/2023 09:04:28 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/20/2023 09:04:28 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/20/2023 09:04:28 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/20/2023 09:04:28 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/20/2023 09:04:28 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/20/2023 09:04:28 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/20/2023 09:04:28 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/20/2023 09:04:28 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/20/2023 09:07:02 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/20/2023 09:07:02 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/20/2023 09:07:02 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/20/2023 09:07:02 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/20/2023 09:07:02 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/20/2023 09:07:02 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/20/2023 09:07:02 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/20/2023 09:07:02 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/20/2023 09:07:02 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/20/2023 09:07:02 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/20/2023 09:07:46 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/20/2023 09:07:46 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/20/2023 09:07:46 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/20/2023 09:07:46 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/20/2023 09:07:46 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/20/2023 09:07:46 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/20/2023 09:07:46 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/20/2023 09:07:46 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/20/2023 09:07:46 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/20/2023 09:07:46 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/20/2023 09:14:10 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/20/2023 09:14:10 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/20/2023 09:14:10 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/20/2023 09:14:10 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/20/2023 09:14:10 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/20/2023 09:14:10 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/20/2023 09:14:10 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/20/2023 09:14:10 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/20/2023 09:14:10 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/20/2023 09:14:10 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/20/2023 09:14:24 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/20/2023 09:14:24 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/20/2023 09:14:24 PM - RegistryHandler Service Instance - INFO - TargettState: ValidateRegisterMessage
+03/20/2023 09:14:24 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/20/2023 09:14:24 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/20/2023 09:14:24 PM - RegistryHandler Service Instance - INFO - StartState: ValidateRegisterMessage
+03/20/2023 09:14:24 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/20/2023 09:14:24 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/20/2023 09:14:24 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/20/2023 09:14:24 PM - RegistryHandler Service Instance - INFO - TargettState: sendMalformedError
+03/20/2023 09:14:24 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/20/2023 09:14:24 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/20/2023 09:14:24 PM - RegistryHandler Service Instance - INFO - StartState: sendMalformedError
+03/20/2023 09:14:24 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/20/2023 09:14:24 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : registerack
+03/20/2023 09:14:24 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/20/2023 09:14:24 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/20/2023 09:14:24 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/20/2023 09:14:24 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/20/2023 09:14:24 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/20/2023 09:14:25 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/21/2023 12:04:59 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 12:04:59 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/21/2023 12:05:00 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 12:05:00 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 12:05:00 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 12:05:00 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/21/2023 12:05:00 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 12:05:00 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 12:05:00 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/21/2023 12:05:00 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/21/2023 12:07:39 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 12:07:39 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 12:07:39 PM - RegistryHandler Service Instance - INFO - TargettState: ValidateRegisterMessage
+03/21/2023 12:07:39 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 12:07:39 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 12:07:39 PM - RegistryHandler Service Instance - INFO - StartState: ValidateRegisterMessage
+03/21/2023 12:07:39 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 12:07:39 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 12:07:40 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 12:07:40 PM - RegistryHandler Service Instance - INFO - TargettState: sendMalformedError
+03/21/2023 12:07:40 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 12:07:40 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 12:07:40 PM - RegistryHandler Service Instance - INFO - StartState: sendMalformedError
+03/21/2023 12:07:40 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 12:07:40 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : registerack
+03/21/2023 12:07:40 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 12:07:40 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/21/2023 12:07:40 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 12:07:40 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 12:07:40 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/21/2023 12:07:40 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/21/2023 12:18:32 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 12:18:32 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/21/2023 12:18:32 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 12:18:32 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 12:18:32 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 12:18:32 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/21/2023 12:18:33 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 12:18:33 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 12:18:33 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/21/2023 12:18:33 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/21/2023 12:18:51 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 12:18:51 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 12:18:51 PM - RegistryHandler Service Instance - INFO - TargettState: ValidateRegisterMessage
+03/21/2023 12:18:51 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 12:18:51 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 12:18:51 PM - RegistryHandler Service Instance - INFO - StartState: ValidateRegisterMessage
+03/21/2023 12:18:51 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 12:18:51 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 12:18:51 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 12:18:51 PM - RegistryHandler Service Instance - INFO - TargettState: saveDescriptorDetails
+03/21/2023 12:18:51 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 12:18:51 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 12:18:51 PM - RegistryHandler Service Instance - INFO - StartState: saveDescriptorDetails
+03/21/2023 12:18:51 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 12:18:53 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 12:18:53 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 12:18:53 PM - RegistryHandler Service Instance - INFO - TargettState: sendRegisterAck
+03/21/2023 12:18:53 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 12:18:53 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 12:18:53 PM - RegistryHandler Service Instance - INFO - StartState: sendRegisterAck
+03/21/2023 12:18:53 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 12:18:53 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : registerack
+03/21/2023 12:18:53 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 12:18:53 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/21/2023 12:18:53 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 12:18:53 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 12:18:53 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/21/2023 12:18:53 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/21/2023 12:52:27 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 12:52:27 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 12:52:27 PM - RegistryHandler Service Instance - INFO - TargettState: ValidateRegisterMessage
+03/21/2023 12:52:27 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 12:52:27 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 12:52:27 PM - RegistryHandler Service Instance - INFO - StartState: ValidateRegisterMessage
+03/21/2023 12:52:27 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 12:52:27 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 12:52:27 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 12:52:27 PM - RegistryHandler Service Instance - INFO - TargettState: saveDescriptorDetails
+03/21/2023 12:52:27 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 12:52:27 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 12:52:28 PM - RegistryHandler Service Instance - INFO - StartState: saveDescriptorDetails
+03/21/2023 12:52:28 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 12:52:33 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 12:52:33 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 12:52:33 PM - RegistryHandler Service Instance - INFO - TargettState: sendRegisterAck
+03/21/2023 12:52:33 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 12:52:33 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 12:52:33 PM - RegistryHandler Service Instance - INFO - StartState: sendRegisterAck
+03/21/2023 12:52:33 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 12:52:33 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : registerack
+03/21/2023 12:52:33 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 12:52:33 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/21/2023 12:52:33 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 12:52:33 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 12:52:33 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/21/2023 12:52:33 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/21/2023 06:17:55 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:17:56 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/21/2023 06:17:56 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 06:17:56 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 06:17:56 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 06:17:56 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/21/2023 06:17:56 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 06:17:56 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:17:56 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/21/2023 06:17:56 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/21/2023 06:19:59 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:19:59 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/21/2023 06:19:59 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 06:19:59 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 06:19:59 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 06:19:59 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/21/2023 06:20:00 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 06:20:00 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:20:00 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/21/2023 06:20:00 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/21/2023 06:21:06 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 06:21:06 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 06:21:06 PM - RegistryHandler Service Instance - INFO - TargettState: ValidateRegisterMessage
+03/21/2023 06:21:06 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 06:21:06 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:21:06 PM - RegistryHandler Service Instance - INFO - StartState: ValidateRegisterMessage
+03/21/2023 06:21:06 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 06:21:07 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 06:21:07 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 06:21:07 PM - RegistryHandler Service Instance - INFO - TargettState: saveDescriptorDetails
+03/21/2023 06:21:07 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 06:21:07 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:21:07 PM - RegistryHandler Service Instance - INFO - StartState: saveDescriptorDetails
+03/21/2023 06:21:07 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 06:21:23 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 06:21:24 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 06:21:24 PM - RegistryHandler Service Instance - INFO - TargettState: sendRegisterAck
+03/21/2023 06:21:24 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 06:21:24 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:21:24 PM - RegistryHandler Service Instance - INFO - StartState: sendRegisterAck
+03/21/2023 06:21:24 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 06:21:24 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : registerack
+03/21/2023 06:21:24 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 06:21:24 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/21/2023 06:21:25 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 06:21:25 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:21:25 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/21/2023 06:21:25 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/21/2023 06:23:25 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:23:25 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/21/2023 06:23:25 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 06:23:25 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 06:23:25 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 06:23:25 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/21/2023 06:23:25 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 06:23:26 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:23:26 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/21/2023 06:23:26 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/21/2023 06:23:48 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 06:23:48 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 06:23:48 PM - RegistryHandler Service Instance - INFO - TargettState: ValidateRegisterMessage
+03/21/2023 06:23:48 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 06:23:49 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:23:49 PM - RegistryHandler Service Instance - INFO - StartState: ValidateRegisterMessage
+03/21/2023 06:23:49 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 06:23:49 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 06:23:49 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 06:23:49 PM - RegistryHandler Service Instance - INFO - TargettState: saveDescriptorDetails
+03/21/2023 06:23:49 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 06:23:49 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:23:49 PM - RegistryHandler Service Instance - INFO - StartState: saveDescriptorDetails
+03/21/2023 06:23:49 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 06:23:54 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 06:23:54 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 06:23:54 PM - RegistryHandler Service Instance - INFO - TargettState: sendRegisterAck
+03/21/2023 06:23:54 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 06:23:54 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:23:55 PM - RegistryHandler Service Instance - INFO - StartState: sendRegisterAck
+03/21/2023 06:23:55 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 06:23:55 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : registerack
+03/21/2023 06:23:55 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 06:23:55 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/21/2023 06:23:55 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 06:23:55 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:23:55 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/21/2023 06:23:55 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/21/2023 06:24:37 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:24:37 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/21/2023 06:24:37 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 06:24:37 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 06:24:37 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 06:24:37 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/21/2023 06:24:37 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 06:24:37 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:24:37 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/21/2023 06:24:37 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/21/2023 06:24:58 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 06:24:58 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 06:24:58 PM - RegistryHandler Service Instance - INFO - TargettState: ValidateRegisterMessage
+03/21/2023 06:24:59 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 06:24:59 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:24:59 PM - RegistryHandler Service Instance - INFO - StartState: ValidateRegisterMessage
+03/21/2023 06:24:59 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 06:25:00 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 06:25:00 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 06:25:00 PM - RegistryHandler Service Instance - INFO - TargettState: saveDescriptorDetails
+03/21/2023 06:25:00 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 06:25:00 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:25:00 PM - RegistryHandler Service Instance - INFO - StartState: saveDescriptorDetails
+03/21/2023 06:25:00 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 06:25:16 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 06:25:16 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 06:25:16 PM - RegistryHandler Service Instance - INFO - TargettState: sendRegisterAck
+03/21/2023 06:25:16 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 06:25:16 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:25:16 PM - RegistryHandler Service Instance - INFO - StartState: sendRegisterAck
+03/21/2023 06:25:16 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 06:25:17 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : registerack
+03/21/2023 06:25:17 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 06:25:17 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/21/2023 06:25:17 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 06:25:17 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:25:17 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/21/2023 06:25:17 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/21/2023 06:26:31 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:26:31 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/21/2023 06:26:31 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 06:26:31 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 06:26:31 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 06:26:31 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/21/2023 06:26:32 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 06:26:32 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:26:32 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/21/2023 06:26:32 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/21/2023 06:26:44 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 06:26:44 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 06:26:44 PM - RegistryHandler Service Instance - INFO - TargettState: ValidateRegisterMessage
+03/21/2023 06:26:44 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 06:26:44 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:26:44 PM - RegistryHandler Service Instance - INFO - StartState: ValidateRegisterMessage
+03/21/2023 06:26:44 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 06:26:45 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 06:26:45 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 06:26:45 PM - RegistryHandler Service Instance - INFO - TargettState: saveDescriptorDetails
+03/21/2023 06:26:45 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 06:26:45 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:26:45 PM - RegistryHandler Service Instance - INFO - StartState: saveDescriptorDetails
+03/21/2023 06:26:45 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 06:27:09 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 06:27:09 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 06:27:09 PM - RegistryHandler Service Instance - INFO - TargettState: sendRegisterAck
+03/21/2023 06:27:09 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 06:27:10 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:27:10 PM - RegistryHandler Service Instance - INFO - StartState: sendRegisterAck
+03/21/2023 06:27:10 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 06:27:10 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : registerack
+03/21/2023 06:27:10 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 06:27:10 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/21/2023 06:27:10 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 06:27:10 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:27:10 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/21/2023 06:27:10 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/21/2023 06:27:32 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:27:32 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/21/2023 06:27:33 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 06:27:33 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 06:27:33 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 06:27:33 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/21/2023 06:27:33 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 06:27:33 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:27:33 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/21/2023 06:27:33 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/21/2023 06:27:50 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 06:27:50 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 06:27:50 PM - RegistryHandler Service Instance - INFO - TargettState: ValidateRegisterMessage
+03/21/2023 06:27:50 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 06:27:50 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:27:51 PM - RegistryHandler Service Instance - INFO - StartState: ValidateRegisterMessage
+03/21/2023 06:27:51 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 06:27:52 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 06:27:52 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 06:27:52 PM - RegistryHandler Service Instance - INFO - TargettState: saveDescriptorDetails
+03/21/2023 06:27:52 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 06:27:52 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:27:52 PM - RegistryHandler Service Instance - INFO - StartState: saveDescriptorDetails
+03/21/2023 06:27:52 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 06:28:11 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 06:28:12 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 06:28:12 PM - RegistryHandler Service Instance - INFO - TargettState: sendRegisterAck
+03/21/2023 06:28:12 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 06:28:12 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:28:12 PM - RegistryHandler Service Instance - INFO - StartState: sendRegisterAck
+03/21/2023 06:28:12 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 06:28:12 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : registerack
+03/21/2023 06:28:13 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 06:28:13 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/21/2023 06:28:13 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 06:28:13 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 06:28:13 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/21/2023 06:28:13 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/21/2023 08:43:08 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 08:43:08 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/21/2023 08:43:08 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 08:43:08 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 08:43:08 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 08:43:08 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/21/2023 08:43:08 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 08:43:08 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 08:43:08 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/21/2023 08:43:08 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/21/2023 08:43:17 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 08:43:17 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 08:43:17 PM - RegistryHandler Service Instance - INFO - TargettState: ValidateRegisterMessage
+03/21/2023 08:43:17 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 08:43:17 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 08:43:17 PM - RegistryHandler Service Instance - INFO - StartState: ValidateRegisterMessage
+03/21/2023 08:43:17 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 08:43:17 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 08:43:17 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 08:43:17 PM - RegistryHandler Service Instance - INFO - TargettState: saveDescriptorDetails
+03/21/2023 08:43:17 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 08:43:17 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 08:43:17 PM - RegistryHandler Service Instance - INFO - StartState: saveDescriptorDetails
+03/21/2023 08:43:17 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 08:46:57 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 08:46:57 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/21/2023 08:46:58 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 08:46:58 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 08:46:58 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 08:46:58 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/21/2023 08:46:58 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 08:46:58 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 08:46:58 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/21/2023 08:46:58 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/21/2023 08:47:07 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 08:47:07 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 08:47:07 PM - RegistryHandler Service Instance - INFO - TargettState: ValidateRegisterMessage
+03/21/2023 08:47:07 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 08:47:07 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 08:47:07 PM - RegistryHandler Service Instance - INFO - StartState: ValidateRegisterMessage
+03/21/2023 08:47:07 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 08:47:07 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 08:47:07 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 08:47:07 PM - RegistryHandler Service Instance - INFO - TargettState: saveDescriptorDetails
+03/21/2023 08:47:07 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 08:47:07 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 08:47:07 PM - RegistryHandler Service Instance - INFO - StartState: saveDescriptorDetails
+03/21/2023 08:47:07 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 08:47:10 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 08:47:10 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 08:47:10 PM - RegistryHandler Service Instance - INFO - TargettState: sendRegisterAck
+03/21/2023 08:47:10 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 08:47:10 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 08:47:10 PM - RegistryHandler Service Instance - INFO - StartState: sendRegisterAck
+03/21/2023 08:47:10 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 08:47:10 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : registerack
+03/21/2023 08:47:10 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 08:47:10 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/21/2023 08:47:10 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 08:47:10 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 08:47:10 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/21/2023 08:47:10 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/21/2023 08:47:36 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 08:47:36 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/21/2023 08:47:37 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 08:47:37 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 08:47:37 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 08:47:37 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/21/2023 08:47:37 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 08:47:37 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 08:47:37 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/21/2023 08:47:37 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/21/2023 08:47:46 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 08:47:46 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 08:47:46 PM - RegistryHandler Service Instance - INFO - TargettState: ValidateRegisterMessage
+03/21/2023 08:47:46 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 08:47:46 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 08:47:46 PM - RegistryHandler Service Instance - INFO - StartState: ValidateRegisterMessage
+03/21/2023 08:47:46 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 08:47:46 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 08:47:46 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 08:47:46 PM - RegistryHandler Service Instance - INFO - TargettState: saveDescriptorDetails
+03/21/2023 08:47:46 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 08:47:46 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 08:47:46 PM - RegistryHandler Service Instance - INFO - StartState: saveDescriptorDetails
+03/21/2023 08:47:46 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 08:48:14 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 08:48:14 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 08:48:14 PM - RegistryHandler Service Instance - INFO - TargettState: sendRegisterAck
+03/21/2023 08:48:14 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 08:48:19 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 08:48:19 PM - RegistryHandler Service Instance - INFO - StartState: sendRegisterAck
+03/21/2023 08:48:19 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 08:48:20 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : registerack
+03/21/2023 08:48:20 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 08:48:20 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/21/2023 08:48:20 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 08:49:10 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 08:49:10 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/21/2023 08:49:10 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 08:49:10 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 08:49:10 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 08:49:10 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/21/2023 08:49:10 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 08:49:10 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 08:49:10 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/21/2023 08:49:10 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/21/2023 08:49:19 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 08:49:19 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 08:49:19 PM - RegistryHandler Service Instance - INFO - TargettState: ValidateRegisterMessage
+03/21/2023 08:49:19 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 08:49:19 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 08:49:19 PM - RegistryHandler Service Instance - INFO - StartState: ValidateRegisterMessage
+03/21/2023 08:49:19 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 08:49:19 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 08:49:19 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 08:49:19 PM - RegistryHandler Service Instance - INFO - TargettState: saveDescriptorDetails
+03/21/2023 08:49:19 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 08:49:19 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 08:49:19 PM - RegistryHandler Service Instance - INFO - StartState: saveDescriptorDetails
+03/21/2023 08:49:19 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 08:49:30 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 08:49:31 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 08:49:31 PM - RegistryHandler Service Instance - INFO - TargettState: sendRegisterAck
+03/21/2023 08:49:31 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 08:49:31 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 08:49:31 PM - RegistryHandler Service Instance - INFO - StartState: sendRegisterAck
+03/21/2023 08:49:31 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 08:49:31 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : registerack
+03/21/2023 08:50:05 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 08:50:09 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/21/2023 08:51:04 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 08:51:04 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/21/2023 08:51:04 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 08:51:04 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 08:51:04 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 08:51:04 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/21/2023 08:51:04 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 08:51:04 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 08:51:04 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/21/2023 08:51:05 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/21/2023 08:51:55 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 08:51:55 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 08:51:55 PM - RegistryHandler Service Instance - INFO - TargettState: ValidateRegisterMessage
+03/21/2023 08:51:55 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 08:51:55 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 08:51:55 PM - RegistryHandler Service Instance - INFO - StartState: ValidateRegisterMessage
+03/21/2023 08:51:55 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 08:51:55 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 08:51:56 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 08:51:56 PM - RegistryHandler Service Instance - INFO - TargettState: saveDescriptorDetails
+03/21/2023 08:51:56 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 08:51:56 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 08:51:56 PM - RegistryHandler Service Instance - INFO - StartState: saveDescriptorDetails
+03/21/2023 08:51:56 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 08:52:00 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 08:52:00 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 08:52:00 PM - RegistryHandler Service Instance - INFO - TargettState: sendRegisterAck
+03/21/2023 08:52:00 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 08:52:00 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 08:52:01 PM - RegistryHandler Service Instance - INFO - StartState: sendRegisterAck
+03/21/2023 08:52:01 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 08:52:01 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : registerack
+03/21/2023 08:52:01 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 08:52:01 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/21/2023 08:52:01 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 08:52:01 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 08:52:01 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/21/2023 08:52:01 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/21/2023 08:59:32 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 08:59:32 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 08:59:32 PM - RegistryHandler Service Instance - INFO - TargettState: ValidateRegisterMessage
+03/21/2023 08:59:32 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 08:59:32 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 08:59:32 PM - RegistryHandler Service Instance - INFO - StartState: ValidateRegisterMessage
+03/21/2023 08:59:32 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 08:59:32 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 08:59:32 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 08:59:32 PM - RegistryHandler Service Instance - INFO - TargettState: saveDescriptorDetails
+03/21/2023 08:59:32 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 08:59:32 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 08:59:32 PM - RegistryHandler Service Instance - INFO - StartState: saveDescriptorDetails
+03/21/2023 08:59:32 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 08:59:36 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 08:59:36 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 08:59:36 PM - RegistryHandler Service Instance - INFO - TargettState: sendRegisterAck
+03/21/2023 08:59:36 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 08:59:37 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 08:59:37 PM - RegistryHandler Service Instance - INFO - StartState: sendRegisterAck
+03/21/2023 08:59:37 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 08:59:37 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : registerack
+03/21/2023 08:59:37 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 08:59:37 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/21/2023 08:59:37 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 08:59:37 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 08:59:37 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/21/2023 08:59:37 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/21/2023 09:14:41 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 09:14:41 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 09:14:41 PM - RegistryHandler Service Instance - INFO - TargettState: ValidateRegisterMessage
+03/21/2023 09:14:41 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 09:14:41 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 09:14:41 PM - RegistryHandler Service Instance - INFO - StartState: ValidateRegisterMessage
+03/21/2023 09:14:41 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 09:14:41 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 09:14:41 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 09:14:41 PM - RegistryHandler Service Instance - INFO - TargettState: saveDescriptorDetails
+03/21/2023 09:14:41 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 09:14:41 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 09:14:41 PM - RegistryHandler Service Instance - INFO - StartState: saveDescriptorDetails
+03/21/2023 09:14:41 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 09:14:45 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 09:14:45 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 09:14:45 PM - RegistryHandler Service Instance - INFO - TargettState: sendRegisterAck
+03/21/2023 09:14:45 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 09:14:45 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 09:14:45 PM - RegistryHandler Service Instance - INFO - StartState: sendRegisterAck
+03/21/2023 09:14:45 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 09:14:46 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : registerack
+03/21/2023 09:14:46 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 09:14:46 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/21/2023 09:14:46 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 09:14:46 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 09:14:46 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/21/2023 09:14:46 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/21/2023 09:20:43 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 09:20:43 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 09:20:43 PM - RegistryHandler Service Instance - INFO - TargettState: ValidateRegisterMessage
+03/21/2023 09:20:43 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 09:20:43 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 09:20:43 PM - RegistryHandler Service Instance - INFO - StartState: ValidateRegisterMessage
+03/21/2023 09:20:43 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 09:20:43 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 09:20:43 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 09:20:43 PM - RegistryHandler Service Instance - INFO - TargettState: saveDescriptorDetails
+03/21/2023 09:20:43 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 09:20:43 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 09:20:43 PM - RegistryHandler Service Instance - INFO - StartState: saveDescriptorDetails
+03/21/2023 09:20:43 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 09:20:48 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/21/2023 09:20:48 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 09:20:48 PM - RegistryHandler Service Instance - INFO - TargettState: sendRegisterAck
+03/21/2023 09:20:48 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 09:20:49 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 09:20:49 PM - RegistryHandler Service Instance - INFO - StartState: sendRegisterAck
+03/21/2023 09:20:49 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/21/2023 09:20:49 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : registerack
+03/21/2023 09:20:49 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/21/2023 09:20:49 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/21/2023 09:20:49 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/21/2023 09:20:49 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/21/2023 09:20:49 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/21/2023 09:20:49 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/30/2023 12:36:35 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 12:36:35 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/30/2023 12:36:35 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/30/2023 12:36:35 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/30/2023 12:36:36 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/30/2023 12:36:36 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/30/2023 12:36:36 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/30/2023 12:36:36 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 12:36:36 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/30/2023 12:36:36 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/30/2023 12:37:21 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/30/2023 12:37:21 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/30/2023 12:37:21 PM - RegistryHandler Service Instance - INFO - TargettState: ValidateRegisterMessage
+03/30/2023 12:37:21 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/30/2023 12:37:21 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 12:37:22 PM - RegistryHandler Service Instance - INFO - StartState: ValidateRegisterMessage
+03/30/2023 12:37:22 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/30/2023 12:37:22 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/30/2023 12:37:22 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/30/2023 12:37:22 PM - RegistryHandler Service Instance - INFO - TargettState: saveDescriptorDetails
+03/30/2023 12:37:22 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/30/2023 12:37:22 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 12:37:22 PM - RegistryHandler Service Instance - INFO - StartState: saveDescriptorDetails
+03/30/2023 12:37:22 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/30/2023 12:37:24 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/30/2023 12:37:24 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/30/2023 12:37:24 PM - RegistryHandler Service Instance - INFO - TargettState: sendRegisterAck
+03/30/2023 12:37:25 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/30/2023 12:37:25 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 12:37:25 PM - RegistryHandler Service Instance - INFO - StartState: sendRegisterAck
+03/30/2023 12:37:25 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/30/2023 12:37:25 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : registerack
+03/30/2023 12:37:25 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/30/2023 12:37:25 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/30/2023 12:37:25 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/30/2023 12:37:25 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 12:37:25 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/30/2023 12:37:25 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/30/2023 12:39:43 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/30/2023 12:39:43 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/30/2023 12:39:44 PM - RegistryHandler Service Instance - INFO - TargettState: ValidateRegisterMessage
+03/30/2023 12:39:44 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/30/2023 12:39:44 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 12:39:44 PM - RegistryHandler Service Instance - INFO - StartState: ValidateRegisterMessage
+03/30/2023 12:39:44 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/30/2023 12:39:44 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/30/2023 12:39:44 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/30/2023 12:39:44 PM - RegistryHandler Service Instance - INFO - TargettState: saveDescriptorDetails
+03/30/2023 12:39:44 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/30/2023 12:39:44 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 12:39:44 PM - RegistryHandler Service Instance - INFO - StartState: saveDescriptorDetails
+03/30/2023 12:39:44 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/30/2023 12:39:48 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/30/2023 12:39:48 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/30/2023 12:39:48 PM - RegistryHandler Service Instance - INFO - TargettState: sendRegisterAck
+03/30/2023 12:39:48 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/30/2023 12:39:48 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 12:39:48 PM - RegistryHandler Service Instance - INFO - StartState: sendRegisterAck
+03/30/2023 12:39:48 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/30/2023 12:39:48 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : registerack
+03/30/2023 12:39:49 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/30/2023 12:39:49 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/30/2023 12:39:49 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/30/2023 12:39:49 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 12:39:49 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/30/2023 12:39:49 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/30/2023 12:40:39 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/30/2023 12:40:39 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/30/2023 12:40:39 PM - RegistryHandler Service Instance - INFO - TargettState: ValidateRegisterMessage
+03/30/2023 12:40:39 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/30/2023 12:40:39 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 12:40:39 PM - RegistryHandler Service Instance - INFO - StartState: ValidateRegisterMessage
+03/30/2023 12:40:39 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/30/2023 12:40:39 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/30/2023 12:40:39 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/30/2023 12:40:39 PM - RegistryHandler Service Instance - INFO - TargettState: saveDescriptorDetails
+03/30/2023 12:40:40 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/30/2023 12:40:40 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 12:40:40 PM - RegistryHandler Service Instance - INFO - StartState: saveDescriptorDetails
+03/30/2023 12:40:40 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/30/2023 12:40:43 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/30/2023 12:40:43 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/30/2023 12:40:43 PM - RegistryHandler Service Instance - INFO - TargettState: sendRegisterAck
+03/30/2023 12:40:43 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/30/2023 12:40:43 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 12:40:43 PM - RegistryHandler Service Instance - INFO - StartState: sendRegisterAck
+03/30/2023 12:40:43 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/30/2023 12:40:43 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : registerack
+03/30/2023 12:40:44 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/30/2023 12:40:44 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/30/2023 12:40:44 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/30/2023 12:40:44 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 12:40:44 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/30/2023 12:40:44 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/30/2023 12:40:47 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/30/2023 12:40:47 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/30/2023 12:40:47 PM - RegistryHandler Service Instance - INFO - TargettState: ValidateRegisterMessage
+03/30/2023 12:40:47 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/30/2023 12:40:47 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 12:40:47 PM - RegistryHandler Service Instance - INFO - StartState: ValidateRegisterMessage
+03/30/2023 12:40:47 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/30/2023 12:40:47 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/30/2023 12:40:47 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/30/2023 12:40:47 PM - RegistryHandler Service Instance - INFO - TargettState: saveDescriptorDetails
+03/30/2023 12:40:47 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/30/2023 12:40:47 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 12:40:47 PM - RegistryHandler Service Instance - INFO - StartState: saveDescriptorDetails
+03/30/2023 12:40:47 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/30/2023 12:40:51 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/30/2023 12:40:51 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/30/2023 12:40:51 PM - RegistryHandler Service Instance - INFO - TargettState: sendRegisterAck
+03/30/2023 12:40:51 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/30/2023 12:40:51 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 12:40:51 PM - RegistryHandler Service Instance - INFO - StartState: sendRegisterAck
+03/30/2023 12:40:51 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/30/2023 12:40:52 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : registerack
+03/30/2023 12:40:52 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/30/2023 12:40:52 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/30/2023 12:40:52 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/30/2023 12:40:52 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 12:40:52 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/30/2023 12:40:52 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/30/2023 12:40:53 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/30/2023 12:40:53 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/30/2023 12:40:53 PM - RegistryHandler Service Instance - INFO - TargettState: ValidateRegisterMessage
+03/30/2023 12:40:53 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/30/2023 12:40:53 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 12:40:53 PM - RegistryHandler Service Instance - INFO - StartState: ValidateRegisterMessage
+03/30/2023 12:40:53 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/30/2023 12:40:53 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/30/2023 12:40:53 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/30/2023 12:40:53 PM - RegistryHandler Service Instance - INFO - TargettState: saveDescriptorDetails
+03/30/2023 12:40:53 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/30/2023 12:40:54 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 12:40:54 PM - RegistryHandler Service Instance - INFO - StartState: saveDescriptorDetails
+03/30/2023 12:40:54 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/30/2023 12:40:57 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/30/2023 12:40:57 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/30/2023 12:40:57 PM - RegistryHandler Service Instance - INFO - TargettState: sendRegisterAck
+03/30/2023 12:40:57 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/30/2023 12:40:57 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 12:40:57 PM - RegistryHandler Service Instance - INFO - StartState: sendRegisterAck
+03/30/2023 12:40:57 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/30/2023 12:40:57 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : registerack
+03/30/2023 12:40:58 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/30/2023 12:40:58 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/30/2023 12:40:58 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/30/2023 12:40:58 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 12:40:58 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/30/2023 12:40:58 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/30/2023 01:37:21 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/30/2023 01:37:21 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/30/2023 01:37:21 PM - RegistryHandler Service Instance - INFO - TargettState: ValidateRegisterMessage
+03/30/2023 01:37:21 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/30/2023 01:37:21 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 01:37:21 PM - RegistryHandler Service Instance - INFO - StartState: ValidateRegisterMessage
+03/30/2023 01:37:21 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/30/2023 01:37:21 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/30/2023 01:37:21 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/30/2023 01:37:21 PM - RegistryHandler Service Instance - INFO - TargettState: saveDescriptorDetails
+03/30/2023 01:37:21 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/30/2023 01:37:21 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 01:37:22 PM - RegistryHandler Service Instance - INFO - StartState: saveDescriptorDetails
+03/30/2023 01:37:22 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/30/2023 01:37:24 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/30/2023 01:37:24 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/30/2023 01:37:24 PM - RegistryHandler Service Instance - INFO - TargettState: sendRegisterAck
+03/30/2023 01:37:24 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/30/2023 01:37:24 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 01:37:24 PM - RegistryHandler Service Instance - INFO - StartState: sendRegisterAck
+03/30/2023 01:37:25 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/30/2023 01:37:25 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : registerack
+03/30/2023 01:37:25 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/30/2023 01:37:25 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/30/2023 01:37:25 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/30/2023 01:37:25 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 01:37:25 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/30/2023 01:37:25 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/30/2023 04:06:58 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 04:06:58 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/30/2023 04:06:58 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/30/2023 04:06:59 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/30/2023 04:06:59 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/30/2023 04:06:59 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/30/2023 04:06:59 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/30/2023 04:06:59 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 04:06:59 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/30/2023 04:06:59 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/30/2023 04:07:10 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 04:07:10 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/30/2023 04:07:10 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/30/2023 04:07:10 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/30/2023 04:07:10 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/30/2023 04:07:11 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/30/2023 04:07:11 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/30/2023 04:07:11 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 04:07:11 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/30/2023 04:07:11 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+03/30/2023 04:16:42 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 04:16:42 PM - RegistryHandler Service Instance - INFO - StartState: Start
+03/30/2023 04:16:42 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+03/30/2023 04:16:42 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+03/30/2023 04:16:42 PM - RegistryHandler Service Instance - INFO - Condition :-
+03/30/2023 04:16:42 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+03/30/2023 04:16:42 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+03/30/2023 04:16:42 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+03/30/2023 04:16:42 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+03/30/2023 04:16:42 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+04/05/2023 10:03:14 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+04/05/2023 10:03:14 PM - RegistryHandler Service Instance - INFO - StartState: Start
+04/05/2023 10:03:15 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+04/05/2023 10:03:15 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+04/05/2023 10:03:15 PM - RegistryHandler Service Instance - INFO - Condition :-
+04/05/2023 10:03:15 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+04/05/2023 10:03:15 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+04/05/2023 10:03:15 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+04/05/2023 10:03:15 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+04/05/2023 10:03:15 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+04/05/2023 10:04:09 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+04/05/2023 10:04:09 PM - RegistryHandler Service Instance - INFO - Condition :-
+04/05/2023 10:04:09 PM - RegistryHandler Service Instance - INFO - TargettState: ValidateRegisterMessage
+04/05/2023 10:04:09 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+04/05/2023 10:04:09 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+04/05/2023 10:04:09 PM - RegistryHandler Service Instance - INFO - StartState: ValidateRegisterMessage
+04/05/2023 10:04:09 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+04/05/2023 10:04:09 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+04/05/2023 10:04:09 PM - RegistryHandler Service Instance - INFO - Condition :-
+04/05/2023 10:04:09 PM - RegistryHandler Service Instance - INFO - TargettState: saveDescriptorDetails
+04/05/2023 10:04:09 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+04/05/2023 10:04:09 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+04/05/2023 10:04:09 PM - RegistryHandler Service Instance - INFO - StartState: saveDescriptorDetails
+04/05/2023 10:04:09 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+04/05/2023 10:04:12 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+04/05/2023 10:04:12 PM - RegistryHandler Service Instance - INFO - Condition :-
+04/05/2023 10:04:12 PM - RegistryHandler Service Instance - INFO - TargettState: sendRegisterAck
+04/05/2023 10:04:12 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+04/05/2023 10:04:12 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+04/05/2023 10:04:12 PM - RegistryHandler Service Instance - INFO - StartState: sendRegisterAck
+04/05/2023 10:04:12 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+04/05/2023 10:04:12 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : registerack
+04/05/2023 10:04:13 PM - RegistryHandler Service Instance - INFO - Condition :-
+04/05/2023 10:04:13 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+04/05/2023 10:04:13 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+04/05/2023 10:04:13 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+04/05/2023 10:04:13 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+04/05/2023 10:04:13 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+04/05/2023 10:48:26 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+04/05/2023 10:48:26 PM - RegistryHandler Service Instance - INFO - StartState: Start
+04/05/2023 10:48:26 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+04/05/2023 10:48:27 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+04/05/2023 10:48:27 PM - RegistryHandler Service Instance - INFO - Condition :-
+04/05/2023 10:48:27 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+04/05/2023 10:48:27 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+04/05/2023 10:48:27 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+04/05/2023 10:48:27 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+04/05/2023 10:48:27 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+04/05/2023 10:52:51 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+04/05/2023 10:52:51 PM - RegistryHandler Service Instance - INFO - StartState: Start
+04/05/2023 10:52:51 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+04/05/2023 10:52:51 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+04/05/2023 10:52:51 PM - RegistryHandler Service Instance - INFO - Condition :-
+04/05/2023 10:52:51 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+04/05/2023 10:52:51 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+04/05/2023 10:52:52 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+04/05/2023 10:52:52 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+04/05/2023 10:52:52 PM - RegistryHandler Service Instance - INFO - InputDocument : register
+04/05/2023 11:47:15 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+04/05/2023 11:47:15 PM - RegistryHandler Service Instance - INFO - StartState: Start
+04/05/2023 11:47:16 PM - RegistryHandler Service Instance - INFO - InputDocument : NA
+04/05/2023 11:47:16 PM - RegistryHandler Service Instance - INFO - OutputDocumentType : NA
+04/05/2023 11:47:16 PM - RegistryHandler Service Instance - INFO - Condition :-
+04/05/2023 11:47:16 PM - RegistryHandler Service Instance - INFO - TargettState: WaitforRegisterMessage
+04/05/2023 11:47:16 PM - RegistryHandler Service Instance - INFO - ############################################################################# 
+
+04/05/2023 11:47:16 PM - RegistryHandler Service Instance - INFO - 
+ #############################################################################
+04/05/2023 11:47:16 PM - RegistryHandler Service Instance - INFO - StartState: WaitforRegisterMessage
+04/05/2023 11:47:16 PM - RegistryHandler Service Instance - INFO - InputDocument : register

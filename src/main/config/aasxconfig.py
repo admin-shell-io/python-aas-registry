@@ -10,9 +10,9 @@ import json
 import os.path
 
 try:
-    from utils.utils import ExecuteDBModifier,AASDescriptor,ExecuteDBRetriever,AASMetaModelValidator,DescriptorValidator,ConnectResponse
+    from utils.utils import ExecuteDBModifier,AASDescriptor,ExecuteDBRetriever,DescriptorValidator,ConnectResponse
 except ImportError:
-    from src.main.utils.utils import ExecuteDBModifier,AASDescriptor,ExecuteDBRetriever,AASMetaModelValidator,DescriptorValidator,ConnectResponse
+    from src.main.utils.utils import ExecuteDBModifier,AASDescriptor,ExecuteDBRetriever,DescriptorValidator,ConnectResponse
 
 
 script_dir = os.path.dirname(os.path.realpath(__file__))
@@ -28,12 +28,6 @@ class ConfigParser(object):
         self.jsonData = {}
         with open(aas_json__path) as json_file:
             self.jsonData = json.load(json_file)
-        with open(os.path.join(repository,"ass_JsonSchema.json")) as json_file_aas:
-            self.aasJsonSchema  = json.load(json_file_aas)
-        with open(os.path.join(repository,"asset_JsonSchema.json")) as json_file_asset:
-            self.assetJsonSchema  = json.load(json_file_asset)
-        with open(os.path.join(repository,"submodel_JsonSchema.json")) as json_file_submodel:
-            self.submodelJsonSchema  = json.load(json_file_submodel)
         with open(os.path.join(script_dir,"status.json")) as statusFile:
             self.submodel_statusResponse_path  = json.load(statusFile)
         with open(os.path.join(repository,"aasDescSchema.json")) as json_file_aasDesc:
@@ -42,6 +36,7 @@ class ConfigParser(object):
             self.submodelDescSchema  = json.load(json_file_submodelDesc)    
         with open(os.path.join(dataPath,"database.json")) as json_file_dataBase:
             self.dataBaseFile  = json.load(json_file_dataBase)                
+    
     def setAASID(self):
         return self.jsonData["assetAdministrationShells"][0]["idShort"]
     

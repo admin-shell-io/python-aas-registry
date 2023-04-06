@@ -154,7 +154,7 @@ class MessageHandler(object):
     
     def fetchDataAdaptor(self,ob_Message):
         try:
-            receiverId = ob_Message["frame"]["receiver"]["identification"]["id"]
+            receiverId = ob_Message["frame"]["receiver"]["id"]
             if receiverId in self.pyAAS.mqttGateWayEntries:
                 return "MQTT"
             if receiverId in self.pyAAS.httpEndPointsDict:
@@ -248,7 +248,7 @@ class MessageHandler(object):
         try:
             data =  cpMessage["data"]
             timeStamp = cpMessage["timestamp"]
-            Id = data["frame"]["sender"]["identification"]["id"]
+            Id = data["frame"]["sender"]["id"]
             if Id not in list(self.pyAAS.connectBotsDict.keys()):
                 botDict = {"id" :Id,"timeStamp" : timeStamp, "iframesList" : [] }
                 self.pyAAS.connectBotsDict[Id] = botDict
@@ -262,14 +262,14 @@ class MessageHandler(object):
                 if "receiver" not in list(jsonData["frame"].keys()):
                     self.putBroadCastMessage(jsonData)
                 
-                elif (jsonData["frame"]["receiver"]["identification"]["id"] == "VWS_RIC"):
+                elif (jsonData["frame"]["receiver"]["id"] == "VWS_RIC"):
                     if  jsonData["frame"]["type"] == "register" :
                         descriptorData = json.loads(jsonData["interactionElements"][0])
                         descUrl = "http://localhost:9021/api/v1/registry/"+descriptorData["idShort"]
                         _putRegistryResponse = requests.put(descUrl,data=json.dumps(descriptorData),headers=self.connectHeader)
                         self.pyAAS.service_logger.info("AASID : "+ descriptorData["idShort"] +_putRegistryResponse.text)
                 else:
-                    _receiver = data["frame"]["receiver"]["identification"]["id"]
+                    _receiver = data["frame"]["receiver"]["id"]
                     if _receiver in list(self.pyAAS.connectBotsDict.keys()):
                         self.pyAAS.connectBotsDict[_receiver]["iframesList"].append(Im)
                     else:

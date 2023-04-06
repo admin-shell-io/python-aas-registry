@@ -130,7 +130,7 @@ except ImportError:
     
     The ReceiverAASID and ReceiverRolename could be obtained from sender part of the incoming message
     and these are to be provided empty, if there is no receiver.
-    receiverId = self.baseClass.StateName_In["frame"]["sender"]["identification"]["id"]
+    receiverId = self.baseClass.StateName_In["frame"]["sender"]["id"]
     receiverRole = self.baseClass.StateName_In["frame"]["sender"]["role"]["name"]
     
     I40FrameData is a dictionary
@@ -234,7 +234,7 @@ class {{StateName}}(object):
             # receiverRole could be empty 
             
             # For the return reply these details could be obtained from the inbound Message
-            receiverId = message["frame"]["sender"]["identification"]["id"]
+            receiverId = message["frame"]["sender"]["id"]
             receiverRole = message["frame"]["sender"]["role"]["name"]
             
             # For sending the message to an internal skill

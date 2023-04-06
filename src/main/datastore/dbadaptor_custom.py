@@ -39,12 +39,12 @@ class DB_ADAPTOR(object):
     def getAASParams(self,aas):
         params = {}
         try:
-            params["aasId"] = aas["assetAdministrationShells"][0]["identification"]["id"]
+            params["aasId"] = aas["assetAdministrationShells"][0]["id"]
         except:
             params["aasId"] = ""
         
         try:
-            params["aasetId"] = aas["assets"][0]["identification"]["id"]
+            params["aasetId"] = aas["assets"][0]["id"]
         except:
             params["aasetId"] = ""
         
@@ -117,7 +117,7 @@ class DB_ADAPTOR(object):
 
         try:
             aasSubmodels = self.mongocol_aas.find({
-                                        "assetAdministrationShells.0.identification.id": aasId, 
+                                        "assetAdministrationShells.0.id": aasId, 
                                     }, 
                                     { 
                                         "submodels" : 1.0,
@@ -189,7 +189,7 @@ class DB_ADAPTOR(object):
     def getDescParams(self,descData):
         params = {}
         try:
-            params["aasId"] = descData["identification"]
+            params["aasId"] = descData["id"]
         except:
             params["aasId"] = ""
         
@@ -273,7 +273,7 @@ class DB_ADAPTOR(object):
                     query["endpoint"] = ""
                     query["ASYNC"] = "Y" 
                     self.insertDescriptorEndPoint(query)
-                    self.pyAAS.mqttGateWayEntries.add(descData["identification"])                
+                    self.pyAAS.mqttGateWayEntries.add(descData["id"])                
             else:
                 returnMessageDict = response
         except Exception as E:
@@ -284,7 +284,7 @@ class DB_ADAPTOR(object):
 
     def getDescriptorIndexData(self,aasD):
         try:
-            aasId  = aasD["identification"]
+            aasId  = aasD["id"]
         except:
             aasId = ""
         try:
@@ -306,7 +306,7 @@ class DB_ADAPTOR(object):
             if (response["status"] == 200 and str(response["message"][0]) != "No Asset Administration Shell with passed identifier found"):
                 present = False
                 for submodelDesc in response["message"][0]["submodelDescriptors"]:
-                    if submodelDesc["idShort"] == submodelId or submodelDesc["identification"] == submodelId:
+                    if submodelDesc["idShort"] == submodelId or submodelDesc["id"] == submodelId:
                         returnMessageDict = {"message" : [submodelDesc], "status": 200}
                         present = True
                 if (not present):
@@ -357,7 +357,7 @@ class DB_ADAPTOR(object):
                 K = 0
                 present = False
                 for submodelDesc in response["message"][0]["submodelDescriptors"]:
-                    if submodelDesc["idShort"] == submodelId or submodelDesc["identification"] == submodelId:
+                    if submodelDesc["idShort"] == submodelId or submodelDesc["id"] == submodelId:
                         del aasSubmodelDescData[i]
                         present = True
                         k = i
@@ -417,7 +417,7 @@ class DB_ADAPTOR(object):
                 query["endpoint"] = ""
                 query["ASYNC"] = "Y" 
                 self.insertDescriptorEndPoint(query)
-                self.pyAAS.mqttGateWayEntries.add(descData["identification"])
+                self.pyAAS.mqttGateWayEntries.add(descData["id"])
         except Exception as E:
             self.pyAAS.service_logger.info(str(E))
             returnMessageDict = {"message": ["Unexpected Internal Server Error"],"status":500}
@@ -505,7 +505,7 @@ class DB_ADAPTOR(object):
     def getSubmodelDescParams(self,submodelDescData):
         params = {}
         try:
-            params["submodelId"] = submodelDescData["identification"]
+            params["submodelId"] = submodelDescData["id"]
         except Exception as E:
             self.pyAAS.service_logger.info(str(E))
             params["submodelId"] = ""

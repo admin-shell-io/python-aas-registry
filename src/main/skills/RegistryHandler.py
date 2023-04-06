@@ -135,7 +135,7 @@ except ImportError:
     
     The ReceiverAASID and ReceiverRolename could be obtained from sender part of the incoming message
     and these are to be provided empty, if there is no receiver.
-    receiverId = self.baseClass.StateName_In["frame"]["sender"]["identification"]["id"]
+    receiverId = self.baseClass.StateName_In["frame"]["sender"]["id"]
     receiverRole = self.baseClass.StateName_In["frame"]["sender"]["role"]["name"]
     
     I40FrameData is a dictionary
@@ -202,7 +202,7 @@ class saveDescriptorDetails(object):
     def getDescParams(self,descData):
         params = {}
         try:
-            params["aasId"] = descData["identification"]
+            params["aasId"] = descData["id"]
         except Exception as E:
             params["aasId"] = ""
         
@@ -333,8 +333,7 @@ class sendMalformedError(object):
             # receiverRole could be empty 
             
             # For the return reply these details could be obtained from the inbound Message
-            receiverId = message["frame"]["sender"]["identification"]["id"]
-            receiverIdType = message["frame"]["sender"]["identification"]["idType"]
+            receiverId = message["frame"]["sender"]["id"]
             receiverRole = message["frame"]["sender"]["role"]["name"]
             
             # For sending the message to an internal skill
@@ -345,11 +344,9 @@ class sendMalformedError(object):
                                     "type" : oMessage,
                                     "messageId" : oMessage+"_"+str(self.baseClass.pyAAS.dba.getMessageCount()["message"][0]+1),
                                     "SenderAASID" : self.baseClass.pyAAS.AASID,
-                                    "SenderIdType" : "idShort",
                                     "SenderRolename" : self.baseClass.skillName,
                                     "conversationId" : message["frame"]["conversationId"],
                                     "ReceiverAASID" :  receiverId,
-                                    "ReceiverIdType" : receiverIdType,
                                     "ReceiverRolename" : receiverRole
                                 }
         
@@ -483,8 +480,7 @@ class sendRegisterAck(object):
             # receiverRole could be empty 
             
             # For the return reply these details could be obtained from the inbound Message
-            receiverId = message["frame"]["sender"]["identification"]["id"]
-            receiverIdType = message["frame"]["sender"]["identification"]["idType"]
+            receiverId = message["frame"]["sender"]["id"]
             receiverRole = message["frame"]["sender"]["role"]["name"]
             # For sending the message to an internal skill
             # The receiver Id should be
@@ -498,7 +494,6 @@ class sendRegisterAck(object):
                                     "SenderRolename" : self.baseClass.skillName,
                                     "conversationId" : message["frame"]["conversationId"],
                                     "ReceiverAASID" :  receiverId,
-                                    "ReceiverIdType" : receiverIdType,
                                     "ReceiverRolename" : receiverRole
                                 }
         
@@ -660,11 +655,9 @@ class RegistryHandler(object):
                                 "type" : "StausChange",
                                 "messageId" : "StausChange_1",
                                 "SenderAASID" : self.pyAAS.AASID,
-                                "SenderIdType" : "IRI",
                                 "SenderRolename" : self.skillName,
                                 "conversationId" : "AASNetworkedBidding",
                                 "ReceiverAASID" :  self.pyAAS.AASID + "/"+self.skillName,
-                                "ReceiverIdType" : "IRI",
                                 "ReceiverRolename" : "SkillStatusChange"
                             }
         self.statusframe = self.gen.createFrame(self.StatusDataFrame)

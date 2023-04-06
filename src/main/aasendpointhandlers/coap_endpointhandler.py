@@ -28,7 +28,7 @@ try:
         HandleConnectCoap
 except ImportError:
     from src.main.aasendpointhandlers.coap_endpointresources import RetrieveMessageCoap, HandleConnectProtocolCoap, \
-        HandleConnectCoaps
+        HandleConnectCoap
 
 
 class AASEndPointHandler(AASEndPointHandler):
@@ -79,7 +79,7 @@ class AASEndPointHandler(AASEndPointHandler):
 
     def dispatchMessage(self, send_Message):
         try:
-            targetID = send_Message["frame"]["receiver"]["identification"]["id"]
+            targetID = send_Message["frame"]["receiver"]["id"]
             targetAAS_URI = self.pyAAS.coapEndPointsDict[targetID]
             payload = json.dumps(send_Message).encode("utf-8")
             asyncio.get_event_loop().run_until_complete(self.dispatch(targetAAS_URI, payload))

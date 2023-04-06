@@ -18,9 +18,9 @@ except ImportError:
     from src.main.utils.i40data import Generic
 
 try:
-    from utils.utils import ExecuteDBModifier,ExecuteDBRetriever,AASMetaModelValidator,DescriptorValidator,ConnectResponse
+    from utils.utils import ExecuteDBModifier,ExecuteDBRetriever,DescriptorValidator,ConnectResponse
 except ImportError:
-    from src.main.utils.utils import ExecuteDBModifier,ExecuteDBRetriever,AASMetaModelValidator,DescriptorValidator,ConnectResponse
+    from src.main.utils.utils import ExecuteDBModifier,ExecuteDBRetriever,DescriptorValidator,ConnectResponse
 
 class RetrieveMessageCoap(resource.Resource):    
     def __init__(self, pyAAS):
@@ -32,8 +32,8 @@ class RetrieveMessageCoap(resource.Resource):
         try:
             _type = tMessage["frame"]["type"]
             if (_type == "HeartBeat"):
-                _sender = tMessage["frame"]["sender"]["identification"]["id"]
-                _senderIdType = tMessage["frame"]["sender"]["identification"]["idType"]
+                _sender = tMessage["frame"]["sender"]["id"]
+                _senderIdType = ""
                 cr = ConnectResponse(self.pyAAS)
                 if _sender in list(self.pyAAS.coapEndPointsDict.keys()):
                     self.pyAAS.aasBotsDict[_sender] = (datetime.now()).strftime("%Y-%m-%d %H:%M:%S")
@@ -45,11 +45,11 @@ class RetrieveMessageCoap(resource.Resource):
             else :
                 if "receiver" not in list(tMessage["frame"].keys()):
                     self.pyAAS.msgHandler.putBroadCastMessage(tMessage)
-                elif tMessage["frame"]["receiver"]["identification"]["id"] == "AASpillarbox" and tMessage["frame"]["type"] == "register":
+                elif tMessage["frame"]["receiver"]["id"] == "AASpillarbox" and tMessage["frame"]["type"] == "register":
                     data = self.pyAAS.skillInstanceDict["RegistryHandler"].restAPIHandler(tMessage)
                     message =  aiocoap.Message(code=Code.CHANGED, payload=json.dumps(data).encode("utf-8"))
                 else:
-                    _receiver = tMessage["frame"]["receiver"]["identification"]["id"]
+                    _receiver = tMessage["frame"]["receiver"]["id"]
                     if _receiver in list(self.pyAAS.connectBotsDict.keys()):
                         self.pyAAS.connectBotsDict["iframesList"].append(tMessage)
                     else:
@@ -71,7 +71,7 @@ class HandleConnectProtocolCoap(resource.Resource):
                 timestamp = (datetime.now()).strftime("%Y-%m-%d %H:%M:%S")
                 data = {"timestamp":timestamp,"data":heartBeat}
                 self.pyAAS.msgHandler.putConnectMessage(data)
-                _senderId = heartBeat["frame"]["sender"]["identification"]["id"]
+                _senderId = heartBeat["frame"]["sender"]["id"]
                 self.pyAAS.aasBotsDict[_senderId] = timestamp
                 cResponse = ConnectResponse(self.pyAAS)
                 _iframedata = cResponse._createNewIframeData(_senderId,"ksks") 

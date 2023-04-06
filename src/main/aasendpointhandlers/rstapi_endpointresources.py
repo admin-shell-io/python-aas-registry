@@ -8,7 +8,7 @@ This source code may use other Open Source software components (see LICENSE.txt)
 import json
 from datetime import datetime, timedelta
 from urllib.parse import unquote
-from flask_restful import Resource
+from flask_restful import Resource,request
 from flask import render_template, Response, make_response
 
 try:
@@ -39,7 +39,7 @@ class AssetAdministrationShellDescriptorById(Resource):
     def getDescParams(self, descData):
         params = {"aasId": "", "aasetId": "", "idShort": ""}
         try:
-            params["aasId"] = descData["identification"]
+            params["aasId"] = descData["id"]
         except:
             pass
 
@@ -117,7 +117,7 @@ class SubmodelDescriptorById(Resource):
                 # return self.pyAAS.skillInstanceDict["RegistryHandler"].restAPIHandler(data)
             else:
                 if (descValid.valitdateSubmodelDescriptor(data)):
-                    if (submodelId == data["idShort"] or submodelId == data["identification"]):
+                    if (submodelId == data["idShort"] or submodelId == data["id"]):
                         edm = ExecuteDBModifier(self.pyAAS)
                         dataBaseResponse = edm.executeModifer(
                             {"data": {"updateData": data, "aasId": escapeId, "submodelId": submodelId},
@@ -240,9 +240,9 @@ class SubModelDescriptorsbyId(Resource):
         self.pyAAS = pyAAS
 
     def getSubmodelDescriptorParams(self, descData):
-        params = {"identificationId": "", "idShort": ""}
+        params = {"id": "", "idShort": ""}
         try:
-            params["identificationId"] = descData["identification"]
+            params["id"] = descData["id"]
         except:
             pass
 
@@ -283,7 +283,7 @@ class SubModelDescriptorsbyId(Resource):
                 message = {"submodelDescriptors": [data]}
                 if (descValid.valitdateSubmodelDescriptor(message)):
                     descParams = self.getSubmodelDescriptorParams(data)
-                    if (escapeId == descParams["identificationId"] or escapeId == descParams["idShort"]):
+                    if (escapeId == descParams["id"] or escapeId == descParams["idShort"]):
                         edm = ExecuteDBModifier(self.pyAAS)
                         dataBaseResponse = edm.executeModifer({"data": {"updateData": data, "submodelId": escapeId},
                                                                "method": "putSubmodelDescriptorsById"})
@@ -312,7 +312,7 @@ class HandleConnectProtocol(Resource):
                 timestamp = (datetime.now()).strftime("%Y-%m-%d %H:%M:%S")
                 data = {"timestamp": timestamp, "data": heartBeat}
                 self.pyAAS.msgHandler.putConnectMessage(data)
-                _senderId = heartBeat["frame"]["sender"]["identification"]["id"]
+                _senderId = heartBeat["frame"]["sender"]["id"]
                 self.pyAAS.aasBotsDict[_senderId] = timestamp
                 cResponse = ConnectResponse(self.pyAAS)
                 _iframedata = cResponse._createNewIframeData(_senderId, "ksks")
@@ -379,8 +379,8 @@ class RetrieveMessage(Resource):
             tMessage = request.json
             _type = tMessage["frame"]["type"]
             if (_type == "HeartBeat"):
-                _sender = tMessage["frame"]["sender"]["identification"]["id"]
-                _senderidType = tMessage["frame"]["sender"]["identification"]["idType"]
+                _sender = tMessage["frame"]["sender"]["id"]
+                _senderidType = ""
                 cr = ConnectResponse(self.pyAAS)
                 if _sender in list(self.pyAAS.httpEndPointsDict.keys()):
                     self.pyAAS.aasBotsDict[_sender] = (datetime.now() + timedelta(hours=2)).strftime(
@@ -395,11 +395,11 @@ class RetrieveMessage(Resource):
             else:
                 if "receiver" not in list(tMessage["frame"].keys()):
                     self.pyAAS.msgHandler.putBroadCastMessage(tMessage)
-                elif tMessage["frame"]["receiver"]["identification"]["id"] == "AASpillarbox" and tMessage["frame"][
+                elif tMessage["frame"]["receiver"]["id"] == "AASpillarbox" and tMessage["frame"][
                     "type"] == "register":
                     return make_response(self.pyAAS.skillInstanceDict["RegistryHandler"].restAPIHandler(tMessage), 200)
                 else:
-                    _receiver = tMessage["frame"]["receiver"]["identification"]["id"]
+                    _receiver = tMessage["frame"]["receiver"]["id"]
                     if _receiver in list(self.pyAAS.connectBotsDict.keys()):
                         self.pyAAS.connectBotsDict[_receiver]["iframesList"].append(tMessage)
                     else:

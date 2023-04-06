@@ -102,7 +102,7 @@ class AASEndPointHandler(AASEndPointHandler):
         try:
             targetHeader = {"content-type": "application/json", "User-Agent": "VWS Registry Agent " + str(
                 datetime.utcnow().isoformat(sep=' ', timespec='microseconds'))[17:]}
-            targetID = send_Message["frame"]["receiver"]["identification"]["id"]
+            targetID = send_Message["frame"]["receiver"]["id"]
             targetAAS_URI = self.pyAAS.httpEndPointsDict[targetID]
             # t1 = self.pyAAS.idDict[targetID]
             # self.pyAAS.idDict[targetID] = t1 + "," +str(datetime.utcnow().isoformat(sep=' ', timespec='microseconds'))[17:]

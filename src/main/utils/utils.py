@@ -73,9 +73,9 @@ class AASDescriptor(object):
         for desc in descList:
             aasDescriptor = self.createAASDescriptorElement(desc,aasDescriptor,aasxData)
         try:
-            aasDescriptor["identification"] =  aasxData["assetAdministrationShells"][0]["identification"]["id"]
+            aasDescriptor["id"] =  aasxData["assetAdministrationShells"][0]["id"]
         except:
-            aasDescriptor["identification"] = None
+            aasDescriptor["id"] = None
             
         ip = self.pyAAS.lia_env_variable["LIA_AAS_ADMINSHELL_CONNECT_IP"]
         port = self.pyAAS.lia_env_variable["LIA_AAS_RESTAPI_PORT_EXTERN"]
@@ -95,9 +95,9 @@ class AASDescriptor(object):
                 sumodelDescriptor = self.createSubmodelDescriptorElement(desc, sumodelDescriptor, submodel)
             
             try:
-                sumodelDescriptor["identification"]  = submodel["identification"]["id"]
+                sumodelDescriptor["id"]  = submodel["id"]
             except:
-                sumodelDescriptor["identification"]  = None
+                sumodelDescriptor["id"]  = None
             sumodelDescriptor = self.createSubmodelDescriptorElement("semanticId", sumodelDescriptor, submodel)
             submodeldescString = descString +"/submodels/"+sumodelDescriptor["idShort"]
             sumodelDescriptor["endpoints"]  = [self.createndPoint(submodeldescString,"SUBMODEL-1.0")] 
@@ -131,40 +131,6 @@ class DescriptorValidator(object):
         except Exception as E:
             return False
 
-class AASMetaModelValidator(object):
-    def __init__(self,pyAAS):
-        self.pyAAS = pyAAS
-    
-    def valitdateAAS(self,aasData):
-        try :
-            aasJsonSchema = self.pyAAS.aas_configurer.aasJsonSchema
-            if(not validate(instance = aasData, schema= aasJsonSchema)):
-                return True
-            else:
-                return False
-        except Exception as E:
-            return False
-    
-    def valitdateSubmodel(self,submodelData):
-        try :
-            submodelJsonSchema = self.pyAAS.aas_configurer.submodelJsonSchema
-            if(not validate(instance = submodelData, schema= submodelJsonSchema)):
-                return True
-            else:
-                return False
-        except:
-            return False
-
-    def valitdateAsset(self,assetData):
-        try :
-            assetJsonSchema = self.pyAAS.aas_configurer.assetJsonSchema
-            if(not validate(instance = assetData, schema= assetJsonSchema)):
-                return True
-            else:
-                return False
-        except:
-            return False       
-
 class ExecuteDBRetriever(object):
     def __init__(self,pyAAS):
         self.instanceId = str(uuid.uuid1())
@@ -194,11 +160,11 @@ class EndpointObject(object):
                 if endpoint["interface"] == "communication":
                     protocol = endpoint["protocolInformation"]["endpointProtocol"]
                     if protocol == "http" or protocol == "https": 
-                        self.pyAAS.httpEndPointsDict[aasD["identification"]] = endpoint["protocolInformation"]["endpointAddress"]
+                        self.pyAAS.httpEndPointsDict[aasD["id"]] = endpoint["protocolInformation"]["endpointAddress"]
                         query["endpoint"] = endpoint["protocolInformation"]["endpointAddress"]
                         query["ASYNC"] = "N"                        
                     elif protocol == "coap":
-                        self.pyAAS.coapEndPointsDict[aasD["identification"]] = endpoint["protocolInformation"]["endpointAddress"]
+                        self.pyAAS.coapEndPointsDict[aasD["id"]] = endpoint["protocolInformation"]["endpointAddress"]
                         query["endpoint"] = endpoint["protocolInformation"]["endpointAddress"]
                         query["ASYNC"] = "N"
                     self.pyAAS.dba.insertDescriptorEndPoint(query)
@@ -215,35 +181,26 @@ class ConnectResponse(object):
     def creatIframeData(self,senderId,coversationId,messageType,protType):
         frame = {
                     "semanticProtocol": {
-                    "keys": [
-                        {
-                            "type": "GlobalReference",
-                            "local": "local", 
-                            "value": "www.admin-shell.io/interaction/"+protType, 
-                            "idType": 'IRI'
-                        }
+                    "keys": [{
+                                "type": "GlobalReference",
+                                "value": "www.admin-shell.io/interaction/"+protType
+                            }
                         ]
                     }, 
                     "type": messageType,
                     "messageId": str(uuid.uuid1()), 
                     "sender": {
-                        "identification": {
-                            "id": "AASpillarbox",
-                            "idType": "idShort"
-                        }, 
-                        "role": {
-                            "name": "HeartBeatHandler"
+                            "id": "AASpillarbox", 
+                            "role": {
+                                "name": "HeartBeatHandler"
                             }
-                        },
+                    },
                     "receiver": {
-                        "identification": {
-                            "id": senderId,
-                            "idType": "IRI"
-                        }, 
-                        "role": {
-                            "name": "AASHeartBeatHandler"
+                            "id": senderId, 
+                            "role": {
+                                "name": "AASHeartBeatHandler"
                             }
-                        },
+                    },
                     "replyBy": 000000,
                     "inReplyTo":"",
                     "conversationId": coversationId
@@ -254,33 +211,24 @@ class ConnectResponse(object):
     def creatHeartBeatRestResponse(self,senderId,_senderidType,coversationId):
         frame = {
                     "semanticProtocol": {
-                    "keys": [
-                        {
-                            "type": "GlobalReference",
-                            "local": "local", 
-                            "value": "www.admin-shell.io/interaction/heartbeat", 
-                            "idType": "IRI"
-                        }
+                        "keys": [{
+                                    "type": "GlobalReference",
+                                    "value": "www.admin-shell.io/interaction/heartbeat"
+                                }
                         ]
                     }, 
                     "type": "HeartBeatAck",
                     "messageId": str(uuid.uuid1()), 
                     "sender": {
-                        "identification": {
-                            "id": "AASpillarbox",
-                            "idType": "idShort"
-                        }, 
-                        "role": {
-                            "name": "HeartBeatHandler"
-                            }
-                        },
+                                "id": "AASpillarbox", 
+                                "role": {
+                                    "name": "HeartBeatHandler"
+                                }
+                            },
                     "receiver": {
-                        "identification": {
-                            "id": senderId,
-                            "idType": _senderidType
-                        }, 
-                        "role": {
-                            "name": "AASHeartBeatHandler"
+                            "id": senderId, 
+                            "role": {
+                                "name": "AASHeartBeatHandler"
                             }
                         },
                     "replyBy": 000000,
@@ -292,33 +240,25 @@ class ConnectResponse(object):
     def creatHeartBeatMQTTResponse(self,senderId,_senderidType,coversationId):
         frame = {
                     "semanticProtocol": {
-                    "keys": [
-                        {
-                            "type": "GlobalReference",
-                            "local": "local", 
-                            "value": "www.admin-shell.io/interaction/heartbeat", 
-                            "idType": "IRI"
-                        }
+                        "keys": [
+                            {
+                                "type": "GlobalReference",
+                                "value": "www.admin-shell.io/interaction/heartbeat"
+                            }
                         ]
                     }, 
                     "type": "HeartBeatAck",
                     "messageId": str(uuid.uuid1()), 
                     "sender": {
-                        "identification": {
-                            "id": "AASpillarbox",
-                            "idType": "idShort"
-                        }, 
-                        "role": {
-                            "name": "HeartBeatHandler"
-                            }
+                                "id": "AASpillarbox",
+                                "role": {
+                                    "name": "HeartBeatHandler"
+                                }
                         },
                     "receiver": {
-                        "identification": {
                             "id": senderId,
-                            "idType":_senderidType
-                        }, 
-                        "role": {
-                            "name": "AASHeartBeatHandler"
+                            "role": {
+                                "name": "AASHeartBeatHandler"
                             }
                         },
                     "replyBy": 000000,
@@ -341,30 +281,22 @@ class ConnectResponse(object):
                     "keys": [
                         {
                             "type": "GlobalReference",
-                            "local": "local", 
-                            "value": "www.admin-shell.io/interaction/heartbeat", 
-                            "idType": "IRI"
+                            "value": "www.admin-shell.io/interaction/heartbeat"
                         }
                         ]
                     }, 
                     "type": "HeartBeatAck",
                     "messageId": str(uuid.uuid1()), 
                     "sender": {
-                        "identification": {
                             "id": "AASpillarbox",
-                            "idType": "idShort"
-                        }, 
-                        "role": {
-                            "name": "HeartBeatHandler"
+                            "role": {
+                                "name": "HeartBeatHandler"
                             }
                         },
                     "receiver": {
-                        "identification": {
                             "id": senderId,
-                            "idType": _senderidType
-                        }, 
-                        "role": {
-                            "name": "AASHeartBeatHandler"
+                            "role": {
+                                "name": "AASHeartBeatHandler"
                             }
                         },
                     "replyBy": 000000,

@@ -53,7 +53,7 @@ class AASEndPointHandler(AASEndPointHandler):
         self.tpn = "AASpillarbox"  # tpn
         try:
             self.client.connect(self.ipaddressComdrv, port=(self.portComdrv))
-            mqttClientThread1 = threading.Thread(target=self.update, args=(self.tpn,))
+            mqttClientThread1 = threading.Thread(target=self.update, args=("AASpillarbox",))
             mqttClientThread1.start()
 
         except Exception as e:
@@ -73,7 +73,7 @@ class AASEndPointHandler(AASEndPointHandler):
     def dispatchMessage(self, send_Message):
         publishTopic = self.pyAAS.BroadCastMQTTTopic
         try:
-            publishTopic = send_Message["frame"]["receiver"]["identification"]["id"]
+            publishTopic = send_Message["frame"]["receiver"]["id"]
         except Exception as E:
             pass
         try:
@@ -90,8 +90,8 @@ class AASEndPointHandler(AASEndPointHandler):
             jsonMessage = json.loads(msg1)
             _type = jsonMessage["frame"]["type"]
             if (_type == "HeartBeat"):
-                _sender = jsonMessage["frame"]["sender"]["identification"]["id"]
-                _senderIdType = jsonMessage["frame"]["sender"]["identification"]["idType"]
+                _sender = jsonMessage["frame"]["sender"]["id"]
+                _senderIdType = ""
                 cr = ConnectResponse(self.pyAAS)
                 if (_sender in self.pyAAS.mqttGateWayEntries):
                     self.pyAAS.aasBotsDict[_sender] = (datetime.now() + timedelta(hours=2)).strftime(
@@ -106,10 +106,10 @@ class AASEndPointHandler(AASEndPointHandler):
             else:
                 if "receiver" not in list(jsonMessage["frame"].keys()):
                     self.pyAAS.msgHandler.putBroadCastMessage(jsonMessage)
-                elif jsonMessage["frame"]["receiver"]["identification"]["id"] == "AASpillarbox":
+                elif jsonMessage["frame"]["receiver"]["id"] == "AASpillarbox":
                     self.msgHandler.putIbMessage(jsonMessage)
                 else:
-                    _receiver = jsonMessage["frame"]["receiver"]["identification"]["id"]
+                    _receiver = jsonMessage["frame"]["receiver"]["id"]
                     if _receiver in list(self.pyAAS.connectBotsDict.keys()):
                         self.pyAAS.connectBotsDict[_receiver]["iframesList"].append(jsonMessage)
                     else:
@@ -125,7 +125,7 @@ class AASEndPointHandler(AASEndPointHandler):
             self.client.publish(aasId, str(json.dumps(send_Message)))
             print("A new broadcast message is sent to the AAS " + aasId)
         except Exception as E:
-            pass
+            print("Error sending the message to the AAS")
 
     def dispatchBroadCastMessage(self, send_Message):
         for x in self.pyAAS.mqttGateWayEntries:

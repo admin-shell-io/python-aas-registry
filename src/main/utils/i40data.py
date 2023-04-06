@@ -36,21 +36,16 @@ class Generic(object):
                     "keys": [
                         {
                             "type": "GlobalReference",
-                            "local": "local", 
-                            "value": I40Frame["semanticProtocol"], 
-                            "idType": "IRI"
+                            "value": I40Frame["semanticProtocol"] 
                         }
                         ]
                     }, 
                     "type": I40Frame["type"],
                     "messageId": I40Frame["messageId"], 
                     "sender": {
-                        "identification": {
-                            "id": I40Frame["SenderAASID"],
-                            "idType": I40Frame["SenderIdType"]
-                        }, 
-                        "role": {
-                            "name": I40Frame["SenderRolename"]
+                            "id": I40Frame["SenderAASID"], 
+                            "role": {
+                                "name": I40Frame["SenderRolename"]
                             }
                         },
                         "replyBy": 000000,
@@ -60,11 +55,8 @@ class Generic(object):
         
         if (I40Frame["ReceiverAASID"] != ""):
             frame["receiver"] = {
-                                    "identification": {
                                         "id": I40Frame["ReceiverAASID"],
-                                        "idType": I40Frame["ReceiverIdType"]
-                                    }, 
-                                    "role": {
+                                        "role": {
                                         "name": I40Frame["ReceiverRolename"],
                                         
                                     }
