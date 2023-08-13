@@ -6,9 +6,7 @@ This source code may use other Open Source software components (see LICENSE.txt)
 '''
 
 import json
-import logging
 import os
-import requests
 import threading
 import uuid
 
@@ -89,6 +87,7 @@ class AASEndPointHandler(AASEndPointHandler):
             msg1 = str(msg.payload, "utf-8")
             jsonMessage = json.loads(msg1)
             _type = jsonMessage["frame"]["type"]
+            print(_type)
             if (_type == "HeartBeat"):
                 _sender = jsonMessage["frame"]["sender"]["id"]
                 _senderIdType = ""

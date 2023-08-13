@@ -8779,6 +8779,1522 @@
                     }
                 ]
             }
+        },
+        {
+            "messageType": "register",
+            "message_Id": "register_e0ac05d4-3fc2-48e3-a05d-89b26a44271e",
+            "message": {
+                "frame": {
+                    "semanticProtocol": {
+                        "keys": [
+                            {
+                                "type": "GlobalReference",
+                                "value": "www.admin-shell.io/interaction/registration"
+                            }
+                        ]
+                    },
+                    "type": "register",
+                    "messageId": "register_e0ac05d4-3fc2-48e3-a05d-89b26a44271e",
+                    "sender": {
+                        "id": "ww.ovgu.de/aas/67e882ad-7027-4854-b6db-8f5b30e21e1e",
+                        "role": {
+                            "name": "Register"
+                        }
+                    },
+                    "conversationId": "Register_1",
+                    "replyBy": "",
+                    "replyTo": "",
+                    "receiver": {
+                        "id": "AASpillarbox",
+                        "role": {
+                            "name": "RegistryHandler"
+                        }
+                    }
+                },
+                "interactionElements": []
+            }
+        },
+        {
+            "messageType": "register",
+            "message_Id": "register_1d3d766f-a1bf-41e3-8c46-e52907cead3c",
+            "message": {
+                "frame": {
+                    "semanticProtocol": {
+                        "keys": [
+                            {
+                                "type": "GlobalReference",
+                                "value": "www.admin-shell.io/interaction/registration"
+                            }
+                        ]
+                    },
+                    "type": "register",
+                    "messageId": "register_1d3d766f-a1bf-41e3-8c46-e52907cead3c",
+                    "sender": {
+                        "id": "ww.ovgu.de/aas/67e882ad-7027-4854-b6db-8f5b30e21e1e",
+                        "role": {
+                            "name": "Register"
+                        }
+                    },
+                    "conversationId": "Register_1",
+                    "replyBy": "",
+                    "replyTo": "",
+                    "receiver": {
+                        "id": "AASpillarbox",
+                        "role": {
+                            "name": "RegistryHandler"
+                        }
+                    }
+                },
+                "interactionElements": [
+                    {
+                        "id": "ww.ovgu.de/aas/67e882ad-7027-4854-b6db-8f5b30e21e1e",
+                        "administration": {},
+                        "description": [
+                            {
+                                "language": "en",
+                                "text": "HannoverMesseDemo"
+                            }
+                        ],
+                        "globalAssetId": {
+                            "keys": [
+                                {
+                                    "type": "GlobalReference",
+                                    "value": "ServiceRequester3/HMD"
+                                }
+                            ],
+                            "type": "GlobalReference"
+                        },
+                        "endpoints": [
+                            {
+                                "protocolInformation": {
+                                    "endpointAddress": "http://localhost:60012/shells/d3cub3ZndS5kZS9hYXMvNjdlODgyYWQtNzAyNy00ODU0LWI2ZGItOGY1YjMwZTIxZTFl",
+                                    "endpointProtocol": "http",
+                                    "endpointProtocolVersion": "",
+                                    "subprotocol": "",
+                                    "subprotocolBody": "",
+                                    "subprotocolBodyEncoding": "",
+                                    "securityAttributes": ""
+                                },
+                                "interface": "AAS-1.0"
+                            }
+                        ],
+                        "submodelDescriptors": [
+                            {
+                                "id": "ww.ovgu.de/submodel/905777a9-d67d-4dfd-a5f0-89e3c153f7f2",
+                                "semanticId": {
+                                    "keys": [
+                                        {
+                                            "type": "GlobalReference",
+                                            "value": "0173-1#01-AKG243#015"
+                                        }
+                                    ],
+                                    "type": "GlobalReference"
+                                },
+                                "endpoints": [
+                                    {
+                                        "protocolInformation": {
+                                            "endpointAddress": "http://localhost:60012/submodels/d3cub3ZndS5kZS9zdWJtb2RlbC85MDU3NzdhOS1kNjdkLTRkZmQtYTVmMC04OWUzYzE1M2Y3ZjI=/submodel",
+                                            "endpointProtocol": "http",
+                                            "endpointProtocolVersion": "",
+                                            "subprotocol": "",
+                                            "subprotocolBody": "",
+                                            "subprotocolBodyEncoding": "",
+                                            "securityAttributes": ""
+                                        },
+                                        "interface": "SUBMODEL-1.0"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "ww.ovgu.de/submodel/2536ec5a-352c-4315-bf36-812b8bb11703",
+                                "semanticId": {
+                                    "keys": [
+                                        {
+                                            "type": "GlobalReference",
+                                            "value": "0173-1#01-AKG250#017"
+                                        }
+                                    ],
+                                    "type": "GlobalReference"
+                                },
+                                "endpoints": [
+                                    {
+                                        "protocolInformation": {
+                                            "endpointAddress": "http://localhost:60012/submodels/d3cub3ZndS5kZS9zdWJtb2RlbC8yNTM2ZWM1YS0zNTJjLTQzMTUtYmYzNi04MTJiOGJiMTE3MDM=/submodel",
+                                            "endpointProtocol": "http",
+                                            "endpointProtocolVersion": "",
+                                            "subprotocol": "",
+                                            "subprotocolBody": "",
+                                            "subprotocolBodyEncoding": "",
+                                            "securityAttributes": ""
+                                        },
+                                        "interface": "SUBMODEL-1.0"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "ww.ovgu.de/submodel/e1be35d6-d227-4193-863d-65ef6f209638",
+                                "semanticId": {
+                                    "keys": [
+                                        {
+                                            "type": "GlobalReference",
+                                            "value": "0173-1#01-ADR740#004"
+                                        }
+                                    ],
+                                    "type": "GlobalReference"
+                                },
+                                "endpoints": [
+                                    {
+                                        "protocolInformation": {
+                                            "endpointAddress": "http://localhost:60012/submodels/d3cub3ZndS5kZS9zdWJtb2RlbC9lMWJlMzVkNi1kMjI3LTQxOTMtODYzZC02NWVmNmYyMDk2Mzg=/submodel",
+                                            "endpointProtocol": "http",
+                                            "endpointProtocolVersion": "",
+                                            "subprotocol": "",
+                                            "subprotocolBody": "",
+                                            "subprotocolBodyEncoding": "",
+                                            "securityAttributes": ""
+                                        },
+                                        "interface": "SUBMODEL-1.0"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "messageType": "registerack",
+            "message_Id": "registerack_60",
+            "message": {
+                "frame": {
+                    "semanticProtocol": {
+                        "keys": [
+                            {
+                                "type": "GlobalReference",
+                                "value": "www.admin-shell.io/interaction/registration"
+                            }
+                        ]
+                    },
+                    "type": "registerack",
+                    "messageId": "registerack_60",
+                    "sender": {
+                        "id": "VWS_RIC",
+                        "role": {
+                            "name": "RegistryHandler"
+                        }
+                    },
+                    "replyBy": 0,
+                    "inReplyTo": "",
+                    "conversationId": "Register_1",
+                    "receiver": {
+                        "id": "ww.ovgu.de/aas/67e882ad-7027-4854-b6db-8f5b30e21e1e",
+                        "role": {
+                            "name": "Register"
+                        }
+                    }
+                },
+                "interactionElements": [
+                    {
+                        "semanticId": {
+                            "keys": []
+                        },
+                        "identification": {
+                            "idType": "IRI",
+                            "id": "www.company.com/ids/sm/6535_4121_8002_9238"
+                        },
+                        "idShort": "StatusResponse",
+                        "modelType": {
+                            "name": "Submodel"
+                        },
+                        "kind": "Instance",
+                        "submodelElements": [
+                            {
+                                "value": "S",
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Status",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            },
+                            {
+                                "value": 200,
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Code",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            },
+                            {
+                                "value": "The Asset Administration Shell's descriptor registration is successfull",
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Messaage",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "messageType": "register",
+            "message_Id": "register_fe6eb53b-7a89-450b-9be0-ba5dd9e6e4cc",
+            "message": {
+                "frame": {
+                    "semanticProtocol": {
+                        "keys": [
+                            {
+                                "type": "GlobalReference",
+                                "value": "www.admin-shell.io/interaction/registration"
+                            }
+                        ]
+                    },
+                    "type": "register",
+                    "messageId": "register_fe6eb53b-7a89-450b-9be0-ba5dd9e6e4cc",
+                    "sender": {
+                        "id": "ww.ovgu.de/aas/67e882ad-7027-4854-b6db-8f5b30e21e1e",
+                        "role": {
+                            "name": "Register"
+                        }
+                    },
+                    "conversationId": "Register_1",
+                    "replyBy": "",
+                    "replyTo": "",
+                    "receiver": {
+                        "id": "AASpillarbox",
+                        "role": {
+                            "name": "RegistryHandler"
+                        }
+                    }
+                },
+                "interactionElements": [
+                    {
+                        "id": "ww.ovgu.de/aas/67e882ad-7027-4854-b6db-8f5b30e21e1e",
+                        "administration": {},
+                        "description": [
+                            {
+                                "language": "en",
+                                "text": "HannoverMesseDemo"
+                            }
+                        ],
+                        "globalAssetId": {
+                            "keys": [
+                                {
+                                    "type": "GlobalReference",
+                                    "value": "ServiceRequester3/HMD"
+                                }
+                            ],
+                            "type": "GlobalReference"
+                        },
+                        "endpoints": [
+                            {
+                                "protocolInformation": {
+                                    "endpointAddress": "http://localhost:60012/shells/d3cub3ZndS5kZS9hYXMvNjdlODgyYWQtNzAyNy00ODU0LWI2ZGItOGY1YjMwZTIxZTFl",
+                                    "endpointProtocol": "http",
+                                    "endpointProtocolVersion": "",
+                                    "subprotocol": "",
+                                    "subprotocolBody": "",
+                                    "subprotocolBodyEncoding": "",
+                                    "securityAttributes": ""
+                                },
+                                "interface": "AAS-1.0"
+                            }
+                        ],
+                        "submodelDescriptors": [
+                            {
+                                "id": "ww.ovgu.de/submodel/905777a9-d67d-4dfd-a5f0-89e3c153f7f2",
+                                "semanticId": {
+                                    "keys": [
+                                        {
+                                            "type": "GlobalReference",
+                                            "value": "0173-1#01-AKG243#015"
+                                        }
+                                    ],
+                                    "type": "GlobalReference"
+                                },
+                                "endpoints": [
+                                    {
+                                        "protocolInformation": {
+                                            "endpointAddress": "http://localhost:60012/submodels/d3cub3ZndS5kZS9zdWJtb2RlbC85MDU3NzdhOS1kNjdkLTRkZmQtYTVmMC04OWUzYzE1M2Y3ZjI=/submodel",
+                                            "endpointProtocol": "http",
+                                            "endpointProtocolVersion": "",
+                                            "subprotocol": "",
+                                            "subprotocolBody": "",
+                                            "subprotocolBodyEncoding": "",
+                                            "securityAttributes": ""
+                                        },
+                                        "interface": "SUBMODEL-1.0"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "ww.ovgu.de/submodel/2536ec5a-352c-4315-bf36-812b8bb11703",
+                                "semanticId": {
+                                    "keys": [
+                                        {
+                                            "type": "GlobalReference",
+                                            "value": "0173-1#01-AKG250#017"
+                                        }
+                                    ],
+                                    "type": "GlobalReference"
+                                },
+                                "endpoints": [
+                                    {
+                                        "protocolInformation": {
+                                            "endpointAddress": "http://localhost:60012/submodels/d3cub3ZndS5kZS9zdWJtb2RlbC8yNTM2ZWM1YS0zNTJjLTQzMTUtYmYzNi04MTJiOGJiMTE3MDM=/submodel",
+                                            "endpointProtocol": "http",
+                                            "endpointProtocolVersion": "",
+                                            "subprotocol": "",
+                                            "subprotocolBody": "",
+                                            "subprotocolBodyEncoding": "",
+                                            "securityAttributes": ""
+                                        },
+                                        "interface": "SUBMODEL-1.0"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "ww.ovgu.de/submodel/e1be35d6-d227-4193-863d-65ef6f209638",
+                                "semanticId": {
+                                    "keys": [
+                                        {
+                                            "type": "GlobalReference",
+                                            "value": "0173-1#01-ADR740#004"
+                                        }
+                                    ],
+                                    "type": "GlobalReference"
+                                },
+                                "endpoints": [
+                                    {
+                                        "protocolInformation": {
+                                            "endpointAddress": "http://localhost:60012/submodels/d3cub3ZndS5kZS9zdWJtb2RlbC9lMWJlMzVkNi1kMjI3LTQxOTMtODYzZC02NWVmNmYyMDk2Mzg=/submodel",
+                                            "endpointProtocol": "http",
+                                            "endpointProtocolVersion": "",
+                                            "subprotocol": "",
+                                            "subprotocolBody": "",
+                                            "subprotocolBodyEncoding": "",
+                                            "securityAttributes": ""
+                                        },
+                                        "interface": "SUBMODEL-1.0"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "messageType": "registerack",
+            "message_Id": "registerack_62",
+            "message": {
+                "frame": {
+                    "semanticProtocol": {
+                        "keys": [
+                            {
+                                "type": "GlobalReference",
+                                "value": "www.admin-shell.io/interaction/registration"
+                            }
+                        ]
+                    },
+                    "type": "registerack",
+                    "messageId": "registerack_62",
+                    "sender": {
+                        "id": "VWS_RIC",
+                        "role": {
+                            "name": "RegistryHandler"
+                        }
+                    },
+                    "replyBy": 0,
+                    "inReplyTo": "",
+                    "conversationId": "Register_1",
+                    "receiver": {
+                        "id": "ww.ovgu.de/aas/67e882ad-7027-4854-b6db-8f5b30e21e1e",
+                        "role": {
+                            "name": "Register"
+                        }
+                    }
+                },
+                "interactionElements": [
+                    {
+                        "semanticId": {
+                            "keys": []
+                        },
+                        "identification": {
+                            "idType": "IRI",
+                            "id": "www.company.com/ids/sm/6535_4121_8002_9238"
+                        },
+                        "idShort": "StatusResponse",
+                        "modelType": {
+                            "name": "Submodel"
+                        },
+                        "kind": "Instance",
+                        "submodelElements": [
+                            {
+                                "value": "S",
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Status",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            },
+                            {
+                                "value": 200,
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Code",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            },
+                            {
+                                "value": "The Asset Administration Shell's descriptor registration is successfully renewed",
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Messaage",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "messageType": "register",
+            "message_Id": "register_817015ce-5456-4740-b098-01923cc28a1e",
+            "message": {
+                "frame": {
+                    "semanticProtocol": {
+                        "keys": [
+                            {
+                                "type": "GlobalReference",
+                                "value": "www.admin-shell.io/interaction/registration"
+                            }
+                        ]
+                    },
+                    "type": "register",
+                    "messageId": "register_817015ce-5456-4740-b098-01923cc28a1e",
+                    "sender": {
+                        "id": "ww.ovgu.de/aas/67e882ad-7027-4854-b6db-8f5b30e21e1e",
+                        "role": {
+                            "name": "Register"
+                        }
+                    },
+                    "conversationId": "Register_1",
+                    "replyBy": "",
+                    "replyTo": "",
+                    "receiver": {
+                        "id": "AASpillarbox",
+                        "role": {
+                            "name": "RegistryHandler"
+                        }
+                    }
+                },
+                "interactionElements": [
+                    {
+                        "id": "ww.ovgu.de/aas/67e882ad-7027-4854-b6db-8f5b30e21e1e",
+                        "administration": {},
+                        "description": [
+                            {
+                                "language": "en",
+                                "text": "HannoverMesseDemo"
+                            }
+                        ],
+                        "globalAssetId": {
+                            "keys": [
+                                {
+                                    "type": "GlobalReference",
+                                    "value": "ServiceRequester3/HMD"
+                                }
+                            ],
+                            "type": "GlobalReference"
+                        },
+                        "endpoints": [
+                            {
+                                "protocolInformation": {
+                                    "endpointAddress": "http://localhost:60012/shells/d3cub3ZndS5kZS9hYXMvNjdlODgyYWQtNzAyNy00ODU0LWI2ZGItOGY1YjMwZTIxZTFl",
+                                    "endpointProtocol": "http",
+                                    "endpointProtocolVersion": "",
+                                    "subprotocol": "",
+                                    "subprotocolBody": "",
+                                    "subprotocolBodyEncoding": "",
+                                    "securityAttributes": ""
+                                },
+                                "interface": "AAS-1.0"
+                            }
+                        ],
+                        "submodelDescriptors": [
+                            {
+                                "id": "ww.ovgu.de/submodel/905777a9-d67d-4dfd-a5f0-89e3c153f7f2",
+                                "semanticId": {
+                                    "keys": [
+                                        {
+                                            "type": "GlobalReference",
+                                            "value": "0173-1#01-AKG243#015"
+                                        }
+                                    ],
+                                    "type": "GlobalReference"
+                                },
+                                "endpoints": [
+                                    {
+                                        "protocolInformation": {
+                                            "endpointAddress": "http://localhost:60012/submodels/d3cub3ZndS5kZS9zdWJtb2RlbC85MDU3NzdhOS1kNjdkLTRkZmQtYTVmMC04OWUzYzE1M2Y3ZjI=/submodel",
+                                            "endpointProtocol": "http",
+                                            "endpointProtocolVersion": "",
+                                            "subprotocol": "",
+                                            "subprotocolBody": "",
+                                            "subprotocolBodyEncoding": "",
+                                            "securityAttributes": ""
+                                        },
+                                        "interface": "SUBMODEL-1.0"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "ww.ovgu.de/submodel/2536ec5a-352c-4315-bf36-812b8bb11703",
+                                "semanticId": {
+                                    "keys": [
+                                        {
+                                            "type": "GlobalReference",
+                                            "value": "0173-1#01-AKG250#017"
+                                        }
+                                    ],
+                                    "type": "GlobalReference"
+                                },
+                                "endpoints": [
+                                    {
+                                        "protocolInformation": {
+                                            "endpointAddress": "http://localhost:60012/submodels/d3cub3ZndS5kZS9zdWJtb2RlbC8yNTM2ZWM1YS0zNTJjLTQzMTUtYmYzNi04MTJiOGJiMTE3MDM=/submodel",
+                                            "endpointProtocol": "http",
+                                            "endpointProtocolVersion": "",
+                                            "subprotocol": "",
+                                            "subprotocolBody": "",
+                                            "subprotocolBodyEncoding": "",
+                                            "securityAttributes": ""
+                                        },
+                                        "interface": "SUBMODEL-1.0"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "ww.ovgu.de/submodel/e1be35d6-d227-4193-863d-65ef6f209638",
+                                "semanticId": {
+                                    "keys": [
+                                        {
+                                            "type": "GlobalReference",
+                                            "value": "0173-1#01-ADR740#004"
+                                        }
+                                    ],
+                                    "type": "GlobalReference"
+                                },
+                                "endpoints": [
+                                    {
+                                        "protocolInformation": {
+                                            "endpointAddress": "http://localhost:60012/submodels/d3cub3ZndS5kZS9zdWJtb2RlbC9lMWJlMzVkNi1kMjI3LTQxOTMtODYzZC02NWVmNmYyMDk2Mzg=/submodel",
+                                            "endpointProtocol": "http",
+                                            "endpointProtocolVersion": "",
+                                            "subprotocol": "",
+                                            "subprotocolBody": "",
+                                            "subprotocolBodyEncoding": "",
+                                            "securityAttributes": ""
+                                        },
+                                        "interface": "SUBMODEL-1.0"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "messageType": "registerack",
+            "message_Id": "registerack_64",
+            "message": {
+                "frame": {
+                    "semanticProtocol": {
+                        "keys": [
+                            {
+                                "type": "GlobalReference",
+                                "value": "www.admin-shell.io/interaction/registration"
+                            }
+                        ]
+                    },
+                    "type": "registerack",
+                    "messageId": "registerack_64",
+                    "sender": {
+                        "id": "VWS_RIC",
+                        "role": {
+                            "name": "RegistryHandler"
+                        }
+                    },
+                    "replyBy": 0,
+                    "inReplyTo": "",
+                    "conversationId": "Register_1",
+                    "receiver": {
+                        "id": "ww.ovgu.de/aas/67e882ad-7027-4854-b6db-8f5b30e21e1e",
+                        "role": {
+                            "name": "Register"
+                        }
+                    }
+                },
+                "interactionElements": [
+                    {
+                        "semanticId": {
+                            "keys": []
+                        },
+                        "identification": {
+                            "idType": "IRI",
+                            "id": "www.company.com/ids/sm/6535_4121_8002_9238"
+                        },
+                        "idShort": "StatusResponse",
+                        "modelType": {
+                            "name": "Submodel"
+                        },
+                        "kind": "Instance",
+                        "submodelElements": [
+                            {
+                                "value": "S",
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Status",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            },
+                            {
+                                "value": 200,
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Code",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            },
+                            {
+                                "value": "The Asset Administration Shell's descriptor registration is successfully renewed",
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Messaage",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "messageType": "register",
+            "message_Id": "register_c8ea7655-c5e5-4f7a-9c24-3ab6e103f0bd",
+            "message": {
+                "frame": {
+                    "semanticProtocol": {
+                        "keys": [
+                            {
+                                "type": "GlobalReference",
+                                "value": "www.admin-shell.io/interaction/registration"
+                            }
+                        ]
+                    },
+                    "type": "register",
+                    "messageId": "register_c8ea7655-c5e5-4f7a-9c24-3ab6e103f0bd",
+                    "sender": {
+                        "id": "ww.ovgu.de/aas/67e882ad-7027-4854-b6db-8f5b30e21e1e",
+                        "role": {
+                            "name": "Register"
+                        }
+                    },
+                    "conversationId": "Register_1",
+                    "replyBy": "",
+                    "replyTo": "",
+                    "receiver": {
+                        "id": "AASpillarbox",
+                        "role": {
+                            "name": "RegistryHandler"
+                        }
+                    }
+                },
+                "interactionElements": [
+                    {
+                        "id": "ww.ovgu.de/aas/67e882ad-7027-4854-b6db-8f5b30e21e1e",
+                        "administration": {},
+                        "description": [
+                            {
+                                "language": "en",
+                                "text": "HannoverMesseDemo"
+                            }
+                        ],
+                        "globalAssetId": {
+                            "keys": [
+                                {
+                                    "type": "GlobalReference",
+                                    "value": "ServiceRequester3/HMD"
+                                }
+                            ],
+                            "type": "GlobalReference"
+                        },
+                        "endpoints": [
+                            {
+                                "protocolInformation": {
+                                    "endpointAddress": "http://localhost:60012/shells/d3cub3ZndS5kZS9hYXMvNjdlODgyYWQtNzAyNy00ODU0LWI2ZGItOGY1YjMwZTIxZTFl",
+                                    "endpointProtocol": "http",
+                                    "endpointProtocolVersion": "",
+                                    "subprotocol": "",
+                                    "subprotocolBody": "",
+                                    "subprotocolBodyEncoding": "",
+                                    "securityAttributes": ""
+                                },
+                                "interface": "AAS-1.0"
+                            }
+                        ],
+                        "submodelDescriptors": [
+                            {
+                                "id": "ww.ovgu.de/submodel/905777a9-d67d-4dfd-a5f0-89e3c153f7f2",
+                                "semanticId": {
+                                    "keys": [
+                                        {
+                                            "type": "GlobalReference",
+                                            "value": "0173-1#01-AKG243#015"
+                                        }
+                                    ],
+                                    "type": "GlobalReference"
+                                },
+                                "endpoints": [
+                                    {
+                                        "protocolInformation": {
+                                            "endpointAddress": "http://localhost:60012/submodels/d3cub3ZndS5kZS9zdWJtb2RlbC85MDU3NzdhOS1kNjdkLTRkZmQtYTVmMC04OWUzYzE1M2Y3ZjI=/submodel",
+                                            "endpointProtocol": "http",
+                                            "endpointProtocolVersion": "",
+                                            "subprotocol": "",
+                                            "subprotocolBody": "",
+                                            "subprotocolBodyEncoding": "",
+                                            "securityAttributes": ""
+                                        },
+                                        "interface": "SUBMODEL-1.0"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "ww.ovgu.de/submodel/2536ec5a-352c-4315-bf36-812b8bb11703",
+                                "semanticId": {
+                                    "keys": [
+                                        {
+                                            "type": "GlobalReference",
+                                            "value": "0173-1#01-AKG250#017"
+                                        }
+                                    ],
+                                    "type": "GlobalReference"
+                                },
+                                "endpoints": [
+                                    {
+                                        "protocolInformation": {
+                                            "endpointAddress": "http://localhost:60012/submodels/d3cub3ZndS5kZS9zdWJtb2RlbC8yNTM2ZWM1YS0zNTJjLTQzMTUtYmYzNi04MTJiOGJiMTE3MDM=/submodel",
+                                            "endpointProtocol": "http",
+                                            "endpointProtocolVersion": "",
+                                            "subprotocol": "",
+                                            "subprotocolBody": "",
+                                            "subprotocolBodyEncoding": "",
+                                            "securityAttributes": ""
+                                        },
+                                        "interface": "SUBMODEL-1.0"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "ww.ovgu.de/submodel/e1be35d6-d227-4193-863d-65ef6f209638",
+                                "semanticId": {
+                                    "keys": [
+                                        {
+                                            "type": "GlobalReference",
+                                            "value": "0173-1#01-ADR740#004"
+                                        }
+                                    ],
+                                    "type": "GlobalReference"
+                                },
+                                "endpoints": [
+                                    {
+                                        "protocolInformation": {
+                                            "endpointAddress": "http://localhost:60012/submodels/d3cub3ZndS5kZS9zdWJtb2RlbC9lMWJlMzVkNi1kMjI3LTQxOTMtODYzZC02NWVmNmYyMDk2Mzg=/submodel",
+                                            "endpointProtocol": "http",
+                                            "endpointProtocolVersion": "",
+                                            "subprotocol": "",
+                                            "subprotocolBody": "",
+                                            "subprotocolBodyEncoding": "",
+                                            "securityAttributes": ""
+                                        },
+                                        "interface": "SUBMODEL-1.0"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "messageType": "registerack",
+            "message_Id": "registerack_66",
+            "message": {
+                "frame": {
+                    "semanticProtocol": {
+                        "keys": [
+                            {
+                                "type": "GlobalReference",
+                                "value": "www.admin-shell.io/interaction/registration"
+                            }
+                        ]
+                    },
+                    "type": "registerack",
+                    "messageId": "registerack_66",
+                    "sender": {
+                        "id": "VWS_RIC",
+                        "role": {
+                            "name": "RegistryHandler"
+                        }
+                    },
+                    "replyBy": 0,
+                    "inReplyTo": "",
+                    "conversationId": "Register_1",
+                    "receiver": {
+                        "id": "ww.ovgu.de/aas/67e882ad-7027-4854-b6db-8f5b30e21e1e",
+                        "role": {
+                            "name": "Register"
+                        }
+                    }
+                },
+                "interactionElements": [
+                    {
+                        "semanticId": {
+                            "keys": []
+                        },
+                        "identification": {
+                            "idType": "IRI",
+                            "id": "www.company.com/ids/sm/6535_4121_8002_9238"
+                        },
+                        "idShort": "StatusResponse",
+                        "modelType": {
+                            "name": "Submodel"
+                        },
+                        "kind": "Instance",
+                        "submodelElements": [
+                            {
+                                "value": "S",
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Status",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            },
+                            {
+                                "value": 200,
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Code",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            },
+                            {
+                                "value": "The Asset Administration Shell's descriptor registration is successfully renewed",
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Messaage",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "messageType": "register",
+            "message_Id": "register_48e03aac-97df-45b9-bd60-b054812f391b",
+            "message": {
+                "frame": {
+                    "semanticProtocol": {
+                        "keys": [
+                            {
+                                "type": "GlobalReference",
+                                "value": "www.admin-shell.io/interaction/registration"
+                            }
+                        ]
+                    },
+                    "type": "register",
+                    "messageId": "register_48e03aac-97df-45b9-bd60-b054812f391b",
+                    "sender": {
+                        "id": "ww.ovgu.de/aas/67e882ad-7027-4854-b6db-8f5b30e21e1e",
+                        "role": {
+                            "name": "Register"
+                        }
+                    },
+                    "conversationId": "Register_1",
+                    "replyBy": "",
+                    "replyTo": "",
+                    "receiver": {
+                        "id": "AASpillarbox",
+                        "role": {
+                            "name": "RegistryHandler"
+                        }
+                    }
+                },
+                "interactionElements": [
+                    {
+                        "id": "ww.ovgu.de/aas/67e882ad-7027-4854-b6db-8f5b30e21e1e",
+                        "administration": {},
+                        "description": [
+                            {
+                                "language": "en",
+                                "text": "HannoverMesseDemo"
+                            }
+                        ],
+                        "globalAssetId": {
+                            "keys": [
+                                {
+                                    "type": "GlobalReference",
+                                    "value": "ServiceRequester3/HMD"
+                                }
+                            ],
+                            "type": "GlobalReference"
+                        },
+                        "endpoints": [
+                            {
+                                "protocolInformation": {
+                                    "endpointAddress": "http://localhost:60012/shells/d3cub3ZndS5kZS9hYXMvNjdlODgyYWQtNzAyNy00ODU0LWI2ZGItOGY1YjMwZTIxZTFl",
+                                    "endpointProtocol": "http",
+                                    "endpointProtocolVersion": "",
+                                    "subprotocol": "",
+                                    "subprotocolBody": "",
+                                    "subprotocolBodyEncoding": "",
+                                    "securityAttributes": ""
+                                },
+                                "interface": "AAS-1.0"
+                            }
+                        ],
+                        "submodelDescriptors": [
+                            {
+                                "id": "ww.ovgu.de/submodel/905777a9-d67d-4dfd-a5f0-89e3c153f7f2",
+                                "semanticId": {
+                                    "keys": [
+                                        {
+                                            "type": "GlobalReference",
+                                            "value": "0173-1#01-AKG243#015"
+                                        }
+                                    ],
+                                    "type": "GlobalReference"
+                                },
+                                "endpoints": [
+                                    {
+                                        "protocolInformation": {
+                                            "endpointAddress": "http://localhost:60012/submodels/d3cub3ZndS5kZS9zdWJtb2RlbC85MDU3NzdhOS1kNjdkLTRkZmQtYTVmMC04OWUzYzE1M2Y3ZjI=/submodel",
+                                            "endpointProtocol": "http",
+                                            "endpointProtocolVersion": "",
+                                            "subprotocol": "",
+                                            "subprotocolBody": "",
+                                            "subprotocolBodyEncoding": "",
+                                            "securityAttributes": ""
+                                        },
+                                        "interface": "SUBMODEL-1.0"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "ww.ovgu.de/submodel/2536ec5a-352c-4315-bf36-812b8bb11703",
+                                "semanticId": {
+                                    "keys": [
+                                        {
+                                            "type": "GlobalReference",
+                                            "value": "0173-1#01-AKG250#017"
+                                        }
+                                    ],
+                                    "type": "GlobalReference"
+                                },
+                                "endpoints": [
+                                    {
+                                        "protocolInformation": {
+                                            "endpointAddress": "http://localhost:60012/submodels/d3cub3ZndS5kZS9zdWJtb2RlbC8yNTM2ZWM1YS0zNTJjLTQzMTUtYmYzNi04MTJiOGJiMTE3MDM=/submodel",
+                                            "endpointProtocol": "http",
+                                            "endpointProtocolVersion": "",
+                                            "subprotocol": "",
+                                            "subprotocolBody": "",
+                                            "subprotocolBodyEncoding": "",
+                                            "securityAttributes": ""
+                                        },
+                                        "interface": "SUBMODEL-1.0"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "ww.ovgu.de/submodel/e1be35d6-d227-4193-863d-65ef6f209638",
+                                "semanticId": {
+                                    "keys": [
+                                        {
+                                            "type": "GlobalReference",
+                                            "value": "0173-1#01-ADR740#004"
+                                        }
+                                    ],
+                                    "type": "GlobalReference"
+                                },
+                                "endpoints": [
+                                    {
+                                        "protocolInformation": {
+                                            "endpointAddress": "http://localhost:60012/submodels/d3cub3ZndS5kZS9zdWJtb2RlbC9lMWJlMzVkNi1kMjI3LTQxOTMtODYzZC02NWVmNmYyMDk2Mzg=/submodel",
+                                            "endpointProtocol": "http",
+                                            "endpointProtocolVersion": "",
+                                            "subprotocol": "",
+                                            "subprotocolBody": "",
+                                            "subprotocolBodyEncoding": "",
+                                            "securityAttributes": ""
+                                        },
+                                        "interface": "SUBMODEL-1.0"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "messageType": "registerack",
+            "message_Id": "registerack_68",
+            "message": {
+                "frame": {
+                    "semanticProtocol": {
+                        "keys": [
+                            {
+                                "type": "GlobalReference",
+                                "value": "www.admin-shell.io/interaction/registration"
+                            }
+                        ]
+                    },
+                    "type": "registerack",
+                    "messageId": "registerack_68",
+                    "sender": {
+                        "id": "VWS_RIC",
+                        "role": {
+                            "name": "RegistryHandler"
+                        }
+                    },
+                    "replyBy": 0,
+                    "inReplyTo": "",
+                    "conversationId": "Register_1",
+                    "receiver": {
+                        "id": "ww.ovgu.de/aas/67e882ad-7027-4854-b6db-8f5b30e21e1e",
+                        "role": {
+                            "name": "Register"
+                        }
+                    }
+                },
+                "interactionElements": [
+                    {
+                        "semanticId": {
+                            "keys": []
+                        },
+                        "identification": {
+                            "idType": "IRI",
+                            "id": "www.company.com/ids/sm/6535_4121_8002_9238"
+                        },
+                        "idShort": "StatusResponse",
+                        "modelType": {
+                            "name": "Submodel"
+                        },
+                        "kind": "Instance",
+                        "submodelElements": [
+                            {
+                                "value": "S",
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Status",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            },
+                            {
+                                "value": 200,
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Code",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            },
+                            {
+                                "value": "The Asset Administration Shell's descriptor registration is successfully renewed",
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Messaage",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "messageType": "register",
+            "message_Id": "register_b11ebdee-0443-41ad-aed8-a44f4acde969",
+            "message": {
+                "frame": {
+                    "semanticProtocol": {
+                        "keys": [
+                            {
+                                "type": "GlobalReference",
+                                "value": "www.admin-shell.io/interaction/registration"
+                            }
+                        ]
+                    },
+                    "type": "register",
+                    "messageId": "register_b11ebdee-0443-41ad-aed8-a44f4acde969",
+                    "sender": {
+                        "id": "ww.ovgu.de/aas/67e882ad-7027-4854-b6db-8f5b30e21e1e",
+                        "role": {
+                            "name": "Register"
+                        }
+                    },
+                    "conversationId": "RegistrationOrder_1",
+                    "replyBy": "",
+                    "replyTo": "",
+                    "receiver": {
+                        "id": "AASpillarbox",
+                        "role": {
+                            "name": "RegistryHandler"
+                        }
+                    }
+                },
+                "interactionElements": [
+                    {
+                        "id": "ww.ovgu.de/aas/67e882ad-7027-4854-b6db-8f5b30e21e1e",
+                        "administration": {},
+                        "description": [
+                            {
+                                "language": "en",
+                                "text": "HannoverMesseDemo"
+                            }
+                        ],
+                        "globalAssetId": {
+                            "keys": [
+                                {
+                                    "type": "GlobalReference",
+                                    "value": "ServiceRequester3/HMD"
+                                }
+                            ],
+                            "type": "GlobalReference"
+                        },
+                        "endpoints": [
+                            {
+                                "protocolInformation": {
+                                    "endpointAddress": "http://localhost:60012/shells/d3cub3ZndS5kZS9hYXMvNjdlODgyYWQtNzAyNy00ODU0LWI2ZGItOGY1YjMwZTIxZTFl",
+                                    "endpointProtocol": "http",
+                                    "endpointProtocolVersion": "",
+                                    "subprotocol": "",
+                                    "subprotocolBody": "",
+                                    "subprotocolBodyEncoding": "",
+                                    "securityAttributes": ""
+                                },
+                                "interface": "AAS-1.0"
+                            }
+                        ],
+                        "submodelDescriptors": [
+                            {
+                                "id": "ww.ovgu.de/submodel/905777a9-d67d-4dfd-a5f0-89e3c153f7f2",
+                                "semanticId": {
+                                    "keys": [
+                                        {
+                                            "type": "GlobalReference",
+                                            "value": "0173-1#01-AKG243#015"
+                                        }
+                                    ],
+                                    "type": "GlobalReference"
+                                },
+                                "endpoints": [
+                                    {
+                                        "protocolInformation": {
+                                            "endpointAddress": "http://localhost:60012/submodels/d3cub3ZndS5kZS9zdWJtb2RlbC85MDU3NzdhOS1kNjdkLTRkZmQtYTVmMC04OWUzYzE1M2Y3ZjI=/submodel",
+                                            "endpointProtocol": "http",
+                                            "endpointProtocolVersion": "",
+                                            "subprotocol": "",
+                                            "subprotocolBody": "",
+                                            "subprotocolBodyEncoding": "",
+                                            "securityAttributes": ""
+                                        },
+                                        "interface": "SUBMODEL-1.0"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "ww.ovgu.de/submodel/2536ec5a-352c-4315-bf36-812b8bb11703",
+                                "semanticId": {
+                                    "keys": [
+                                        {
+                                            "type": "GlobalReference",
+                                            "value": "0173-1#01-AKG250#017"
+                                        }
+                                    ],
+                                    "type": "GlobalReference"
+                                },
+                                "endpoints": [
+                                    {
+                                        "protocolInformation": {
+                                            "endpointAddress": "http://localhost:60012/submodels/d3cub3ZndS5kZS9zdWJtb2RlbC8yNTM2ZWM1YS0zNTJjLTQzMTUtYmYzNi04MTJiOGJiMTE3MDM=/submodel",
+                                            "endpointProtocol": "http",
+                                            "endpointProtocolVersion": "",
+                                            "subprotocol": "",
+                                            "subprotocolBody": "",
+                                            "subprotocolBodyEncoding": "",
+                                            "securityAttributes": ""
+                                        },
+                                        "interface": "SUBMODEL-1.0"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "ww.ovgu.de/submodel/e1be35d6-d227-4193-863d-65ef6f209638",
+                                "semanticId": {
+                                    "keys": [
+                                        {
+                                            "type": "GlobalReference",
+                                            "value": "0173-1#01-ADR740#004"
+                                        }
+                                    ],
+                                    "type": "GlobalReference"
+                                },
+                                "endpoints": [
+                                    {
+                                        "protocolInformation": {
+                                            "endpointAddress": "http://localhost:60012/submodels/d3cub3ZndS5kZS9zdWJtb2RlbC9lMWJlMzVkNi1kMjI3LTQxOTMtODYzZC02NWVmNmYyMDk2Mzg=/submodel",
+                                            "endpointProtocol": "http",
+                                            "endpointProtocolVersion": "",
+                                            "subprotocol": "",
+                                            "subprotocolBody": "",
+                                            "subprotocolBodyEncoding": "",
+                                            "securityAttributes": ""
+                                        },
+                                        "interface": "SUBMODEL-1.0"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "messageType": "registerack",
+            "message_Id": "registerack_70",
+            "message": {
+                "frame": {
+                    "semanticProtocol": {
+                        "keys": [
+                            {
+                                "type": "GlobalReference",
+                                "value": "www.admin-shell.io/interaction/registration"
+                            }
+                        ]
+                    },
+                    "type": "registerack",
+                    "messageId": "registerack_70",
+                    "sender": {
+                        "id": "VWS_RIC",
+                        "role": {
+                            "name": "RegistryHandler"
+                        }
+                    },
+                    "replyBy": 0,
+                    "inReplyTo": "",
+                    "conversationId": "RegistrationOrder_1",
+                    "receiver": {
+                        "id": "ww.ovgu.de/aas/67e882ad-7027-4854-b6db-8f5b30e21e1e",
+                        "role": {
+                            "name": "Register"
+                        }
+                    }
+                },
+                "interactionElements": [
+                    {
+                        "semanticId": {
+                            "keys": []
+                        },
+                        "identification": {
+                            "idType": "IRI",
+                            "id": "www.company.com/ids/sm/6535_4121_8002_9238"
+                        },
+                        "idShort": "StatusResponse",
+                        "modelType": {
+                            "name": "Submodel"
+                        },
+                        "kind": "Instance",
+                        "submodelElements": [
+                            {
+                                "value": "S",
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Status",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            },
+                            {
+                                "value": 200,
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Code",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            },
+                            {
+                                "value": "The Asset Administration Shell's descriptor registration is successfully renewed",
+                                "semanticId": {
+                                    "keys": []
+                                },
+                                "idShort": "Messaage",
+                                "modelType": {
+                                    "name": "Property"
+                                },
+                                "valueType": {
+                                    "dataObjectType": {
+                                        "name": ""
+                                    }
+                                },
+                                "kind": "Instance"
+                            }
+                        ]
+                    }
+                ]
+            }
         }
     ],
     "aasDescVWS_RIC": [
@@ -10184,6 +11700,124 @@
                 ],
                 "submodelDescriptors": []
             }
+        },
+        {
+            "aasId": "ww.ovgu.de/aas/67e882ad-7027-4854-b6db-8f5b30e21e1e",
+            "aasetId": "",
+            "idShort": "",
+            "data": {
+                "id": "ww.ovgu.de/aas/67e882ad-7027-4854-b6db-8f5b30e21e1e",
+                "administration": {},
+                "description": [
+                    {
+                        "language": "en",
+                        "text": "HannoverMesseDemo"
+                    }
+                ],
+                "globalAssetId": {
+                    "keys": [
+                        {
+                            "type": "GlobalReference",
+                            "value": "ServiceRequester3/HMD"
+                        }
+                    ],
+                    "type": "GlobalReference"
+                },
+                "endpoints": [
+                    {
+                        "protocolInformation": {
+                            "endpointAddress": "http://localhost:60012/shells/d3cub3ZndS5kZS9hYXMvNjdlODgyYWQtNzAyNy00ODU0LWI2ZGItOGY1YjMwZTIxZTFl",
+                            "endpointProtocol": "http",
+                            "endpointProtocolVersion": "",
+                            "subprotocol": "",
+                            "subprotocolBody": "",
+                            "subprotocolBodyEncoding": "",
+                            "securityAttributes": ""
+                        },
+                        "interface": "AAS-1.0"
+                    }
+                ],
+                "submodelDescriptors": [
+                    {
+                        "id": "ww.ovgu.de/submodel/905777a9-d67d-4dfd-a5f0-89e3c153f7f2",
+                        "semanticId": {
+                            "keys": [
+                                {
+                                    "type": "GlobalReference",
+                                    "value": "0173-1#01-AKG243#015"
+                                }
+                            ],
+                            "type": "GlobalReference"
+                        },
+                        "endpoints": [
+                            {
+                                "protocolInformation": {
+                                    "endpointAddress": "http://localhost:60012/submodels/d3cub3ZndS5kZS9zdWJtb2RlbC85MDU3NzdhOS1kNjdkLTRkZmQtYTVmMC04OWUzYzE1M2Y3ZjI=/submodel",
+                                    "endpointProtocol": "http",
+                                    "endpointProtocolVersion": "",
+                                    "subprotocol": "",
+                                    "subprotocolBody": "",
+                                    "subprotocolBodyEncoding": "",
+                                    "securityAttributes": ""
+                                },
+                                "interface": "SUBMODEL-1.0"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ww.ovgu.de/submodel/2536ec5a-352c-4315-bf36-812b8bb11703",
+                        "semanticId": {
+                            "keys": [
+                                {
+                                    "type": "GlobalReference",
+                                    "value": "0173-1#01-AKG250#017"
+                                }
+                            ],
+                            "type": "GlobalReference"
+                        },
+                        "endpoints": [
+                            {
+                                "protocolInformation": {
+                                    "endpointAddress": "http://localhost:60012/submodels/d3cub3ZndS5kZS9zdWJtb2RlbC8yNTM2ZWM1YS0zNTJjLTQzMTUtYmYzNi04MTJiOGJiMTE3MDM=/submodel",
+                                    "endpointProtocol": "http",
+                                    "endpointProtocolVersion": "",
+                                    "subprotocol": "",
+                                    "subprotocolBody": "",
+                                    "subprotocolBodyEncoding": "",
+                                    "securityAttributes": ""
+                                },
+                                "interface": "SUBMODEL-1.0"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ww.ovgu.de/submodel/e1be35d6-d227-4193-863d-65ef6f209638",
+                        "semanticId": {
+                            "keys": [
+                                {
+                                    "type": "GlobalReference",
+                                    "value": "0173-1#01-ADR740#004"
+                                }
+                            ],
+                            "type": "GlobalReference"
+                        },
+                        "endpoints": [
+                            {
+                                "protocolInformation": {
+                                    "endpointAddress": "http://localhost:60012/submodels/d3cub3ZndS5kZS9zdWJtb2RlbC9lMWJlMzVkNi1kMjI3LTQxOTMtODYzZC02NWVmNmYyMDk2Mzg=/submodel",
+                                    "endpointProtocol": "http",
+                                    "endpointProtocolVersion": "",
+                                    "subprotocol": "",
+                                    "subprotocolBody": "",
+                                    "subprotocolBodyEncoding": "",
+                                    "securityAttributes": ""
+                                },
+                                "interface": "SUBMODEL-1.0"
+                            }
+                        ]
+                    }
+                ]
+            }
         }
     ],
     "aasDescEndPointVWS_RIC": [
@@ -10274,6 +11908,13 @@
         {
             "aasId": "ww.ovgu.de/aas/b4ea58d6-155b-4157-b77d-fce8bcca8d0c",
             "aasetId": "wwwwwwwwwwww",
+            "idShort": "",
+            "endpoint": "",
+            "ASYNC": "Y"
+        },
+        {
+            "aasId": "ww.ovgu.de/aas/67e882ad-7027-4854-b6db-8f5b30e21e1e",
+            "aasetId": "ServiceRequester3/HMD",
             "idShort": "",
             "endpoint": "",
             "ASYNC": "Y"

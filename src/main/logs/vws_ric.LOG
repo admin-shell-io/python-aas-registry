@@ -910,3 +910,142 @@
 04/06/2023 12:11:33 AM - RIC Service Instance - INFO - A new broadcasting message has arrived
 04/06/2023 12:18:27 AM - RIC Service Instance - INFO - REST API namespaces are stopped.
 04/06/2023 12:18:27 AM - RIC Service Instance - INFO - REST API namespaces are stopped.
+05/08/2023 01:35:58 PM - RIC Service Instance - INFO - The service Logger is Configured.
+05/08/2023 01:35:58 PM - RIC Service Instance - INFO - Configuring the Service Entities.
+05/08/2023 01:35:58 PM - RIC Service Instance - INFO - The AAS ID is configured.
+05/08/2023 01:35:58 PM - RIC Service Instance - INFO - External Variables are configured.
+05/08/2023 01:35:58 PM - RIC Service Instance - INFO - Configuration Parameters are Set.
+05/08/2023 01:35:58 PM - RIC Service Instance - INFO - The External DB is configured
+05/08/2023 01:35:58 PM - RIC Service Instance - INFO - REST API namespaces are configured
+05/08/2023 01:35:58 PM - RIC Service Instance - INFO - The AAS I40 End Points are configured
+05/08/2023 01:35:58 PM - RIC Service Instance - INFO - The skills are configured
+05/08/2023 01:35:58 PM - RIC Service Instance - INFO - Starting the Service Entities
+05/08/2023 01:35:58 PM - RIC Service Instance - INFO - The Database manager is being started
+05/08/2023 01:35:58 PM - RIC Service Instance - INFO - The message handler started
+05/08/2023 01:36:03 PM - RIC Service Instance - INFO - Unable to connect to the mqtt server [WinError 10061] No connection could be made because the target machine actively refused it
+05/08/2023 01:37:02 PM - RIC Service Instance - INFO - The service Logger is Configured.
+05/08/2023 01:37:02 PM - RIC Service Instance - INFO - Configuring the Service Entities.
+05/08/2023 01:37:02 PM - RIC Service Instance - INFO - The AAS ID is configured.
+05/08/2023 01:37:02 PM - RIC Service Instance - INFO - External Variables are configured.
+05/08/2023 01:37:02 PM - RIC Service Instance - INFO - Configuration Parameters are Set.
+05/08/2023 01:37:02 PM - RIC Service Instance - INFO - The External DB is configured
+05/08/2023 01:37:02 PM - RIC Service Instance - INFO - REST API namespaces are configured
+05/08/2023 01:37:03 PM - RIC Service Instance - INFO - The AAS I40 End Points are configured
+05/08/2023 01:37:03 PM - RIC Service Instance - INFO - The skills are configured
+05/08/2023 01:37:03 PM - RIC Service Instance - INFO - Starting the Service Entities
+05/08/2023 01:37:03 PM - RIC Service Instance - INFO - The Database manager is being started
+05/08/2023 01:37:03 PM - RIC Service Instance - INFO - The message handler started
+05/08/2023 01:37:03 PM - RIC Service Instance - INFO - MQTT channels are started
+05/08/2023 01:37:03 PM - RIC Service Instance - INFO - MQTT channels are succesfully connected.
+05/08/2023 01:37:03 PM - RIC Service Instance - INFO - The AAS end Points are Started
+05/08/2023 01:37:03 PM - RIC Service Instance - INFO - The message handler started
+05/08/2023 01:37:03 PM - RIC Service Instance - INFO - The Skills are Started
+05/08/2023 01:37:03 PM - RIC Service Instance - INFO - COAP namespaces are started
+05/08/2023 01:37:03 PM - RIC Service Instance - INFO - COAP REST API namespaces are configured========================================
+05/08/2023 05:09:34 PM - RIC Service Instance - INFO - MQTT channels are succesfully connected.
+05/08/2023 08:57:50 PM - RIC Service Instance - INFO - MQTT channels are succesfully connected.
+05/08/2023 11:43:59 PM - RIC Service Instance - INFO - MQTT channels are succesfully connected.
+05/09/2023 07:28:08 AM - RIC Service Instance - INFO - MQTT channels are succesfully connected.
+05/09/2023 09:03:26 AM - RIC Service Instance - INFO - MQTT channels are succesfully connected.
+05/09/2023 09:30:33 AM - RIC Service Instance - INFO - MQTT channels are succesfully connected.
+05/09/2023 09:53:53 AM - RIC Service Instance - INFO - MQTT channels are succesfully connected.
+05/09/2023 10:08:43 AM - RIC Service Instance - INFO - MQTT channels are succesfully connected.
+08/12/2023 10:05:16 PM - RIC Service Instance - INFO - The service Logger is Configured.
+08/12/2023 10:05:16 PM - RIC Service Instance - INFO - Configuring the Service Entities.
+08/12/2023 10:05:17 PM - RIC Service Instance - INFO - The AAS ID is configured.
+08/12/2023 10:05:17 PM - RIC Service Instance - INFO - External Variables are configured.
+08/12/2023 10:05:17 PM - RIC Service Instance - INFO - Configuration Parameters are Set.
+08/12/2023 10:05:17 PM - RIC Service Instance - INFO - The External DB is configured
+08/12/2023 10:05:17 PM - RIC Service Instance - INFO - REST API namespaces are configured
+08/12/2023 10:05:17 PM - RIC Service Instance - INFO - The AAS I40 End Points are configured
+08/12/2023 10:05:17 PM - RIC Service Instance - INFO - The skills are configured
+08/12/2023 10:05:17 PM - RIC Service Instance - INFO - Starting the Service Entities
+08/12/2023 10:05:17 PM - RIC Service Instance - INFO - The Database manager is being started
+08/12/2023 10:05:17 PM - RIC Service Instance - INFO - The message handler started
+08/12/2023 10:05:17 PM - RIC Service Instance - INFO - MQTT channels are started
+08/12/2023 10:05:17 PM - RIC Service Instance - INFO - MQTT channels are succesfully connected.
+08/12/2023 10:05:17 PM - RIC Service Instance - INFO - The AAS end Points are Started
+08/12/2023 10:05:18 PM - RIC Service Instance - INFO - COAP namespaces are started
+08/12/2023 10:05:18 PM - RIC Service Instance - INFO - The message handler started
+08/12/2023 10:05:18 PM - RIC Service Instance - INFO - COAP REST API namespaces are configured========================================
+08/12/2023 10:05:18 PM - RIC Service Instance - INFO - The Skills are Started
+08/12/2023 10:10:20 PM - RIC Service Instance - INFO - The service Logger is Configured.
+08/12/2023 10:10:20 PM - RIC Service Instance - INFO - Configuring the Service Entities.
+08/12/2023 10:10:20 PM - RIC Service Instance - INFO - The AAS ID is configured.
+08/12/2023 10:10:20 PM - RIC Service Instance - INFO - External Variables are configured.
+08/12/2023 10:10:20 PM - RIC Service Instance - INFO - Configuration Parameters are Set.
+08/12/2023 10:10:20 PM - RIC Service Instance - INFO - The External DB is configured
+08/12/2023 10:10:20 PM - RIC Service Instance - INFO - REST API namespaces are configured
+08/12/2023 10:10:20 PM - RIC Service Instance - INFO - The AAS I40 End Points are configured
+08/12/2023 10:10:20 PM - RIC Service Instance - INFO - The skills are configured
+08/12/2023 10:10:20 PM - RIC Service Instance - INFO - Starting the Service Entities
+08/12/2023 10:10:20 PM - RIC Service Instance - INFO - The Database manager is being started
+08/12/2023 10:10:20 PM - RIC Service Instance - INFO - The message handler started
+08/12/2023 10:10:20 PM - RIC Service Instance - INFO - MQTT channels are started
+08/12/2023 10:10:21 PM - RIC Service Instance - INFO - MQTT channels are succesfully connected.
+08/12/2023 10:10:21 PM - RIC Service Instance - INFO - The AAS end Points are Started
+08/12/2023 10:10:21 PM - RIC Service Instance - INFO - The message handler started
+08/12/2023 10:10:21 PM - RIC Service Instance - INFO - COAP namespaces are started
+08/12/2023 10:10:21 PM - RIC Service Instance - INFO - COAP REST API namespaces are configured========================================
+08/12/2023 10:10:21 PM - RIC Service Instance - INFO - The Skills are Started
+08/12/2023 10:48:24 PM - RIC Service Instance - INFO - The service Logger is Configured.
+08/12/2023 10:48:24 PM - RIC Service Instance - INFO - Configuring the Service Entities.
+08/12/2023 10:48:24 PM - RIC Service Instance - INFO - The AAS ID is configured.
+08/12/2023 10:48:24 PM - RIC Service Instance - INFO - External Variables are configured.
+08/12/2023 10:48:24 PM - RIC Service Instance - INFO - Configuration Parameters are Set.
+08/12/2023 10:48:24 PM - RIC Service Instance - INFO - The External DB is configured
+08/12/2023 10:48:24 PM - RIC Service Instance - INFO - REST API namespaces are configured
+08/12/2023 10:48:24 PM - RIC Service Instance - INFO - The AAS I40 End Points are configured
+08/12/2023 10:48:24 PM - RIC Service Instance - INFO - The skills are configured
+08/12/2023 10:48:24 PM - RIC Service Instance - INFO - Starting the Service Entities
+08/12/2023 10:48:24 PM - RIC Service Instance - INFO - The Database manager is being started
+08/12/2023 10:48:24 PM - RIC Service Instance - INFO - The message handler started
+08/12/2023 10:48:24 PM - RIC Service Instance - INFO - MQTT channels are started
+08/12/2023 10:48:24 PM - RIC Service Instance - INFO - MQTT channels are succesfully connected.
+08/12/2023 10:48:24 PM - RIC Service Instance - INFO - The AAS end Points are Started
+08/12/2023 10:48:24 PM - RIC Service Instance - INFO - The message handler started
+08/12/2023 10:48:25 PM - RIC Service Instance - INFO - COAP namespaces are started
+08/12/2023 10:48:25 PM - RIC Service Instance - INFO - COAP REST API namespaces are configured========================================
+08/12/2023 10:48:25 PM - RIC Service Instance - INFO - The Skills are Started
+08/13/2023 12:43:39 AM - RIC Service Instance - INFO - MQTT channels are succesfully connected.
+08/13/2023 09:29:57 AM - RIC Service Instance - INFO - MQTT channels are succesfully connected.
+08/13/2023 09:43:38 AM - RIC Service Instance - INFO - The service Logger is Configured.
+08/13/2023 09:43:38 AM - RIC Service Instance - INFO - Configuring the Service Entities.
+08/13/2023 09:43:38 AM - RIC Service Instance - INFO - The AAS ID is configured.
+08/13/2023 09:43:38 AM - RIC Service Instance - INFO - External Variables are configured.
+08/13/2023 09:43:38 AM - RIC Service Instance - INFO - Configuration Parameters are Set.
+08/13/2023 09:43:38 AM - RIC Service Instance - INFO - The External DB is configured
+08/13/2023 09:43:39 AM - RIC Service Instance - INFO - REST API namespaces are configured
+08/13/2023 09:43:39 AM - RIC Service Instance - INFO - The AAS I40 End Points are configured
+08/13/2023 09:43:39 AM - RIC Service Instance - INFO - The skills are configured
+08/13/2023 09:43:39 AM - RIC Service Instance - INFO - Starting the Service Entities
+08/13/2023 09:43:39 AM - RIC Service Instance - INFO - The Database manager is being started
+08/13/2023 09:43:39 AM - RIC Service Instance - INFO - The message handler started
+08/13/2023 09:43:39 AM - RIC Service Instance - INFO - MQTT channels are started
+08/13/2023 09:43:39 AM - RIC Service Instance - INFO - MQTT channels are succesfully connected.
+08/13/2023 09:43:39 AM - RIC Service Instance - INFO - The AAS end Points are Started
+08/13/2023 09:43:39 AM - RIC Service Instance - INFO - The message handler started
+08/13/2023 09:43:39 AM - RIC Service Instance - INFO - COAP namespaces are started
+08/13/2023 09:43:39 AM - RIC Service Instance - INFO - COAP REST API namespaces are configured========================================
+08/13/2023 09:43:39 AM - RIC Service Instance - INFO - The Skills are Started
+08/13/2023 10:44:27 AM - RIC Service Instance - INFO - MQTT channels are succesfully connected.
+08/13/2023 10:49:08 AM - RIC Service Instance - INFO - The service Logger is Configured.
+08/13/2023 10:49:08 AM - RIC Service Instance - INFO - Configuring the Service Entities.
+08/13/2023 10:49:08 AM - RIC Service Instance - INFO - The AAS ID is configured.
+08/13/2023 10:49:08 AM - RIC Service Instance - INFO - External Variables are configured.
+08/13/2023 10:49:08 AM - RIC Service Instance - INFO - Configuration Parameters are Set.
+08/13/2023 10:49:08 AM - RIC Service Instance - INFO - The External DB is configured
+08/13/2023 10:49:10 AM - RIC Service Instance - INFO - REST API namespaces are configured
+08/13/2023 10:49:10 AM - RIC Service Instance - INFO - The AAS I40 End Points are configured
+08/13/2023 10:49:10 AM - RIC Service Instance - INFO - The skills are configured
+08/13/2023 10:49:10 AM - RIC Service Instance - INFO - Starting the Service Entities
+08/13/2023 10:49:10 AM - RIC Service Instance - INFO - The Database manager is being started
+08/13/2023 10:49:10 AM - RIC Service Instance - INFO - The message handler started
+08/13/2023 10:49:10 AM - RIC Service Instance - INFO - MQTT channels are started
+08/13/2023 10:49:10 AM - RIC Service Instance - INFO - MQTT channels are succesfully connected.
+08/13/2023 10:49:10 AM - RIC Service Instance - INFO - The AAS end Points are Started
+08/13/2023 10:49:10 AM - RIC Service Instance - INFO - The message handler started
+08/13/2023 10:49:10 AM - RIC Service Instance - INFO - COAP namespaces are started
+08/13/2023 10:49:10 AM - RIC Service Instance - INFO - COAP REST API namespaces are configured========================================
+08/13/2023 10:49:10 AM - RIC Service Instance - INFO - The Skills are Started
+08/13/2023 12:30:12 PM - RIC Service Instance - INFO - MQTT channels are succesfully connected.
