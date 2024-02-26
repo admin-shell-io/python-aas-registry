@@ -1,5 +1,5 @@
 FROM python:3.7
-WORKDIR vws_ric
+WORKDIR python-aas-registry
 COPY . .
 
 RUN pip3 install APScheduler python-snap7 werkzeug Flask Flask-RESTful python-dotenv requests jsonschema aiocoap hbmqtt
